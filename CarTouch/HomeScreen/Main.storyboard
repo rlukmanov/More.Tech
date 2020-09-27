@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bVP-of-F1o">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="dQy-ba-sgf">
+            <objects>
+                <viewController id="bVP-of-F1o" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lIn-t8-aXg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGV-vf-I7U" customClass="IconView" customModule="CarTouch" customModuleProvider="target">
+                                <rect key="frame" x="87" y="333" width="240" height="240"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleOne" translatesAutoresizingMaskIntoConstraints="NO" id="x1G-yi-Fc6">
+                                        <rect key="frame" x="20" y="20" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Skf-Y5-9zl"/>
+                                            <constraint firstAttribute="height" constant="200" id="uTq-qM-bD0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleTwo" translatesAutoresizingMaskIntoConstraints="NO" id="HEE-6y-Hah">
+                                        <rect key="frame" x="20" y="20" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="odc-JS-KRR"/>
+                                            <constraint firstAttribute="height" constant="200" id="sGg-RB-2ac"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleThree" translatesAutoresizingMaskIntoConstraints="NO" id="Qo9-X8-zwH">
+                                        <rect key="frame" x="20" y="20" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="6e0-Yu-K2D"/>
+                                            <constraint firstAttribute="width" constant="200" id="NR7-dz-8Od"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleFour" translatesAutoresizingMaskIntoConstraints="NO" id="sli-OK-3Oz">
+                                        <rect key="frame" x="20" y="20" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="YiT-Hg-kzd"/>
+                                            <constraint firstAttribute="width" constant="200" id="n0K-fZ-w32"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPu-MC-TGX">
+                                        <rect key="frame" x="129" y="220" width="36" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clear:" destination="dvv-Cy-XYO" eventType="touchUpInside" id="0a9-gT-45A"/>
+                                            <action selector="clear:" destination="xGV-vf-I7U" eventType="touchUpInside" id="Aeo-lP-xYa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkf-Qx-LDo">
+                                        <rect key="frame" x="75" y="220" width="34" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startRotate:" destination="dvv-Cy-XYO" eventType="touchUpInside" id="1tJ-3d-bOs"/>
+                                            <action selector="startRotate:" destination="xGV-vf-I7U" eventType="touchUpInside" id="wko-Ro-9NM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="x1G-yi-Fc6" firstAttribute="centerY" secondItem="xGV-vf-I7U" secondAttribute="centerY" id="8Xo-Mg-xS6"/>
+                                    <constraint firstItem="Qo9-X8-zwH" firstAttribute="centerY" secondItem="xGV-vf-I7U" secondAttribute="centerY" id="AOD-oa-UgE"/>
+                                    <constraint firstItem="HEE-6y-Hah" firstAttribute="centerY" secondItem="xGV-vf-I7U" secondAttribute="centerY" id="EIO-MY-Ct9"/>
+                                    <constraint firstItem="x1G-yi-Fc6" firstAttribute="centerX" secondItem="xGV-vf-I7U" secondAttribute="centerX" id="MM4-iC-kGf"/>
+                                    <constraint firstItem="sli-OK-3Oz" firstAttribute="centerX" secondItem="xGV-vf-I7U" secondAttribute="centerX" id="Qg3-0B-RgH"/>
+                                    <constraint firstAttribute="height" constant="240" id="Rqe-X6-xJo"/>
+                                    <constraint firstItem="sli-OK-3Oz" firstAttribute="centerY" secondItem="xGV-vf-I7U" secondAttribute="centerY" id="Xck-51-kUP"/>
+                                    <constraint firstAttribute="width" constant="240" id="Y4Y-8M-44P"/>
+                                    <constraint firstItem="HEE-6y-Hah" firstAttribute="centerX" secondItem="xGV-vf-I7U" secondAttribute="centerX" id="aeO-Wd-C7l"/>
+                                    <constraint firstItem="Qo9-X8-zwH" firstAttribute="centerX" secondItem="xGV-vf-I7U" secondAttribute="centerX" id="amj-4J-U5j"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="circleTwoImageView" destination="HEE-6y-Hah" collectionClass="NSMutableArray" id="bLn-SA-0pw"/>
+                                    <outletCollection property="circleOneImageView" destination="x1G-yi-Fc6" collectionClass="NSMutableArray" id="g3D-nw-4lg"/>
+                                    <outletCollection property="circleThreeImageView" destination="Qo9-X8-zwH" collectionClass="NSMutableArray" id="4Ml-1M-kuA"/>
+                                    <outletCollection property="circleFourImageView" destination="sli-OK-3Oz" collectionClass="NSMutableArray" id="rlC-8K-3pg"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OkG-RE-jpe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xGV-vf-I7U" firstAttribute="centerY" secondItem="OkG-RE-jpe" secondAttribute="centerY" id="T5E-Ug-6Su"/>
+                            <constraint firstItem="xGV-vf-I7U" firstAttribute="centerX" secondItem="OkG-RE-jpe" secondAttribute="centerX" id="tpI-WR-IGx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G1f-nR-7HE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="dvv-Cy-XYO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-530.43478260869574" y="-256.47321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CircleFour" width="1286" height="1286"/>
+        <image name="CircleOne" width="1286" height="1286"/>
+        <image name="CircleThree" width="1286" height="1286"/>
+        <image name="CircleTwo" width="1286" height="1286"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

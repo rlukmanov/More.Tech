@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundStart" translatesAutoresizingMaskIntoConstraints="NO" id="5W5-mg-ZZQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarTouch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqP-Ml-NtC">
+                                <rect key="frame" x="42" y="345" width="212" height="58"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Покупка автомобиля" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qp5-ZG-fzd">
+                                <rect key="frame" x="42" y="403" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="за пару кликов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spg-ja-JCv">
+                                <rect key="frame" x="94" y="424" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5W5-mg-ZZQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="HFd-Vb-TXi"/>
+                            <constraint firstAttribute="bottom" secondItem="5W5-mg-ZZQ" secondAttribute="bottom" id="LKa-ag-yxq"/>
+                            <constraint firstItem="qp5-ZG-fzd" firstAttribute="top" secondItem="lqP-Ml-NtC" secondAttribute="bottom" id="RLS-WI-6AX"/>
+                            <constraint firstItem="qp5-ZG-fzd" firstAttribute="leading" secondItem="lqP-Ml-NtC" secondAttribute="leading" id="UQV-bI-yFg"/>
+                            <constraint firstItem="spg-ja-JCv" firstAttribute="trailing" secondItem="qp5-ZG-fzd" secondAttribute="trailing" id="Ys8-3a-kgE"/>
+                            <constraint firstItem="lqP-Ml-NtC" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="42" id="kAC-xh-4pC"/>
+                            <constraint firstItem="spg-ja-JCv" firstAttribute="top" secondItem="qp5-ZG-fzd" secondAttribute="bottom" id="l2l-Me-wMD"/>
+                            <constraint firstAttribute="centerY" secondItem="lqP-Ml-NtC" secondAttribute="bottom" constant="45" id="po2-Ga-XsT"/>
+                            <constraint firstAttribute="trailing" secondItem="5W5-mg-ZZQ" secondAttribute="trailing" id="qHn-j3-5Sh"/>
+                            <constraint firstItem="5W5-mg-ZZQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="tRn-cn-ysX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackgroundStart" width="375" height="812"/>
+    </resources>
+</document>
