@@ -9,14 +9,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Load View Controller-->
         <scene sceneID="dQy-ba-sgf">
             <objects>
-                <viewController id="bVP-of-F1o" sceneMemberID="viewController">
+                <viewController id="bVP-of-F1o" customClass="LoadViewController" customModule="CarTouch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lIn-t8-aXg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPu-MC-TGX">
+                                <rect key="frame" x="216" y="610" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clear:" destination="bVP-of-F1o" eventType="touchUpInside" id="9wm-zp-fI8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkf-Qx-LDo">
+                                <rect key="frame" x="162" y="610" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="start:" destination="bVP-of-F1o" eventType="touchUpInside" id="OKf-R5-hOw"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGV-vf-I7U" customClass="IconView" customModule="CarTouch" customModuleProvider="target">
                                 <rect key="frame" x="87" y="333" width="240" height="240"/>
                                 <subviews>
@@ -48,24 +64,6 @@
                                             <constraint firstAttribute="width" constant="200" id="n0K-fZ-w32"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPu-MC-TGX">
-                                        <rect key="frame" x="129" y="220" width="36" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Clear"/>
-                                        <connections>
-                                            <action selector="clear:" destination="dvv-Cy-XYO" eventType="touchUpInside" id="0a9-gT-45A"/>
-                                            <action selector="clear:" destination="xGV-vf-I7U" eventType="touchUpInside" id="Aeo-lP-xYa"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkf-Qx-LDo">
-                                        <rect key="frame" x="75" y="220" width="34" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Start"/>
-                                        <connections>
-                                            <action selector="startRotate:" destination="dvv-Cy-XYO" eventType="touchUpInside" id="1tJ-3d-bOs"/>
-                                            <action selector="startRotate:" destination="xGV-vf-I7U" eventType="touchUpInside" id="wko-Ro-9NM"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -87,17 +85,43 @@
                                     <outletCollection property="circleFourImageView" destination="sli-OK-3Oz" collectionClass="NSMutableArray" id="rlC-8K-3pg"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1No-kA-Epu" customClass="TitleView" customModule="CarTouch" customModuleProvider="target">
+                                <rect key="frame" x="40" y="389" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLU-i6-rKq">
+                                        <rect key="frame" x="0.0" y="64" width="240" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                        <color key="textColor" red="0.094446338709999994" green="0.3773948848" blue="0.78827971220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CLU-i6-rKq" firstAttribute="centerX" secondItem="1No-kA-Epu" secondAttribute="centerX" id="IhC-DP-hXI"/>
+                                    <constraint firstItem="CLU-i6-rKq" firstAttribute="leading" secondItem="1No-kA-Epu" secondAttribute="leading" id="UIc-Gr-5gS"/>
+                                    <constraint firstAttribute="height" constant="128" id="Vhv-7A-dDd"/>
+                                    <constraint firstItem="CLU-i6-rKq" firstAttribute="centerY" secondItem="1No-kA-Epu" secondAttribute="centerY" id="glS-rR-HR8"/>
+                                    <constraint firstAttribute="width" constant="240" id="oXi-nL-Yjp"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="titleLabel" destination="CLU-i6-rKq" id="age-2j-6G3"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OkG-RE-jpe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1No-kA-Epu" firstAttribute="leading" secondItem="OkG-RE-jpe" secondAttribute="leading" constant="40" id="0lY-cs-lsB"/>
+                            <constraint firstItem="1No-kA-Epu" firstAttribute="centerY" secondItem="OkG-RE-jpe" secondAttribute="centerY" id="2vo-7H-ynV"/>
                             <constraint firstItem="xGV-vf-I7U" firstAttribute="centerY" secondItem="OkG-RE-jpe" secondAttribute="centerY" id="T5E-Ug-6Su"/>
                             <constraint firstItem="xGV-vf-I7U" firstAttribute="centerX" secondItem="OkG-RE-jpe" secondAttribute="centerX" id="tpI-WR-IGx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="iconView" destination="xGV-vf-I7U" id="rfn-vL-y7z"/>
+                        <outlet property="titleView" destination="1No-kA-Epu" id="S0g-xQ-ENO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1f-nR-7HE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="dvv-Cy-XYO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-530.43478260869574" y="-256.47321428571428"/>
         </scene>

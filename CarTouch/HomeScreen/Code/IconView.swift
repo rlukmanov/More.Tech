@@ -11,27 +11,15 @@ import UIKit
 class IconView: UIView {
     
     var rotateDuration = 1.0
+    var scaleAntTranslationDuration = 2.0
     
     @IBOutlet var circleOneImageView: [UIImageView]!
     @IBOutlet var circleTwoImageView: [UIImageView]!
     @IBOutlet var circleThreeImageView: [UIImageView]!
     @IBOutlet var circleFourImageView: [UIImageView]!
     
-    @IBAction func startRotate(_ sender: Any) {
-        
-        self.rotateCircleOne()
-    }
+    var delegate: TitleAnimationProtocol?
     
-    //
-    
-    @IBAction func clear(_ sender: Any) {
-        circleOneImageView.first!.layer.removeAllAnimations()
-        circleTwoImageView.first!.layer.removeAllAnimations()
-        circleThreeImageView.first!.layer.removeAllAnimations()
-        circleFourImageView.first!.layer.removeAllAnimations()
-    }
-    
-    @objc
     func rotateCircleOne() {
         CATransaction.begin()
         CATransaction.setCompletionBlock({
@@ -47,7 +35,7 @@ class IconView: UIView {
         CATransaction.commit()
     }
     
-    func rotateCircleTwo() {
+    private func rotateCircleTwo() {
         CATransaction.begin()
         CATransaction.setCompletionBlock({
             self.rotateCircleThree()
@@ -64,7 +52,7 @@ class IconView: UIView {
         CATransaction.commit()
     }
     
-    func rotateCircleThree() {
+    private func rotateCircleThree() {
         CATransaction.begin()
         CATransaction.setCompletionBlock({
             self.rotateCircleFour()
@@ -81,10 +69,11 @@ class IconView: UIView {
         CATransaction.commit()
     }
     
-    func rotateCircleFour() {
+    private func rotateCircleFour() {
         CATransaction.begin()
         CATransaction.setCompletionBlock({
-            //self.rotateCircleThree()
+            self.scaleAndTranslateAnimation()
+            self.delegate?.startAnimation()
         })
         
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
@@ -97,5 +86,27 @@ class IconView: UIView {
         self.circleFourImageView.first!.layer.add(rotationAnimation, forKey: nil)
         CATransaction.commit()
     }
- 
+    
+    private func scaleAndTranslateAnimation() {
+        CATransaction.begin()
+        CATransaction.setCompletionBlock({
+            //self.rotateCircleThree()
+        })
+        
+        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+        scaleAnimation.toValue = 92.0 / 200.0
+        scaleAnimation.duration = scaleAntTranslationDuration
+        scaleAnimation.fillMode = CAMediaTimingFillMode.forwards
+        scaleAnimation.isRemovedOnCompletion = false
+        
+        let translationAnimation = CABasicAnimation(keyPath: "transform.translation.x")
+        translationAnimation.toValue = -110
+        translationAnimation.duration = scaleAntTranslationDuration
+        translationAnimation.fillMode = CAMediaTimingFillMode.forwards
+        translationAnimation.isRemovedOnCompletion = false
+        
+        self.layer.add(scaleAnimation, forKey: nil)
+        self.layer.add(translationAnimation, forKey: nil)
+        CATransaction.commit()
+    }
 }

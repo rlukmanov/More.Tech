@@ -16,6 +16,9 @@
 		E145A899251B822E00A78C56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E145A898251B822E00A78C56 /* Main.storyboard */; };
 		E145A89B251B839000A78C56 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E145A89A251B839000A78C56 /* GradientView.swift */; };
 		E14A7D54251FB33F0047A2A1 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14A7D53251FB33F0047A2A1 /* IconView.swift */; };
+		E16218A32520D49000A58078 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16218A22520D49000A58078 /* TitleView.swift */; };
+		E16218A62520D7DF00A58078 /* TitleAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16218A52520D7DF00A58078 /* TitleAnimationProtocol.swift */; };
+		E16218A92520D9EE00A58078 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16218A82520D9EE00A58078 /* LoadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		E145A898251B822E00A78C56 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E145A89A251B839000A78C56 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		E14A7D53251FB33F0047A2A1 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		E16218A22520D49000A58078 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		E16218A52520D7DF00A58078 /* TitleAnimationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAnimationProtocol.swift; sourceTree = "<group>"; };
+		E16218A82520D9EE00A58078 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 			children = (
 				E145A89A251B839000A78C56 /* GradientView.swift */,
 				E14A7D53251FB33F0047A2A1 /* IconView.swift */,
+				E16218A22520D49000A58078 /* TitleView.swift */,
+				E16218A52520D7DF00A58078 /* TitleAnimationProtocol.swift */,
+				E16218A82520D9EE00A58078 /* LoadViewController.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -171,9 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16218A92520D9EE00A58078 /* LoadViewController.swift in Sources */,
 				E145A87C251B5F0900A78C56 /* ViewController.swift in Sources */,
 				E14A7D54251FB33F0047A2A1 /* IconView.swift in Sources */,
 				E145A878251B5F0900A78C56 /* AppDelegate.swift in Sources */,
+				E16218A62520D7DF00A58078 /* TitleAnimationProtocol.swift in Sources */,
+				E16218A32520D49000A58078 /* TitleView.swift in Sources */,
 				E145A89B251B839000A78C56 /* GradientView.swift in Sources */,
 				E145A882251B5F0900A78C56 /* CarTouch.xcdatamodeld in Sources */,
 				E145A87A251B5F0900A78C56 /* SceneDelegate.swift in Sources */,
