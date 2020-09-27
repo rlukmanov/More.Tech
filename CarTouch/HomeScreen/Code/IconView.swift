@@ -22,6 +22,8 @@ class IconView: UIView {
         self.rotateCircleOne()
     }
     
+    //
+    
     @IBAction func clear(_ sender: Any) {
         circleOneImageView.first!.layer.removeAllAnimations()
         circleTwoImageView.first!.layer.removeAllAnimations()
