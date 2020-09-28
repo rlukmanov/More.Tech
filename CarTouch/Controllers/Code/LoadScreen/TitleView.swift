@@ -18,7 +18,7 @@ class TitleView: UIView {
     
     private func translateNameAnimation() {
         let translateAnimation = CABasicAnimation(keyPath: "transform.translation.x")
-        translateAnimation.toValue = 115.0 * screenWidthMultiplier
+        translateAnimation.toValue = 120.0 * screenWidthMultiplier
         translateAnimation.duration = translataionDuration
         translateAnimation.fillMode = CAMediaTimingFillMode.forwards
         translateAnimation.isRemovedOnCompletion = false

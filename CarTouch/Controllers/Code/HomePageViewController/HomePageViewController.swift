@@ -9,7 +9,7 @@ import UIKit
 
 class HomePageViewController: UIViewController {
     
-    @IBOutlet weak var backgroundView: GradientView!
+    @IBOutlet weak var backgroundView: BackgroundView!
     @IBOutlet weak var mainView: MainView!
     
     override func viewDidLoad() {
@@ -21,6 +21,7 @@ class HomePageViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
             self.mainView.popupViewTapped()
+            self.backgroundView.appearTitleAnimation()
         })
     }
     
