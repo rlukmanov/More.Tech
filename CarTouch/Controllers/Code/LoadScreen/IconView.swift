@@ -10,7 +10,7 @@ import UIKit
 
 class IconView: UIView {
     
-    var rotateDuration = 1.0
+    var rotateDuration = 2.0
     var scaleAntTranslationDuration = 2.0
     
     @IBOutlet var circleOneImageView: [UIImageView]!

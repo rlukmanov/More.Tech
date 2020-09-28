@@ -16,20 +16,20 @@ class LoadViewController: UIViewController {
     @IBOutlet weak var titleView: TitleView!
     @IBOutlet weak var iconView: IconView!
     
-    @IBAction func start(_ sender: Any) {
-        iconView.rotateCircleOne()
-    }
-    
-    @IBAction func clear(_ sender: Any) {
-        iconView.circleOneImageView.first!.layer.removeAllAnimations()
-        iconView.circleTwoImageView.first!.layer.removeAllAnimations()
-        iconView.circleThreeImageView.first!.layer.removeAllAnimations()
-        iconView.circleFourImageView.first!.layer.removeAllAnimations()
-        iconView.layer.removeAllAnimations()
-        
-        titleView.titleLabel.layer.removeAllAnimations()
-        titleView.titleLabel.text = ""
-    }
+//    @IBAction func start(_ sender: Any) {
+//        iconView.rotateCircleOne()
+//    }
+//    
+//    @IBAction func clear(_ sender: Any) {
+//        iconView.circleOneImageView.first!.layer.removeAllAnimations()
+//        iconView.circleTwoImageView.first!.layer.removeAllAnimations()
+//        iconView.circleThreeImageView.first!.layer.removeAllAnimations()
+//        iconView.circleFourImageView.first!.layer.removeAllAnimations()
+//        iconView.layer.removeAllAnimations()
+//
+//        titleView.titleLabel.layer.removeAllAnimations()
+//        titleView.titleLabel.text = ""
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +41,12 @@ class LoadViewController: UIViewController {
         
         iconView.delegate = titleView
         iconView.delegateHome = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
+            self.iconView.rotateCircleOne()
+        })
     }
 }
 
