@@ -17,6 +17,8 @@ class LoadViewController: UIViewController {
     @IBOutlet weak var titleView: TitleView!
     @IBOutlet weak var iconView: IconView!
     
+    // MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +39,13 @@ class LoadViewController: UIViewController {
             self.iconView.rotateCircleFour()
         })
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 }
+
+// MARK: ToHomeProtocol
 
 extension LoadViewController: ToHomeProtocol {
     
