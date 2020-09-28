@@ -10,7 +10,8 @@ import UIKit
 
 class LoadViewController: UIViewController {
     
-    var delayMultiplier = 0.3
+    var delayMultiplier = 0.5
+    var characterMultiplier = 0.3
     var delayTransition = 0.5
     
     @IBOutlet weak var titleView: TitleView!
@@ -22,7 +23,7 @@ class LoadViewController: UIViewController {
         iconView.rotateDuration *= delayMultiplier
         iconView.scaleAntTranslationDuration *= delayMultiplier
         titleView.translataionDuration *= delayMultiplier
-        titleView.characterDelay *= delayMultiplier
+        titleView.characterDelay *= characterMultiplier
         
         iconView.delegate = titleView
         iconView.delegateHome = self
@@ -31,6 +32,9 @@ class LoadViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
             self.iconView.rotateCircleOne()
+            self.iconView.rotateCircleTwo()
+            self.iconView.rotateCircleThree()
+            self.iconView.rotateCircleFour()
         })
     }
 }

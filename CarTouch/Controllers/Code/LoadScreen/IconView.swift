@@ -23,55 +23,37 @@ class IconView: UIView {
     var delegateHome: ToHomeProtocol?
     
     func rotateCircleOne() {
-        CATransaction.begin()
-        CATransaction.setCompletionBlock({
-            self.rotateCircleTwo()
-        })
-
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotationAnimation.fromValue = 0.0
         rotationAnimation.toValue = 2 * CGFloat.pi
         rotationAnimation.duration = rotateDuration
         
         self.circleOneImageView.first!.layer.add(rotationAnimation, forKey: nil)
-        CATransaction.commit()
     }
     
-    private func rotateCircleTwo() {
-        CATransaction.begin()
-        CATransaction.setCompletionBlock({
-            self.rotateCircleThree()
-        })
-        
+    func rotateCircleTwo() {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotationAnimation.fromValue = 0.0
         rotationAnimation.toValue = -CGFloat.pi * 3 / 2
-        rotationAnimation.duration = rotateDuration / 4 * 3
+        rotationAnimation.duration = rotateDuration // / 4 * 3
         rotationAnimation.fillMode = CAMediaTimingFillMode.forwards
         rotationAnimation.isRemovedOnCompletion = false
         
         self.circleTwoImageView.first!.layer.add(rotationAnimation, forKey: nil)
-        CATransaction.commit()
     }
     
-    private func rotateCircleThree() {
-        CATransaction.begin()
-        CATransaction.setCompletionBlock({
-            self.rotateCircleFour()
-        })
-        
+    func rotateCircleThree() {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotationAnimation.fromValue = 0.0
         rotationAnimation.toValue = CGFloat.pi
-        rotationAnimation.duration = rotateDuration / 2
+        rotationAnimation.duration = rotateDuration // / 2
         rotationAnimation.fillMode = CAMediaTimingFillMode.forwards
         rotationAnimation.isRemovedOnCompletion = false
         
         self.circleThreeImageView.first!.layer.add(rotationAnimation, forKey: nil)
-        CATransaction.commit()
     }
     
-    private func rotateCircleFour() {
+    func rotateCircleFour() {
         CATransaction.begin()
         CATransaction.setCompletionBlock({
             self.scaleAndTranslateAnimation()
@@ -81,7 +63,7 @@ class IconView: UIView {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotationAnimation.fromValue = 0.0
         rotationAnimation.toValue = -CGFloat.pi / 2
-        rotationAnimation.duration = rotateDuration / 4
+        rotationAnimation.duration = rotateDuration // / 4
         rotationAnimation.fillMode = CAMediaTimingFillMode.forwards
         rotationAnimation.isRemovedOnCompletion = false
         

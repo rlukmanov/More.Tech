@@ -19,7 +19,7 @@ class HomePageViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(700), execute: {
             self.mainView.popupViewTapped()
             self.backgroundView.appearTitleAnimation()
         })
