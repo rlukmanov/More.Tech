@@ -35,6 +35,7 @@ extension TitleView: TitleAnimationProtocol {
 }
 
 extension UILabel {
+
     func animate(newText: String, characterDelay: TimeInterval) {
         DispatchQueue.main.async {
             self.text = ""

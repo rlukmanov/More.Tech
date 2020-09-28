@@ -12,62 +12,46 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleThree" translatesAutoresizingMaskIntoConstraints="NO" id="L2M-Z3-6oG">
-                                <rect key="frame" x="107" y="353" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Qj7-U4-nhQ"/>
-                                    <constraint firstAttribute="height" constant="200" id="gXg-H7-JC3"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleTwo" translatesAutoresizingMaskIntoConstraints="NO" id="h85-FD-Jjn">
-                                <rect key="frame" x="107" y="353" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Cve-Zh-vdk"/>
-                                    <constraint firstAttribute="width" constant="200" id="GaA-39-MrV"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleOne" translatesAutoresizingMaskIntoConstraints="NO" id="hBv-FF-O5b">
-                                <rect key="frame" x="107" y="353" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="18r-Bq-BR7"/>
-                                    <constraint firstAttribute="height" constant="200" id="lfE-64-7Qk"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleFour" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-35-tWO">
-                                <rect key="frame" x="107" y="353" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="4qQ-2a-odg"/>
-                                    <constraint firstAttribute="width" constant="200" id="8wM-6O-hXM"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2020 GangBank. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
+                                <rect key="frame" x="0.0" y="855.5" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarTouch" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
+                                <rect key="frame" x="0.0" y="278" width="414" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Wallet" translatesAutoresizingMaskIntoConstraints="NO" id="gyq-21-yGo">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="h85-FD-Jjn" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="01O-8V-fPt"/>
-                            <constraint firstItem="L2M-Z3-6oG" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="4jV-At-UdD"/>
-                            <constraint firstItem="hBv-FF-O5b" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="Epp-4b-TXf"/>
-                            <constraint firstItem="o6o-35-tWO" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="UW5-2T-lDv"/>
-                            <constraint firstItem="hBv-FF-O5b" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" id="UvX-Bg-dh9"/>
-                            <constraint firstItem="h85-FD-Jjn" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" id="fjw-I0-3C3"/>
-                            <constraint firstItem="o6o-35-tWO" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" id="ysz-8W-7z3"/>
-                            <constraint firstItem="L2M-Z3-6oG" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" id="zm3-Jz-WiP"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
+                            <constraint firstItem="gyq-21-yGo" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" id="95x-hE-Sgm"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="GJd-Yh-RWb" secondAttribute="centerX" id="Q3B-4B-g5h"/>
+                            <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="20" symbolic="YES" id="SfN-ll-jLj"/>
+                            <constraint firstItem="gyq-21-yGo" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="TxL-zI-HHl"/>
+                            <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" multiplier="1/3" constant="1" id="moa-c2-u7t"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="x7j-FC-K8j"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
     <resources>
-        <image name="CircleFour" width="1286" height="1286"/>
-        <image name="CircleOne" width="1286" height="1286"/>
-        <image name="CircleThree" width="1286" height="1286"/>
-        <image name="CircleTwo" width="1286" height="1286"/>
+        <image name="Wallet" width="84.5" height="82"/>
     </resources>
 </document>

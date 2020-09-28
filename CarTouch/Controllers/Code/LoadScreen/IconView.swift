@@ -19,6 +19,7 @@ class IconView: UIView {
     @IBOutlet var circleFourImageView: [UIImageView]!
     
     var delegate: TitleAnimationProtocol?
+    var delegateHome: ToHomeProtocol?
     
     func rotateCircleOne() {
         CATransaction.begin()
@@ -90,7 +91,7 @@ class IconView: UIView {
     private func scaleAndTranslateAnimation() {
         CATransaction.begin()
         CATransaction.setCompletionBlock({
-            //self.rotateCircleThree()
+            self.delegateHome?.toHomeScreen()
         })
         
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
