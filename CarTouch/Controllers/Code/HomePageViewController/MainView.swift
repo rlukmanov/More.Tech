@@ -38,7 +38,7 @@ class MainView: UIView {
         self.leadingAnchor.constraint(equalTo: superview.leadingAnchor).isActive = true
         self.trailingAnchor.constraint(equalTo: superview.trailingAnchor).isActive = true
         self.bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
-        topConstraint = self.topAnchor.constraint(equalTo: superview.topAnchor, constant: superview.frame.height)
+        topConstraint = self.topAnchor.constraint(equalTo: superview.topAnchor, constant: UIScreen.main.bounds.height)
         topConstraint.isActive = true
     }
     
@@ -54,7 +54,7 @@ class MainView: UIView {
                 self.topConstraint.constant = 287
                 self.layer.cornerRadius = 20
             case .closed:
-                self.topConstraint.constant = superview.frame.height
+                self.topConstraint.constant = UIScreen.main.bounds.height
                 self.layer.cornerRadius = 0
             }
             
@@ -77,7 +77,7 @@ class MainView: UIView {
                 self.topConstraint.constant = 287
                 self.layer.cornerRadius = 20
             case .closed:
-                self.topConstraint.constant = superview.frame.height
+                self.topConstraint.constant = UIScreen.main.bounds.height
                 self.layer.cornerRadius = 0
             }
         }

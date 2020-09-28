@@ -12,12 +12,13 @@ class TitleView: UIView {
     
     var translataionDuration = 2.0
     var characterDelay = 0.25
+    private var screenWidthMultiplier = UIScreen.main.bounds.width / 414.0
     
     @IBOutlet var titleLabel: UILabel!
     
     private func translateNameAnimation() {
         let translateAnimation = CABasicAnimation(keyPath: "transform.translation.x")
-        translateAnimation.toValue = 115.0
+        translateAnimation.toValue = 115.0 * screenWidthMultiplier
         translateAnimation.duration = translataionDuration
         translateAnimation.fillMode = CAMediaTimingFillMode.forwards
         translateAnimation.isRemovedOnCompletion = false

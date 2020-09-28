@@ -12,6 +12,7 @@ class IconView: UIView {
     
     var rotateDuration = 2.0
     var scaleAntTranslationDuration = 2.0
+    private var screenWidthMultiplier = UIScreen.main.bounds.width / 414.0
     
     @IBOutlet var circleOneImageView: [UIImageView]!
     @IBOutlet var circleTwoImageView: [UIImageView]!
@@ -101,7 +102,7 @@ class IconView: UIView {
         scaleAnimation.isRemovedOnCompletion = false
         
         let translationAnimation = CABasicAnimation(keyPath: "transform.translation.x")
-        translationAnimation.toValue = -110
+        translationAnimation.toValue = -115 * screenWidthMultiplier
         translationAnimation.duration = scaleAntTranslationDuration
         translationAnimation.fillMode = CAMediaTimingFillMode.forwards
         translationAnimation.isRemovedOnCompletion = false
