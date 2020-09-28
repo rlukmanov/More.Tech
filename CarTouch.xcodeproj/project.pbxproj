@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E130278A2521528500681C1B /* ToHomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13027892521528500681C1B /* ToHomeProtocol.swift */; };
+		E13403C725217DF0003C7856 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13403C625217DF0003C7856 /* NavigationViewController.swift */; };
 		E145A878251B5F0900A78C56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E145A877251B5F0900A78C56 /* AppDelegate.swift */; };
 		E145A87A251B5F0900A78C56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E145A879251B5F0900A78C56 /* SceneDelegate.swift */; };
 		E145A87C251B5F0900A78C56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E145A87B251B5F0900A78C56 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		E13027892521528500681C1B /* ToHomeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToHomeProtocol.swift; sourceTree = "<group>"; };
+		E13403C625217DF0003C7856 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		E145A874251B5F0900A78C56 /* CarTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E145A877251B5F0900A78C56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E145A879251B5F0900A78C56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				E14A7D52251FB3080047A2A1 /* Code */,
 				E145A898251B822E00A78C56 /* Main.storyboard */,
+				E13403C625217DF0003C7856 /* NavigationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E16218A92520D9EE00A58078 /* LoadViewController.swift in Sources */,
+				E13403C725217DF0003C7856 /* NavigationViewController.swift in Sources */,
 				E1DB2B972521629100A57A31 /* MainView.swift in Sources */,
 				E130278A2521528500681C1B /* ToHomeProtocol.swift in Sources */,
 				E1DB2B902521624300A57A31 /* GradientView.swift in Sources */,

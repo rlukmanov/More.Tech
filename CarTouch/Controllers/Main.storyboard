@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="uDf-Ef-kZk">
             <objects>
-                <navigationController id="na8-vx-fIM" sceneMemberID="viewController">
+                <navigationController id="na8-vx-fIM" customClass="NavigationViewController" customModule="CarTouch" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OGG-Ek-Vku">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -116,7 +116,7 @@
                             <constraint firstItem="xGV-vf-I7U" firstAttribute="centerX" secondItem="OkG-RE-jpe" secondAttribute="centerX" id="tpI-WR-IGx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ibW-0L-ckM"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ibW-0L-ckM"/>
                     <connections>
                         <outlet property="iconView" destination="xGV-vf-I7U" id="rfn-vL-y7z"/>
                         <outlet property="titleView" destination="1No-kA-Epu" id="S0g-xQ-ENO"/>
