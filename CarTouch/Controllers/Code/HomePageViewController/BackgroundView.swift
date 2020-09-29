@@ -28,6 +28,17 @@ class BackgroundView: UIView {
     }
 }
 
+// MARK: - NameAnimationProtocol
+
+extension BackgroundView: NameAnimationProtocol {
+    
+    func doAnimation(to valueAlpha: CGFloat, withDelay delay: TimeInterval, withDuration duration: TimeInterval) {
+        UIView.animate(withDuration: duration, delay: delay, options: .curveEaseIn, animations: {
+            self.titleLabel.alpha = valueAlpha
+        }, completion: nil)
+    }
+}
+
 // MARK: - UILabel Fade Animation
 
 extension UILabel {

@@ -228,6 +228,13 @@
                                                     <constraint firstAttribute="height" constant="17" id="ngE-lu-hHV"/>
                                                 </constraints>
                                             </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linePopUp" translatesAutoresizingMaskIntoConstraints="NO" id="rtz-di-VTl">
+                                                <rect key="frame" x="159.5" y="14" width="56" height="4"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="4" id="INe-oZ-67G"/>
+                                                    <constraint firstAttribute="width" constant="56" id="i5f-ak-tPx"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -242,6 +249,7 @@
                                             <constraint firstItem="xE5-cB-oTM" firstAttribute="leading" secondItem="DgV-kH-Xgu" secondAttribute="leading" constant="16" id="OoF-Ik-lJA"/>
                                             <constraint firstItem="xE5-cB-oTM" firstAttribute="top" secondItem="DgV-kH-Xgu" secondAttribute="top" constant="93" id="Qfp-my-7oO"/>
                                             <constraint firstItem="IZB-eh-WDc" firstAttribute="leading" secondItem="DgV-kH-Xgu" secondAttribute="leading" constant="16" id="WOL-J4-SuJ"/>
+                                            <constraint firstItem="rtz-di-VTl" firstAttribute="top" secondItem="DgV-kH-Xgu" secondAttribute="top" constant="14" id="YZ3-WR-xuI"/>
                                             <constraint firstItem="j9D-dE-JKk" firstAttribute="centerX" secondItem="DgV-kH-Xgu" secondAttribute="centerX" id="dGL-eb-s2D"/>
                                             <constraint firstAttribute="trailing" secondItem="eSd-qE-953" secondAttribute="trailing" constant="16" id="fz5-vl-BeC"/>
                                             <constraint firstItem="IoV-Ct-H9D" firstAttribute="centerY" secondItem="agF-Ww-73p" secondAttribute="centerY" id="g52-Ja-QjR"/>
@@ -250,6 +258,7 @@
                                             <constraint firstAttribute="trailing" secondItem="xE5-cB-oTM" secondAttribute="trailing" constant="16" id="msm-yh-zCj"/>
                                             <constraint firstAttribute="trailing" secondItem="IZB-eh-WDc" secondAttribute="trailing" constant="16" id="q1R-DD-RSZ"/>
                                             <constraint firstItem="CH8-fS-sY5" firstAttribute="leading" secondItem="DgV-kH-Xgu" secondAttribute="leading" constant="16" id="rx2-0O-HJ6"/>
+                                            <constraint firstItem="rtz-di-VTl" firstAttribute="centerX" secondItem="DgV-kH-Xgu" secondAttribute="centerX" id="tUe-1e-ArZ"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarTouch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y60-gS-fWj">
@@ -301,6 +310,7 @@
         <image name="Rub" width="202.5" height="216"/>
         <image name="Telegram" width="234.5" height="250.5"/>
         <image name="Wallet" width="84.5" height="82"/>
+        <image name="linePopUp" width="28" height="2"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

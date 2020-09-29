@@ -23,6 +23,7 @@ class HomePageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mainView.delegate = backgroundView
         backgroundView.configurate()
         mainView.configurate()
     }

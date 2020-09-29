@@ -25,7 +25,11 @@ class MainView: UIView {
     
     private let popupOffset: CGFloat = 287
     private let popupOffsetMax: CGFloat = 357
+    private let upOffsetMultiplier = CGFloat(0.7)
+    private let middleOffsetMultiplier = CGFloat(0.3)
     private var topConstraint = NSLayoutConstraint()
+    
+    var delegate: NameAnimationProtocol?
     
     // MARK: - Configurate Function
     
@@ -84,8 +88,10 @@ class MainView: UIView {
             switch state {
             case .toUp:
                 self.topConstraint.constant = 0
+                self.delegate?.doAnimation(to: 0.0, withDelay: 0.0, withDuration: 0.7)
             case .toMiddle:
                 self.topConstraint.constant = self.popupOffset
+                self.delegate?.doAnimation(to: 1.0, withDelay: 0.0, withDuration: 0.7)
             }
             superview.layoutIfNeeded()
         })
@@ -98,7 +104,11 @@ class MainView: UIView {
     
     private func animateStep(toValue currentConstraint: CGFloat) {
         let transitionAnimator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1, animations: {
+            var progressAnimation = currentConstraint / self.popupOffset
+            progressAnimation = progressAnimation > 1 ? 1 : progressAnimation
+            
             self.topConstraint.constant = currentConstraint
+            self.delegate?.doAnimation(to: progressAnimation, withDelay: 0.0, withDuration: 0.1)
             self.superview!.layoutIfNeeded()
         })
         
@@ -133,7 +143,7 @@ class MainView: UIView {
             shouldReturn = true
 
             if currentConstraint <= popupOffsetMax {
-                if currentConstraint <= 0.7 * popupOffset {
+                if currentConstraint <= upOffsetMultiplier * popupOffset {
                     shouldReturn = false
                     self.isUserInteractionEnabled = false
                     currentPosition = .top
@@ -148,7 +158,7 @@ class MainView: UIView {
             shouldReturn = true
 
             if currentConstraint >= 0 {
-                if currentConstraint >= 0.3 * popupOffset {
+                if currentConstraint >= middleOffsetMultiplier * popupOffset {
                     shouldReturn = false
                     self.isUserInteractionEnabled = false
                     currentPosition = .middle
