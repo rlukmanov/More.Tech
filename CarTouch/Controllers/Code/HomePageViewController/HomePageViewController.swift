@@ -9,12 +9,21 @@ import UIKit
 
 class HomePageViewController: UIViewController {
     
+    // MARK: - Properties
+    
     @IBOutlet weak var backgroundView: BackgroundView!
     @IBOutlet weak var mainView: MainView!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        backgroundView.configurate()
         mainView.configurate()
     }
     
@@ -23,9 +32,5 @@ class HomePageViewController: UIViewController {
             self.mainView.openView()
             self.backgroundView.appearTitleAnimation()
         })
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
     }
 }

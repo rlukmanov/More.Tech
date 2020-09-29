@@ -10,12 +10,18 @@ import UIKit
 
 class LoadViewController: UIViewController {
     
+    // MARK: - Properties
+    
     var delayMultiplier = 0.5
     var characterMultiplier = 0.3
     var delayTransition = 0.5
     
     @IBOutlet weak var titleView: TitleView!
     @IBOutlet weak var iconView: IconView!
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     // MARK: - View Controller Lifecycle
     
@@ -33,15 +39,8 @@ class LoadViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
-            self.iconView.rotateCircleOne()
-            self.iconView.rotateCircleTwo()
-            self.iconView.rotateCircleThree()
-            self.iconView.rotateCircleFour()
+            self.iconView.doRotation()
         })
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
     }
 }
 

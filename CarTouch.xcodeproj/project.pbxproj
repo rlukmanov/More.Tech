@@ -115,7 +115,6 @@
 			children = (
 				E14A7D52251FB3080047A2A1 /* Code */,
 				E145A898251B822E00A78C56 /* Main.storyboard */,
-				E13403C625217DF0003C7856 /* NavigationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +122,7 @@
 		E14A7D52251FB3080047A2A1 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				E1F857A42523BF0C00D33CB9 /* NavigationViewController */,
 				E1302786252151F000681C1B /* Protocols */,
 				E1DB2B8D2521622000A57A31 /* HomePageViewController */,
 				E1DB2B9B25216A0500A57A31 /* LoadScreen */,
@@ -157,6 +157,14 @@
 				E1F8577C2521FE2100D33CB9 /* CustomButton.swift */,
 			);
 			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		E1F857A42523BF0C00D33CB9 /* NavigationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E13403C625217DF0003C7856 /* NavigationViewController.swift */,
+			);
+			path = NavigationViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

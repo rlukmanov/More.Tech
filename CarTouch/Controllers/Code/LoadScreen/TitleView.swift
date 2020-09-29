@@ -10,11 +10,15 @@ import UIKit
 
 class TitleView: UIView {
     
+    // MARK: - Properties
+    
     var translataionDuration = 2.0
     var characterDelay = 0.25
     private var screenWidthMultiplier = UIScreen.main.bounds.width / 414.0
     
     @IBOutlet var titleLabel: UILabel!
+    
+    // MARK: - Translate animation
     
     private func translateNameAnimation() {
         let translateAnimation = CABasicAnimation(keyPath: "transform.translation.x")
@@ -28,6 +32,8 @@ class TitleView: UIView {
     }
 }
 
+// MARK: - TitleAnimationProtocol
+
 extension TitleView: TitleAnimationProtocol {
     
     func startAnimation() {
@@ -35,8 +41,10 @@ extension TitleView: TitleAnimationProtocol {
     }
 }
 
-extension UILabel {
+// MARK: - Animate label text
 
+extension UILabel {
+    
     func animate(newText: String, characterDelay: TimeInterval) {
         DispatchQueue.main.async {
             self.text = ""
@@ -54,7 +62,10 @@ extension UILabel {
     }
 }
 
+// MARK: - Animate fade view
+
 extension UIView {
+    
     func fadeTransition(_ duration: CFTimeInterval) {
         let animation = CATransition()
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)

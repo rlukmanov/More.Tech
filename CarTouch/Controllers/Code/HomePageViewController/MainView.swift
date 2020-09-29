@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: - State & Direction enum
+
 private enum Direction {
     case toMiddle
     case toUp
@@ -19,9 +21,13 @@ private enum State {
 
 class MainView: UIView {
     
+    // MARK: - Properties
+    
     private let popupOffset: CGFloat = 287
     private let popupOffsetMax: CGFloat = 357
     private var topConstraint = NSLayoutConstraint()
+    
+    // MARK: - Configurate function
     
     func configurate() {
         self.backgroundColor = .white
@@ -40,6 +46,8 @@ class MainView: UIView {
         topConstraint.isActive = true
     }
     
+    // MARK: - OpenView function
+    
     func openView() {
         guard let superview = superview else {
             return
@@ -51,12 +59,15 @@ class MainView: UIView {
             superview.layoutIfNeeded()
         })
 
-        topConstraint.constant = popupOffset
-
         transitionAnimator.startAnimation()
     }
     
-    // MARK: - Animation
+    // MARK: - Animation panned
+    
+    private var offsetViewY: CGFloat = 0
+    private var shouldReturn = false
+    private var currentDirection: Direction = .toMiddle
+    private var currentPosition: State = .middle
     
     private lazy var panRecognizer: UIPanGestureRecognizer = {
         let recognizer = UIPanGestureRecognizer()
@@ -76,10 +87,8 @@ class MainView: UIView {
             case .toMiddle:
                 self.topConstraint.constant = self.popupOffset
             }
-            
             superview.layoutIfNeeded()
         })
-        
         transitionAnimator.addCompletion({ _ in
             self.isUserInteractionEnabled = true
         })
@@ -92,15 +101,12 @@ class MainView: UIView {
             self.topConstraint.constant = currentConstraint
             self.superview!.layoutIfNeeded()
         })
+        
         transitionAnimator.startAnimation()
     }
     
-    private var offsetViewY: CGFloat = 0
-    private var shouldReturn = false
-    private var currentDirection: Direction = .toMiddle
-    private var currentPosition: State = .middle
-    
-    @objc private func popupViewPanned(recognizer: UIPanGestureRecognizer) {
+    @objc
+    private func popupViewPanned(recognizer: UIPanGestureRecognizer) {
         switch recognizer.state {
         case .ended:
             offsetViewY = topConstraint.constant - popupOffset

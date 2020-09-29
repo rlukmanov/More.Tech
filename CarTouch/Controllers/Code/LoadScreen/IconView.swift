@@ -10,6 +10,8 @@ import UIKit
 
 class IconView: UIView {
     
+    // MARK: - Properties
+    
     var rotateDuration = 2.0
     var scaleAntTranslationDuration = 2.0
     private var screenWidthMultiplier = UIScreen.main.bounds.width / 414.0
@@ -19,10 +21,21 @@ class IconView: UIView {
     @IBOutlet var circleThreeImageView: [UIImageView]!
     @IBOutlet var circleFourImageView: [UIImageView]!
     
+    // MARK: - Delegates
+    
     var delegate: TitleAnimationProtocol?
     var delegateHome: ToHomeProtocol?
     
-    func rotateCircleOne() {
+    // MARK: - Rotate animations
+    
+    func doRotation() {
+        rotateCircleOne()
+        rotateCircleTwo()
+        rotateCircleThree()
+        rotateCircleFour()
+    }
+    
+    private func rotateCircleOne() {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotationAnimation.fromValue = 0.0
         rotationAnimation.toValue = 2 * CGFloat.pi
@@ -31,7 +44,7 @@ class IconView: UIView {
         self.circleOneImageView.first!.layer.add(rotationAnimation, forKey: nil)
     }
     
-    func rotateCircleTwo() {
+    private func rotateCircleTwo() {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotationAnimation.fromValue = 0.0
         rotationAnimation.toValue = -CGFloat.pi * 3 / 2
@@ -42,7 +55,7 @@ class IconView: UIView {
         self.circleTwoImageView.first!.layer.add(rotationAnimation, forKey: nil)
     }
     
-    func rotateCircleThree() {
+    private func rotateCircleThree() {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotationAnimation.fromValue = 0.0
         rotationAnimation.toValue = CGFloat.pi
@@ -53,7 +66,7 @@ class IconView: UIView {
         self.circleThreeImageView.first!.layer.add(rotationAnimation, forKey: nil)
     }
     
-    func rotateCircleFour() {
+    private func rotateCircleFour() {
         CATransaction.begin()
         CATransaction.setCompletionBlock({
             self.scaleAndTranslateAnimation()
@@ -70,6 +83,8 @@ class IconView: UIView {
         self.circleFourImageView.first!.layer.add(rotationAnimation, forKey: nil)
         CATransaction.commit()
     }
+    
+    // MARK: - Scale & Translate animations
     
     private func scaleAndTranslateAnimation() {
         CATransaction.begin()

@@ -9,5 +9,6 @@
 import Foundation
 
 protocol ToHomeProtocol {
+    
     func toHomeScreen()
 }

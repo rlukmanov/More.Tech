@@ -11,6 +11,8 @@ import UIKit
 
 class GradientView: UIView {
     
+    // MARK: - Inspectable properties
+    
     @IBInspectable var firstColor: UIColor = UIColor.clear {
         didSet {
             updateView()
@@ -28,6 +30,8 @@ class GradientView: UIView {
             return CAGradientLayer.self
         }
     }
+    
+    // MARK: - UpdateView function
     
     func updateView() {
         let layer = self.layer as! CAGradientLayer
