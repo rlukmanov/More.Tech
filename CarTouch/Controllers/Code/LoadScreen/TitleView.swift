@@ -18,7 +18,7 @@ class TitleView: UIView {
     
     @IBOutlet var titleLabel: UILabel!
     
-    // MARK: - Translate animation
+    // MARK: - Translate Animation
     
     private func translateNameAnimation() {
         let translateAnimation = CABasicAnimation(keyPath: "transform.translation.x")
@@ -41,7 +41,7 @@ extension TitleView: TitleAnimationProtocol {
     }
 }
 
-// MARK: - Animate label text
+// MARK: - Animate label Text
 
 extension UILabel {
     
@@ -62,7 +62,7 @@ extension UILabel {
     }
 }
 
-// MARK: - Animate fade view
+// MARK: - Animate Fade View
 
 extension UIView {
     

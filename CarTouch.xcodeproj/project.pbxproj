@@ -12,7 +12,6 @@
 		E13403CA2521EFBA003C7856 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13403C92521EFBA003C7856 /* BackgroundView.swift */; };
 		E145A878251B5F0900A78C56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E145A877251B5F0900A78C56 /* AppDelegate.swift */; };
 		E145A87A251B5F0900A78C56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E145A879251B5F0900A78C56 /* SceneDelegate.swift */; };
-		E145A87C251B5F0900A78C56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E145A87B251B5F0900A78C56 /* ViewController.swift */; };
 		E145A882251B5F0900A78C56 /* CarTouch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E145A880251B5F0900A78C56 /* CarTouch.xcdatamodeld */; };
 		E145A884251B5F0D00A78C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E145A883251B5F0D00A78C56 /* Assets.xcassets */; };
 		E145A899251B822E00A78C56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E145A898251B822E00A78C56 /* Main.storyboard */; };
@@ -34,7 +33,6 @@
 		E145A874251B5F0900A78C56 /* CarTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E145A877251B5F0900A78C56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E145A879251B5F0900A78C56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E145A87B251B5F0900A78C56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E145A881251B5F0900A78C56 /* CarTouch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarTouch.xcdatamodel; sourceTree = "<group>"; };
 		E145A883251B5F0D00A78C56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E145A888251B5F0D00A78C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 				E145A88F251B73DC00A78C56 /* LaunchScreen */,
 				E145A877251B5F0900A78C56 /* AppDelegate.swift */,
 				E145A879251B5F0900A78C56 /* SceneDelegate.swift */,
-				E145A87B251B5F0900A78C56 /* ViewController.swift */,
 				E145A888251B5F0D00A78C56 /* Info.plist */,
 				E145A880251B5F0900A78C56 /* CarTouch.xcdatamodeld */,
 			);
@@ -244,7 +241,6 @@
 				E1DB2B972521629100A57A31 /* MainView.swift in Sources */,
 				E130278A2521528500681C1B /* ToHomeProtocol.swift in Sources */,
 				E1DB2B902521624300A57A31 /* GradientView.swift in Sources */,
-				E145A87C251B5F0900A78C56 /* ViewController.swift in Sources */,
 				E14A7D54251FB33F0047A2A1 /* IconView.swift in Sources */,
 				E145A878251B5F0900A78C56 /* AppDelegate.swift in Sources */,
 				E16218A62520D7DF00A58078 /* TitleAnimationProtocol.swift in Sources */,
@@ -380,6 +376,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7N89YQRF7B;
 				INFOPLIST_FILE = CarTouch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -397,6 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7N89YQRF7B;
 				INFOPLIST_FILE = CarTouch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

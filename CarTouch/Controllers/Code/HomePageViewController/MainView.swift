@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - State & Direction enum
+// MARK: - State & Direction Enum
 
 private enum Direction {
     case toMiddle
@@ -27,7 +27,7 @@ class MainView: UIView {
     private let popupOffsetMax: CGFloat = 357
     private var topConstraint = NSLayoutConstraint()
     
-    // MARK: - Configurate function
+    // MARK: - Configurate Function
     
     func configurate() {
         self.backgroundColor = .white
@@ -46,7 +46,7 @@ class MainView: UIView {
         topConstraint.isActive = true
     }
     
-    // MARK: - OpenView function
+    // MARK: - OpenView Function
     
     func openView() {
         guard let superview = superview else {
@@ -62,7 +62,7 @@ class MainView: UIView {
         transitionAnimator.startAnimation()
     }
     
-    // MARK: - Animation panned
+    // MARK: - Animation Panned
     
     private var offsetViewY: CGFloat = 0
     private var shouldReturn = false

@@ -26,7 +26,7 @@ class IconView: UIView {
     var delegate: TitleAnimationProtocol?
     var delegateHome: ToHomeProtocol?
     
-    // MARK: - Rotate animations
+    // MARK: - Rotate Animations
     
     func doRotation() {
         rotateCircleOne()
@@ -84,7 +84,7 @@ class IconView: UIView {
         CATransaction.commit()
     }
     
-    // MARK: - Scale & Translate animations
+    // MARK: - Scale & Translate Animations
     
     private func scaleAndTranslateAnimation() {
         CATransaction.begin()

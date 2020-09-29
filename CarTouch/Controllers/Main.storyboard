@@ -155,8 +155,8 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DgV-kH-Xgu" customClass="MainView" customModule="CarTouch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="287" width="414" height="609"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZB-eh-WDc">
-                                                <rect key="frame" x="16" y="232" width="343" height="55"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IZB-eh-WDc">
+                                                <rect key="frame" x="16" y="232" width="377" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylU-qC-t6L" customClass="CustomButton" customModule="CarTouch" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="55"/>
@@ -288,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="98j-vO-YGg" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="-256"/>
+            <point key="canvasLocation" x="363.768115942029" y="-256.47321428571428"/>
         </scene>
     </scenes>
     <resources>

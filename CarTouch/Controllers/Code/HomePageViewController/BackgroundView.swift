@@ -9,20 +9,26 @@
 import UIKit
 
 class BackgroundView: UIView {
-
+    
+    // MARK: - Properties
+    
     @IBOutlet var titleLabel: UILabel!
     var durationAppear = 1.0
+    
+    // MARK: - Configurate Function
     
     func configurate() {
         titleLabel.alpha = 0
     }
+    
+    // MARK: - appearTitleAnimation
     
     func appearTitleAnimation() {
         titleLabel.fadeIn(withDuration: durationAppear)
     }
 }
 
-// MARK: - UILabel fade animation
+// MARK: - UILabel Fade Animation
 
 extension UILabel {
     
