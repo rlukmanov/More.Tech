@@ -18,7 +18,7 @@ class BackgroundView: UIView {
         let animation = CATransition()
         animation.duration = durationAppear
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        animation.type = CATransitionType.fade
+//        animation.type = CATransitionType.fade
         titleLabel.layer.add(animation, forKey: CATransitionType.fade.rawValue)
     }
 }

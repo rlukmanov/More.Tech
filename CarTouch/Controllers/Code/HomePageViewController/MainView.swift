@@ -69,7 +69,7 @@ class MainView: UIView {
             return
         }
 
-        let transitionAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio:1, animations: {
+        let transitionAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1, animations: {
             switch state {
             case .toUp:
                 self.topConstraint.constant = 0
@@ -88,7 +88,7 @@ class MainView: UIView {
     }
     
     private func animateStep(toValue currentConstraint: CGFloat) {
-        let transitionAnimator = UIViewPropertyAnimator(duration: 0.3, dampingRatio:1, animations: {
+        let transitionAnimator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1, animations: {
             self.topConstraint.constant = currentConstraint
             self.superview!.layoutIfNeeded()
         })
