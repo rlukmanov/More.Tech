@@ -65,7 +65,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="x1G-yi-Fc6" firstAttribute="centerY" secondItem="xGV-vf-I7U" secondAttribute="centerY" id="8Xo-Mg-xS6"/>
                                     <constraint firstItem="Qo9-X8-zwH" firstAttribute="centerY" secondItem="xGV-vf-I7U" secondAttribute="centerY" id="AOD-oa-UgE"/>
@@ -108,7 +108,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OkG-RE-jpe"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1No-kA-Epu" firstAttribute="leading" secondItem="OkG-RE-jpe" secondAttribute="leading" constant="40" id="0lY-cs-lsB"/>
                             <constraint firstItem="1No-kA-Epu" firstAttribute="centerY" secondItem="OkG-RE-jpe" secondAttribute="centerY" id="2vo-7H-ynV"/>
