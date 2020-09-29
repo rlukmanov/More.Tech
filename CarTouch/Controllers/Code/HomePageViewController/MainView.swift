@@ -88,7 +88,7 @@ class MainView: UIView {
     }
     
     private func animateStep(toValue currentConstraint: CGFloat) {
-        let transitionAnimator = UIViewPropertyAnimator(duration: 1.0, dampingRatio:1, animations: {
+        let transitionAnimator = UIViewPropertyAnimator(duration: 0.3, dampingRatio:1, animations: {
             self.topConstraint.constant = currentConstraint
             self.superview!.layoutIfNeeded()
         })
@@ -118,9 +118,8 @@ class MainView: UIView {
             break
         }
 
-        let offsetY = recognizer.translation(in: self).y
+        let offsetY = 2 * recognizer.translation(in: self).y
         let currentConstraint = popupOffset + offsetY + offsetViewY
-        print(currentConstraint)
 
         switch currentPosition {
         case .middle:
@@ -128,7 +127,7 @@ class MainView: UIView {
             shouldReturn = true
 
             if currentConstraint <= popupOffsetMax {
-                if currentConstraint <= 0.8 * popupOffset {
+                if currentConstraint <= 0.7 * popupOffset {
                     shouldReturn = false
                     self.isUserInteractionEnabled = false
                     currentPosition = .top
@@ -143,7 +142,7 @@ class MainView: UIView {
             shouldReturn = true
 
             if currentConstraint >= 0 {
-                if currentConstraint >= 0.2 * popupOffset {
+                if currentConstraint >= 0.3 * popupOffset {
                     shouldReturn = false
                     self.isUserInteractionEnabled = false
                     currentPosition = .middle
