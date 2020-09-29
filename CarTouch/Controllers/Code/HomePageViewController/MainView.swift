@@ -7,29 +7,27 @@
 
 import UIKit
 
-private enum State {
-    case closed
-    case open
+private enum Direction {
+    case toMiddle
+    case toUp
 }
- 
-extension State {
-    var opposite: State {
-        switch self {
-        case .open: return .closed
-        case .closed: return .open
-        }
-    }
+
+private enum State {
+    case top
+    case middle
 }
 
 class MainView: UIView {
     
+    private let popupOffset: CGFloat = 287
+    private let popupOffsetMax: CGFloat = 357
     private var topConstraint = NSLayoutConstraint()
-    private var currentState: State = .closed
     
     func configurate() {
         self.backgroundColor = .white
         self.translatesAutoresizingMaskIntoConstraints = false
         self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        self.addGestureRecognizer(panRecognizer)
         
         guard let superview = superview else {
             return
@@ -42,46 +40,119 @@ class MainView: UIView {
         topConstraint.isActive = true
     }
     
-    func popupViewTapped() {
+    func openView() {
         guard let superview = superview else {
             return
         }
-        let state = currentState.opposite
-        
+
         let transitionAnimator = UIViewPropertyAnimator(duration: 1, dampingRatio: 1, animations: {
+            self.topConstraint.constant = self.popupOffset
+            self.layer.cornerRadius = 20
+            superview.layoutIfNeeded()
+        })
+
+        topConstraint.constant = popupOffset
+
+        transitionAnimator.startAnimation()
+    }
+    
+    // MARK: - Animation
+    
+    private lazy var panRecognizer: UIPanGestureRecognizer = {
+        let recognizer = UIPanGestureRecognizer()
+        recognizer.addTarget(self, action: #selector(popupViewPanned(recognizer:)))
+        return recognizer
+    }()
+
+    private func animateTransitionIfNeeded(to state: Direction, duration: TimeInterval) {
+        guard let superview = superview else {
+            return
+        }
+
+        let transitionAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio:1, animations: {
             switch state {
-            case .open:
-                self.topConstraint.constant = 287
-                self.layer.cornerRadius = 20
-            case .closed:
-                self.topConstraint.constant = UIScreen.main.bounds.height
-                self.layer.cornerRadius = 0
+            case .toUp:
+                self.topConstraint.constant = 0
+            case .toMiddle:
+                self.topConstraint.constant = self.popupOffset
             }
             
             superview.layoutIfNeeded()
         })
         
-        transitionAnimator.addCompletion { position in
-            switch position {
-            case .start:
-                self.currentState = state.opposite
-            case .end:
-                self.currentState = state
-            case .current:
-                ()
-            @unknown default:
-                return
-            }
-            switch self.currentState {
-            case .open:
-                self.topConstraint.constant = 287
-                self.layer.cornerRadius = 20
-            case .closed:
-                self.topConstraint.constant = UIScreen.main.bounds.height
-                self.layer.cornerRadius = 0
-            }
-        }
+        transitionAnimator.addCompletion({ _ in
+            self.isUserInteractionEnabled = true
+        })
         
         transitionAnimator.startAnimation()
+    }
+    
+    private func animateStep(toValue currentConstraint: CGFloat) {
+        let transitionAnimator = UIViewPropertyAnimator(duration: 1.0, dampingRatio:1, animations: {
+            self.topConstraint.constant = currentConstraint
+            self.superview!.layoutIfNeeded()
+        })
+        transitionAnimator.startAnimation()
+    }
+    
+    private var offsetViewY: CGFloat = 0
+    private var shouldReturn = false
+    private var currentDirection: Direction = .toMiddle
+    private var currentPosition: State = .middle
+    
+    @objc private func popupViewPanned(recognizer: UIPanGestureRecognizer) {
+        switch recognizer.state {
+        case .ended:
+            offsetViewY = topConstraint.constant - popupOffset
+            if shouldReturn {
+                switch currentPosition {
+                case .top:
+                    offsetViewY = -popupOffset
+                case .middle:
+                    offsetViewY = 0
+                }
+                animateTransitionIfNeeded(to: self.currentDirection, duration: 1.0)
+                return
+            }
+        default:
+            break
+        }
+
+        let offsetY = recognizer.translation(in: self).y
+        let currentConstraint = popupOffset + offsetY + offsetViewY
+        print(currentConstraint)
+
+        switch currentPosition {
+        case .middle:
+            currentDirection = .toMiddle
+            shouldReturn = true
+
+            if currentConstraint <= popupOffsetMax {
+                if currentConstraint <= 0.8 * popupOffset {
+                    shouldReturn = false
+                    self.isUserInteractionEnabled = false
+                    currentPosition = .top
+                    offsetViewY = -popupOffset
+                    animateTransitionIfNeeded(to: .toUp, duration: 1.0)
+                } else {
+                    animateStep(toValue: currentConstraint)
+                }
+            }
+        case .top:
+            currentDirection = .toUp
+            shouldReturn = true
+
+            if currentConstraint >= 0 {
+                if currentConstraint >= 0.2 * popupOffset {
+                    shouldReturn = false
+                    self.isUserInteractionEnabled = false
+                    currentPosition = .middle
+                    offsetViewY = 0
+                    animateTransitionIfNeeded(to: .toMiddle, duration: 1.0)
+                } else {
+                    animateStep(toValue: currentConstraint)
+                }
+            }
+        }
     }
 }
