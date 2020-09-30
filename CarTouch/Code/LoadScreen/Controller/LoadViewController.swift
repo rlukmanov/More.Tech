@@ -12,7 +12,7 @@ class LoadViewController: UIViewController {
     
     // MARK: - Properties
     
-    var delayMultiplier = 0.5
+    var delayMultiplier = 0.3
     var characterMultiplier = 0.3
     var delayTransition = 0.5
     
@@ -28,13 +28,11 @@ class LoadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        iconView.rotateDuration *= delayMultiplier
-        iconView.scaleAntTranslationDuration *= delayMultiplier
-        titleView.translataionDuration *= delayMultiplier
-        titleView.characterDelay *= characterMultiplier
-        
         iconView.delegate = titleView
         iconView.delegateHome = self
+        
+        iconView.configurate(withMultiplier: delayMultiplier)
+        titleView.configurate(withMultiplier: delayMultiplier)
     }
     
     override func viewDidAppear(_ animated: Bool) {

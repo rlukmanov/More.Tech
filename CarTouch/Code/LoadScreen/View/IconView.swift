@@ -12,9 +12,9 @@ class IconView: UIView {
     
     // MARK: - Properties
     
-    var rotateDuration = 2.0
-    var scaleAntTranslationDuration = 2.0
-    private var screenWidthMultiplier = UIScreen.main.bounds.width / 414.0
+    private var rotateDuration = 2.0
+    private var scaleAntTranslationDuration = 4.0
+    private var leadingConstraint = NSLayoutConstraint()
     
     @IBOutlet var circleOneImageView: [UIImageView]!
     @IBOutlet var circleTwoImageView: [UIImageView]!
@@ -25,6 +25,13 @@ class IconView: UIView {
     
     var delegate: TitleAnimationProtocol?
     var delegateHome: ToHomeProtocol?
+    
+    // MARK: - Configurate Function
+    
+    func configurate(withMultiplier multiplier: Double) {
+        rotateDuration *= multiplier
+        scaleAntTranslationDuration *= multiplier
+    }
     
     // MARK: - Rotate Animations
     
@@ -69,7 +76,7 @@ class IconView: UIView {
     private func rotateCircleFour() {
         CATransaction.begin()
         CATransaction.setCompletionBlock({
-            self.scaleAndTranslateAnimation()
+            self.translateAndScaleAnimation()
             self.delegate?.startAnimation()
         })
         
@@ -86,26 +93,32 @@ class IconView: UIView {
     
     // MARK: - Scale & Translate Animations
     
-    private func scaleAndTranslateAnimation() {
-        CATransaction.begin()
-        CATransaction.setCompletionBlock({
-            self.delegateHome?.toHomeScreen()
-        })
-        
+    private func scaleAnimation(circleImageView: UIImageView) {
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
         scaleAnimation.toValue = 92.0 / 200.0
         scaleAnimation.duration = scaleAntTranslationDuration
         scaleAnimation.fillMode = CAMediaTimingFillMode.forwards
         scaleAnimation.isRemovedOnCompletion = false
         
-        let translationAnimation = CABasicAnimation(keyPath: "transform.translation.x")
-        translationAnimation.toValue = -115 * screenWidthMultiplier
-        translationAnimation.duration = scaleAntTranslationDuration
-        translationAnimation.fillMode = CAMediaTimingFillMode.forwards
-        translationAnimation.isRemovedOnCompletion = false
+        circleImageView.layer.add(scaleAnimation, forKey: nil)
+    }
+    
+    private func translateAndScaleAnimation() {
+        CATransaction.begin()
+        CATransaction.setCompletionBlock({
+            self.delegateHome?.toHomeScreen()
+        })
         
-        self.layer.add(scaleAnimation, forKey: nil)
-        self.layer.add(translationAnimation, forKey: nil)
+        guard let superview = superview else {
+            return
+        }
+        
+        UIView.animate(withDuration: scaleAntTranslationDuration, delay: 0.0, options: .curveEaseOut, animations: {
+            self.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 32).isActive = true
+            self.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -(32 + 209 + 11)).isActive = true // 32 - offset from left, 209 - width title, 11 - between icon and title
+            superview.layoutIfNeeded()
+        }, completion: nil)
+        
         CATransaction.commit()
     }
 }

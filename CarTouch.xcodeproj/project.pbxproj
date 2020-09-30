@@ -91,8 +91,7 @@
 		E145A876251B5F0900A78C56 /* CarTouch */ = {
 			isa = PBXGroup;
 			children = (
-				E1F857812522028300D33CB9 /* CustomButton */,
-				E145A895251B81EE00A78C56 /* Controllers */,
+				E145A895251B81EE00A78C56 /* Code */,
 				E145A88F251B73DC00A78C56 /* LaunchScreen */,
 				E145A877251B5F0900A78C56 /* AppDelegate.swift */,
 				E145A879251B5F0900A78C56 /* SceneDelegate.swift */,
@@ -110,33 +109,59 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
-		E145A895251B81EE00A78C56 /* Controllers */ = {
+		E145A895251B81EE00A78C56 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				E14A7D52251FB3080047A2A1 /* Code */,
-				E145A898251B822E00A78C56 /* Main.storyboard */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E14A7D52251FB3080047A2A1 /* Code */ = {
-			isa = PBXGroup;
-			children = (
-				E1F857A42523BF0C00D33CB9 /* NavigationViewController */,
+				E1F857812522028300D33CB9 /* CustomButton */,
 				E1302786252151F000681C1B /* Protocols */,
+				E1F857A42523BF0C00D33CB9 /* NavigationViewController */,
 				E1DB2B9B25216A0500A57A31 /* LoadScreen */,
 				E1DB2B8D2521622000A57A31 /* HomePageViewController */,
+				E145A898251B822E00A78C56 /* Main.storyboard */,
 			);
 			path = Code;
 			sourceTree = "<group>";
 		};
-		E1DB2B8D2521622000A57A31 /* HomePageViewController */ = {
+		E1BD5B2C2524B19D002DBDD5 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				E1DB2B8F2521624300A57A31 /* GradientView.swift */,
 				E13403C92521EFBA003C7856 /* BackgroundView.swift */,
 				E1DB2B962521629100A57A31 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1BD5B2D2524B1AA002DBDD5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				E1DB2B932521626C00A57A31 /* HomePageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1BD5B2E2524B1C8002DBDD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E14A7D53251FB33F0047A2A1 /* IconView.swift */,
+				E16218A22520D49000A58078 /* TitleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1BD5B302524B1CE002DBDD5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E16218A82520D9EE00A58078 /* LoadViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1DB2B8D2521622000A57A31 /* HomePageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1BD5B2C2524B19D002DBDD5 /* View */,
+				E1BD5B2D2524B1AA002DBDD5 /* Controller */,
 			);
 			path = HomePageViewController;
 			sourceTree = "<group>";
@@ -144,9 +169,8 @@
 		E1DB2B9B25216A0500A57A31 /* LoadScreen */ = {
 			isa = PBXGroup;
 			children = (
-				E14A7D53251FB33F0047A2A1 /* IconView.swift */,
-				E16218A22520D49000A58078 /* TitleView.swift */,
-				E16218A82520D9EE00A58078 /* LoadViewController.swift */,
+				E1BD5B2E2524B1C8002DBDD5 /* View */,
+				E1BD5B302524B1CE002DBDD5 /* Controller */,
 			);
 			path = LoadScreen;
 			sourceTree = "<group>";
