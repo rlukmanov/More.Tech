@@ -25,8 +25,11 @@ class MainView: UIView {
     
     private let popupOffset: CGFloat = 287
     private let popupOffsetMax: CGFloat = 357
-    private let upOffsetMultiplier = CGFloat(0.7)
-    private let middleOffsetMultiplier = CGFloat(0.3)
+    private let topOffset: CGFloat = 144
+    private let upOffsetMultiplier = CGFloat(0.85)
+    private let middleOffsetMultiplier = CGFloat(0.15)
+    private let velocityEdge = CGFloat(500)
+    private var velocityIs = false
     private var topConstraint = NSLayoutConstraint()
     
     var delegate: NameAnimationProtocol?
@@ -78,16 +81,17 @@ class MainView: UIView {
         recognizer.addTarget(self, action: #selector(popupViewPanned(recognizer:)))
         return recognizer
     }()
-
+    
+    // MARK: - AnimateTransitionIfNeeded Function
+    
     private func animateTransitionIfNeeded(to state: Direction, duration: TimeInterval) {
         guard let superview = superview else {
             return
         }
-
-        let transitionAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1, animations: {
+        let transitionAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio:1, animations: {
             switch state {
             case .toUp:
-                self.topConstraint.constant = 0
+                self.topConstraint.constant = self.topOffset
                 self.delegate?.doAnimation(to: 0.0, withDelay: 0.0, withDuration: 0.7)
             case .toMiddle:
                 self.topConstraint.constant = self.popupOffset
@@ -102,6 +106,8 @@ class MainView: UIView {
         transitionAnimator.startAnimation()
     }
     
+    // MARK: - AnimateStep Function
+    
     private func animateStep(toValue currentConstraint: CGFloat) {
         let transitionAnimator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1, animations: {
             var progressAnimation = currentConstraint / self.popupOffset
@@ -115,6 +121,8 @@ class MainView: UIView {
         transitionAnimator.startAnimation()
     }
     
+    // MARK: - PopupViewPanned Function
+    
     @objc
     private func popupViewPanned(recognizer: UIPanGestureRecognizer) {
         switch recognizer.state {
@@ -123,7 +131,7 @@ class MainView: UIView {
             if shouldReturn {
                 switch currentPosition {
                 case .top:
-                    offsetViewY = -popupOffset
+                    offsetViewY = -popupOffset + topOffset
                 case .middle:
                     offsetViewY = 0
                 }
@@ -133,21 +141,20 @@ class MainView: UIView {
         default:
             break
         }
-
+        
         let offsetY = 2 * recognizer.translation(in: self).y
         let currentConstraint = popupOffset + offsetY + offsetViewY
-
+        print(currentConstraint)
         switch currentPosition {
         case .middle:
             currentDirection = .toMiddle
             shouldReturn = true
-
             if currentConstraint <= popupOffsetMax {
-                if currentConstraint <= upOffsetMultiplier * popupOffset {
+                if currentConstraint <= topOffset + upOffsetMultiplier * (popupOffset - topOffset) {
                     shouldReturn = false
                     self.isUserInteractionEnabled = false
                     currentPosition = .top
-                    offsetViewY = -popupOffset
+                    offsetViewY = -popupOffset + topOffset
                     animateTransitionIfNeeded(to: .toUp, duration: 1.0)
                 } else {
                     animateStep(toValue: currentConstraint)
@@ -156,9 +163,8 @@ class MainView: UIView {
         case .top:
             currentDirection = .toUp
             shouldReturn = true
-
-            if currentConstraint >= 0 {
-                if currentConstraint >= middleOffsetMultiplier * popupOffset {
+            if currentConstraint >= topOffset {
+                if currentConstraint >= topOffset + middleOffsetMultiplier * (popupOffset - topOffset) {
                     shouldReturn = false
                     self.isUserInteractionEnabled = false
                     currentPosition = .middle
