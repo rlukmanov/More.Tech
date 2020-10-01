@@ -158,6 +158,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgV-kH-Xgu" customClass="MainView" customModule="CarTouch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="287" width="414" height="609"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PositionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6dh-Wi-0Co">
+                                                <rect key="frame" x="149.5" y="-6" width="115" height="3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="3" id="gRb-s5-h68"/>
+                                                    <constraint firstAttribute="width" constant="115" id="gjb-R3-qLf"/>
+                                                </constraints>
+                                            </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZB-eh-WDc">
                                                 <rect key="frame" x="16" y="232" width="382" height="55"/>
                                                 <subviews>
@@ -196,7 +203,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="YAG-90-0FB"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9D-dE-JKk">
+                                            <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9D-dE-JKk">
                                                 <rect key="frame" x="123" y="317" width="168" height="32"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <state key="normal" title="Расширенный поиск">
@@ -231,7 +238,7 @@
                                                     <constraint firstAttribute="height" constant="17" id="ngE-lu-hHV"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linePopUp" translatesAutoresizingMaskIntoConstraints="NO" id="rtz-di-VTl">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LinePopUp" translatesAutoresizingMaskIntoConstraints="NO" id="rtz-di-VTl">
                                                 <rect key="frame" x="179" y="14" width="56" height="4"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="INe-oZ-67G"/>
@@ -251,12 +258,14 @@
                                             <constraint firstItem="drI-Gj-4NH" firstAttribute="top" secondItem="xE5-cB-oTM" secondAttribute="bottom" constant="24" id="OQd-fY-AC4"/>
                                             <constraint firstItem="xE5-cB-oTM" firstAttribute="leading" secondItem="DgV-kH-Xgu" secondAttribute="leading" constant="16" id="OoF-Ik-lJA"/>
                                             <constraint firstItem="xE5-cB-oTM" firstAttribute="top" secondItem="DgV-kH-Xgu" secondAttribute="top" constant="93" id="Qfp-my-7oO"/>
+                                            <constraint firstItem="6dh-Wi-0Co" firstAttribute="bottom" secondItem="DgV-kH-Xgu" secondAttribute="top" constant="-3" id="Vul-KU-4ny"/>
                                             <constraint firstItem="IZB-eh-WDc" firstAttribute="leading" secondItem="DgV-kH-Xgu" secondAttribute="leading" constant="16" id="WOL-J4-SuJ"/>
                                             <constraint firstItem="rtz-di-VTl" firstAttribute="top" secondItem="DgV-kH-Xgu" secondAttribute="top" constant="14" id="YZ3-WR-xuI"/>
                                             <constraint firstItem="j9D-dE-JKk" firstAttribute="centerX" secondItem="DgV-kH-Xgu" secondAttribute="centerX" id="dGL-eb-s2D"/>
                                             <constraint firstItem="eSd-qE-953" firstAttribute="trailing" secondItem="DgV-kH-Xgu" secondAttribute="trailing" constant="-16" id="fz5-vl-BeC"/>
                                             <constraint firstItem="IoV-Ct-H9D" firstAttribute="centerY" secondItem="agF-Ww-73p" secondAttribute="centerY" id="g52-Ja-QjR"/>
                                             <constraint firstItem="CH8-fS-sY5" firstAttribute="trailing" secondItem="DgV-kH-Xgu" secondAttribute="trailing" constant="-16" id="inC-Dc-rby"/>
+                                            <constraint firstItem="6dh-Wi-0Co" firstAttribute="centerX" secondItem="DgV-kH-Xgu" secondAttribute="centerX" id="mOG-kq-AQ8"/>
                                             <constraint firstItem="drI-Gj-4NH" firstAttribute="centerY" secondItem="eSd-qE-953" secondAttribute="centerY" id="mjT-1m-KdI"/>
                                             <constraint firstItem="xE5-cB-oTM" firstAttribute="trailing" secondItem="DgV-kH-Xgu" secondAttribute="trailing" constant="-16" id="msm-yh-zCj"/>
                                             <constraint firstItem="IZB-eh-WDc" firstAttribute="trailing" secondItem="DgV-kH-Xgu" secondAttribute="trailing" constant="-16" id="q1R-DD-RSZ"/>
@@ -314,10 +323,11 @@
         <image name="CircleTwo" width="100" height="101"/>
         <image name="GeoIcon" width="75.5" height="94.5"/>
         <image name="Line" width="343" height="1"/>
+        <image name="LinePopUp" width="28" height="2"/>
+        <image name="PositionIcon" width="57.5" height="1.5"/>
         <image name="Rub" width="202.5" height="216"/>
         <image name="Telegram" width="234.5" height="250.5"/>
         <image name="Wallet" width="84.5" height="82"/>
-        <image name="linePopUp" width="28" height="2"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

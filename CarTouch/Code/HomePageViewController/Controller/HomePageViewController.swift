@@ -26,6 +26,8 @@ class HomePageViewController: UIViewController {
         mainView.delegate = backgroundView
         backgroundView.configurate()
         mainView.configurate()
+        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
     override func viewDidAppear(_ animated: Bool) {

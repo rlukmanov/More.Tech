@@ -92,10 +92,10 @@ class MainView: UIView {
             switch state {
             case .toUp:
                 self.topConstraint.constant = self.topOffset
-                self.delegate?.doAnimation(to: 0.0, withDelay: 0.0, withDuration: 0.7)
+                //self.delegate?.doAnimation(to: 0.0, withDelay: 0.0, withDuration: 0.7)
             case .toMiddle:
                 self.topConstraint.constant = self.popupOffset
-                self.delegate?.doAnimation(to: 1.0, withDelay: 0.0, withDuration: 0.7)
+                //self.delegate?.doAnimation(to: 1.0, withDelay: 0.0, withDuration: 0.7)
             }
             superview.layoutIfNeeded()
         })
@@ -110,11 +110,11 @@ class MainView: UIView {
     
     private func animateStep(toValue currentConstraint: CGFloat) {
         let transitionAnimator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1, animations: {
-            var progressAnimation = currentConstraint / self.popupOffset
-            progressAnimation = progressAnimation > 1 ? 1 : progressAnimation
+            //var progressAnimation = currentConstraint / self.popupOffset
+            //progressAnimation = progressAnimation > 1 ? 1 : progressAnimation
             
             self.topConstraint.constant = currentConstraint
-            self.delegate?.doAnimation(to: progressAnimation, withDelay: 0.0, withDuration: 0.1)
+            //self.delegate?.doAnimation(to: progressAnimation, withDelay: 0.0, withDuration: 0.1)
             self.superview!.layoutIfNeeded()
         })
         
@@ -144,7 +144,7 @@ class MainView: UIView {
         
         let offsetY = 2 * recognizer.translation(in: self).y
         let currentConstraint = popupOffset + offsetY + offsetViewY
-        print(currentConstraint)
+        
         switch currentPosition {
         case .middle:
             currentDirection = .toMiddle
