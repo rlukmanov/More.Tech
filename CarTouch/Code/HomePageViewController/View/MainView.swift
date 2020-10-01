@@ -32,7 +32,7 @@ class MainView: UIView {
     private var velocityIs = false
     private var topConstraint = NSLayoutConstraint()
     
-    var delegate: NameAnimationProtocol?
+    var delegate: SetGradientViewTop?
     
     // MARK: - Configurate Function
     
@@ -65,7 +65,11 @@ class MainView: UIView {
             self.layer.cornerRadius = 20
             superview.layoutIfNeeded()
         })
-
+        
+        transitionAnimator.addCompletion({_ in 
+            self.delegate?.setGradientViewTopConstraint()
+        })
+        
         transitionAnimator.startAnimation()
     }
     

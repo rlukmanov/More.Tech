@@ -141,23 +141,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5AJ-hS-cym" customClass="GradientView" customModule="CarTouch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="177" width="414" height="130"/>
+                                        <rect key="frame" x="0.0" y="177" width="414" height="200"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="130" id="5so-0U-7qQ"/>
+                                            <constraint firstAttribute="height" constant="200" id="5so-0U-7qQ"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
                                                 <color key="value" red="0.096390388909999999" green="0.38804620499999998" blue="0.82357615230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                                <color key="value" red="0.0039215686269999999" green="0.22352941179999999" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="value" red="0.0" green="0.12156862745098039" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgV-kH-Xgu" customClass="MainView" customModule="CarTouch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="287" width="414" height="609"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvk-OP-fga">
+                                                <rect key="frame" x="182.5" y="-33.5" width="49" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PositionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6dh-Wi-0Co">
                                                 <rect key="frame" x="149.5" y="-6" width="115" height="3"/>
                                                 <constraints>
@@ -252,6 +258,7 @@
                                             <constraint firstItem="drI-Gj-4NH" firstAttribute="leading" secondItem="DgV-kH-Xgu" secondAttribute="leading" constant="16" id="Ak3-qX-A1u"/>
                                             <constraint firstItem="j9D-dE-JKk" firstAttribute="top" secondItem="ylU-qC-t6L" secondAttribute="bottom" constant="30" id="BET-pR-6Ob"/>
                                             <constraint firstItem="agF-Ww-73p" firstAttribute="trailing" secondItem="DgV-kH-Xgu" secondAttribute="trailing" constant="-16" id="CnN-Yi-7bG"/>
+                                            <constraint firstItem="gvk-OP-fga" firstAttribute="bottom" secondItem="DgV-kH-Xgu" secondAttribute="top" constant="-14" id="Gf4-ut-L6l"/>
                                             <constraint firstItem="IoV-Ct-H9D" firstAttribute="leading" secondItem="DgV-kH-Xgu" secondAttribute="leading" constant="16" id="K9o-fs-9Nh"/>
                                             <constraint firstItem="CH8-fS-sY5" firstAttribute="top" secondItem="xE5-cB-oTM" secondAttribute="bottom" constant="66" id="MTE-G0-0R2"/>
                                             <constraint firstItem="IZB-eh-WDc" firstAttribute="top" secondItem="DgV-kH-Xgu" secondAttribute="top" constant="232" id="Me2-4M-pUf"/>
@@ -261,6 +268,7 @@
                                             <constraint firstItem="6dh-Wi-0Co" firstAttribute="bottom" secondItem="DgV-kH-Xgu" secondAttribute="top" constant="-3" id="Vul-KU-4ny"/>
                                             <constraint firstItem="IZB-eh-WDc" firstAttribute="leading" secondItem="DgV-kH-Xgu" secondAttribute="leading" constant="16" id="WOL-J4-SuJ"/>
                                             <constraint firstItem="rtz-di-VTl" firstAttribute="top" secondItem="DgV-kH-Xgu" secondAttribute="top" constant="14" id="YZ3-WR-xuI"/>
+                                            <constraint firstItem="gvk-OP-fga" firstAttribute="centerX" secondItem="DgV-kH-Xgu" secondAttribute="centerX" id="Z51-B7-i0G"/>
                                             <constraint firstItem="j9D-dE-JKk" firstAttribute="centerX" secondItem="DgV-kH-Xgu" secondAttribute="centerX" id="dGL-eb-s2D"/>
                                             <constraint firstItem="eSd-qE-953" firstAttribute="trailing" secondItem="DgV-kH-Xgu" secondAttribute="trailing" constant="-16" id="fz5-vl-BeC"/>
                                             <constraint firstItem="IoV-Ct-H9D" firstAttribute="centerY" secondItem="agF-Ww-73p" secondAttribute="centerY" id="g52-Ja-QjR"/>
@@ -290,9 +298,10 @@
                                     <constraint firstItem="DgV-kH-Xgu" firstAttribute="bottom" secondItem="hbw-Zx-cef" secondAttribute="bottom" id="Zdt-l6-2xc"/>
                                     <constraint firstItem="5AJ-hS-cym" firstAttribute="leading" secondItem="hbw-Zx-cef" secondAttribute="leading" id="f4D-nV-Eet"/>
                                     <constraint firstItem="5AJ-hS-cym" firstAttribute="trailing" secondItem="hbw-Zx-cef" secondAttribute="trailing" id="g0T-nV-oDB"/>
-                                    <constraint firstItem="5AJ-hS-cym" firstAttribute="bottom" secondItem="DgV-kH-Xgu" secondAttribute="top" constant="20" id="iH1-da-FE6"/>
+                                    <constraint firstItem="5AJ-hS-cym" firstAttribute="bottom" secondItem="DgV-kH-Xgu" secondAttribute="top" priority="250" constant="90" id="iH1-da-FE6"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="gradientView" destination="5AJ-hS-cym" id="Ymy-9g-3dc"/>
                                     <outlet property="titleLabel" destination="Y60-gS-fWj" id="aHN-fM-qjq"/>
                                 </connections>
                             </view>

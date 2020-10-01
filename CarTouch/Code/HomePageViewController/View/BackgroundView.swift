@@ -12,8 +12,10 @@ class BackgroundView: UIView {
     
     // MARK: - Properties
     
-    @IBOutlet var titleLabel: UILabel!
     var durationAppear = 1.0
+    
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var gradientView: GradientView!
     
     // MARK: - Configurate Function
     
@@ -28,14 +30,18 @@ class BackgroundView: UIView {
     }
 }
 
-// MARK: - NameAnimationProtocol
+// MARK: - NameAnimationProtocol & SetGradientViewTop
 
-extension BackgroundView: NameAnimationProtocol {
+extension BackgroundView: NameAnimationProtocol & SetGradientViewTop {
     
     func doAnimation(to valueAlpha: CGFloat, withDelay delay: TimeInterval, withDuration duration: TimeInterval) {
         UIView.animate(withDuration: duration, delay: delay, options: .curveEaseIn, animations: {
             self.titleLabel.alpha = valueAlpha
         }, completion: nil)
+    }
+    
+    func setGradientViewTopConstraint() {
+        self.gradientView.topAnchor.constraint(equalTo: self.topAnchor, constant: 177).isActive = true
     }
 }
 

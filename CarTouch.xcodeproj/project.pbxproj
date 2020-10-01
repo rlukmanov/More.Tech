@@ -21,6 +21,7 @@
 		E16218A62520D7DF00A58078 /* TitleAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16218A52520D7DF00A58078 /* TitleAnimationProtocol.swift */; };
 		E16218A92520D9EE00A58078 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16218A82520D9EE00A58078 /* LoadViewController.swift */; };
 		E18CD3432521714800841536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18CD3422521714800841536 /* LaunchScreen.storyboard */; };
+		E1D2767F2525676500702A27 /* SetGradientViewTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2767E2525676500702A27 /* SetGradientViewTop.swift */; };
 		E1DB2B902521624300A57A31 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB2B8F2521624300A57A31 /* GradientView.swift */; };
 		E1DB2B942521626C00A57A31 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB2B932521626C00A57A31 /* HomePageViewController.swift */; };
 		E1DB2B972521629100A57A31 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB2B962521629100A57A31 /* MainView.swift */; };
@@ -44,6 +45,7 @@
 		E16218A52520D7DF00A58078 /* TitleAnimationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAnimationProtocol.swift; sourceTree = "<group>"; };
 		E16218A82520D9EE00A58078 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 		E18CD3422521714800841536 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E1D2767E2525676500702A27 /* SetGradientViewTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGradientViewTop.swift; sourceTree = "<group>"; };
 		E1DB2B8F2521624300A57A31 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		E1DB2B932521626C00A57A31 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		E1DB2B962521629100A57A31 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				E13027892521528500681C1B /* ToHomeProtocol.swift */,
 				E16218A52520D7DF00A58078 /* TitleAnimationProtocol.swift */,
 				E1312EBC2523C7530004A014 /* NameAnimationProtocol.swift */,
+				E1D2767E2525676500702A27 /* SetGradientViewTop.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				E16218A62520D7DF00A58078 /* TitleAnimationProtocol.swift in Sources */,
 				E1DB2B942521626C00A57A31 /* HomePageViewController.swift in Sources */,
 				E1312EBD2523C7530004A014 /* NameAnimationProtocol.swift in Sources */,
+				E1D2767F2525676500702A27 /* SetGradientViewTop.swift in Sources */,
 				E16218A32520D49000A58078 /* TitleView.swift in Sources */,
 				E145A882251B5F0900A78C56 /* CarTouch.xcdatamodeld in Sources */,
 				E145A87A251B5F0900A78C56 /* SceneDelegate.swift in Sources */,
