@@ -10,6 +10,10 @@ import UIKit
 
 class HomeScrollView: UIScrollView {
     
+    // MARK: - Property
+    
+    var delegateChangeTitle: ChangeCurrentTitle?
+    
     // MARK: - Init
     
     override init(frame: CGRect) {
@@ -28,10 +32,17 @@ class HomeScrollView: UIScrollView {
 extension HomeScrollView: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y != 0 {
+        let offsetX = scrollView.contentOffset.x
+        let offsetY = scrollView.contentOffset.y
+        
+        if offsetY != 0 {
             scrollView.contentOffset.y = 0
         }
         
-        print(scrollView.contentOffset.x)
+        if offsetX == 0 {
+            delegateChangeTitle?.changeSearchLabel()
+        } else if offsetX == UIScreen.main.bounds.width {
+            delegateChangeTitle?.changeHistoryLabel()
+        }
     }
 }

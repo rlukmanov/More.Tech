@@ -16,6 +16,8 @@ class HomeBackgroundView: UIView {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var gradientView: HomeGradientView!
+    @IBOutlet weak var searchLabel: UILabel!
+    @IBOutlet weak var historyLabel: UILabel!
     
     // MARK: - Init
     
@@ -32,6 +34,7 @@ class HomeBackgroundView: UIView {
     
     func configurate() {
         titleLabel.alpha = 0
+        historyLabel.alpha = 0.5
     }
     
     // MARK: - AppearTitleAnimation
@@ -56,19 +59,34 @@ extension HomeBackgroundView: NameAnimationProtocol & SetGradientViewTop {
     }
 }
 
+// MARK: - ChangeCurrentTitle
+
+extension HomeBackgroundView: ChangeCurrentTitle {
+    
+    func changeHistoryLabel() {
+        searchLabel.fadeOut(toAlpha: 0.5, withDuration: 0.3)
+        historyLabel.fadeIn(toAlpha: 1.0, withDuration: 0.3)
+    }
+    
+    func changeSearchLabel() {
+        historyLabel.fadeOut(toAlpha: 0.5, withDuration: 0.3)
+        searchLabel.fadeIn(toAlpha: 1.0, withDuration: 0.3)
+    }
+}
+
 // MARK: - UILabel Fade Animation
 
 extension UILabel {
     
-    func fadeIn(withDuration duration: TimeInterval = 1.0) {
+    func fadeIn(toAlpha alpha: CGFloat = 1.0, withDuration duration: TimeInterval = 1.0) {
         UIView.animate(withDuration: duration, animations: {
-            self.alpha = 1.0
+            self.alpha = alpha
         })
     }
 
-    func fadeOut(withDuration duration: TimeInterval = 1.0) {
+    func fadeOut(toAlpha alpha: CGFloat = 0.0, withDuration duration: TimeInterval = 1.0) {
         UIView.animate(withDuration: duration, animations: {
-            self.alpha = 0.0
+            self.alpha = alpha
         })
     }
 }

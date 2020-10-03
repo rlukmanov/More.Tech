@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var backgroundView: HomeBackgroundView!
     @IBOutlet weak var mainView: MainView!
+    @IBOutlet weak var scrollView: HomeScrollView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -27,6 +28,7 @@ class HomeViewController: UIViewController {
         mainView.delegate = backgroundView
         mainView.configurate()
         backgroundView.configurate()
+        scrollView.delegateChangeTitle = backgroundView
         
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
