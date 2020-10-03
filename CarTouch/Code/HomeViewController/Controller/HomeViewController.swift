@@ -1,17 +1,18 @@
 //
-//  HomePageViewController.swift
-//  HomePageCT
+//  HomeViewController.swift
+//  CarTouch
 //
-//  Created by Ruslan Lukmanov on 27.09.2020.
+//  Created by Ruslan Lukmanov on 03.10.2020.
+//  Copyright © 2020 GangBank. All rights reserved.
 //
 
 import UIKit
 
-class HomePageViewController: UIViewController {
-    
+class HomeViewController: UIViewController {
+
     // MARK: - Properties
     
-    @IBOutlet weak var backgroundView: BackgroundView!
+    @IBOutlet weak var backgroundView: HomeBackgroundView!
     @IBOutlet weak var mainView: MainView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -24,8 +25,8 @@ class HomePageViewController: UIViewController {
         super.viewDidLoad()
         
         mainView.delegate = backgroundView
-        backgroundView.configurate()
         mainView.configurate()
+        backgroundView.configurate()
         
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }

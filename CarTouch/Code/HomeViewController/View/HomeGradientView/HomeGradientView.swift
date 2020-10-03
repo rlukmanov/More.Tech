@@ -9,7 +9,7 @@
 import UIKit
 @IBDesignable
 
-class GradientView: UIView {
+class HomeGradientView: UIView {
     
     // MARK: - Inspectable Properties
     

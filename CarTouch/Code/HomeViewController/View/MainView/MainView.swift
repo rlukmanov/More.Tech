@@ -1,6 +1,6 @@
 //
 //  MainView.swift
-//  HomePageCT
+//  CarTouch
 //
 //  Created by Ruslan Lukmanov on 27.09.2020.
 //
@@ -26,13 +26,24 @@ class MainView: UIView {
     private let popupOffset: CGFloat = 287
     private let popupOffsetMax: CGFloat = 357
     private let topOffset: CGFloat = 144
-    private let upOffsetMultiplier = CGFloat(0.85)
-    private let middleOffsetMultiplier = CGFloat(0.15)
+    private let upOffsetMultiplier = CGFloat(0.7)
+    private let middleOffsetMultiplier = CGFloat(0.3)
     private let velocityEdge = CGFloat(500)
     private var velocityIs = false
     private var topConstraint = NSLayoutConstraint()
     
     var delegate: SetGradientViewTop?
+    
+    // MARK: - Init
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+    }
     
     // MARK: - Configurate Function
     
@@ -46,9 +57,6 @@ class MainView: UIView {
             return
         }
         
-        self.leadingAnchor.constraint(equalTo: superview.leadingAnchor).isActive = true
-        self.trailingAnchor.constraint(equalTo: superview.trailingAnchor).isActive = true
-        self.bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
         topConstraint = self.topAnchor.constraint(equalTo: superview.topAnchor, constant: UIScreen.main.bounds.height)
         topConstraint.isActive = true
     }
@@ -59,7 +67,7 @@ class MainView: UIView {
         guard let superview = superview else {
             return
         }
-
+        
         let transitionAnimator = UIViewPropertyAnimator(duration: 1, dampingRatio: 1, animations: {
             self.topConstraint.constant = self.popupOffset
             self.layer.cornerRadius = 20

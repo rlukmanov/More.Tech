@@ -8,22 +8,33 @@
 
 import UIKit
 
-class BackgroundView: UIView {
+class HomeBackgroundView: UIView {
     
     // MARK: - Properties
     
     var durationAppear = 1.0
     
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var gradientView: GradientView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var gradientView: HomeGradientView!
     
-    // MARK: - Configurate Function
+    // MARK: - Init
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+    }
+    
+    // MARK: - Configurate
     
     func configurate() {
         titleLabel.alpha = 0
     }
     
-    // MARK: - appearTitleAnimation
+    // MARK: - AppearTitleAnimation
     
     func appearTitleAnimation() {
         titleLabel.fadeIn(withDuration: durationAppear)
@@ -32,7 +43,7 @@ class BackgroundView: UIView {
 
 // MARK: - NameAnimationProtocol & SetGradientViewTop
 
-extension BackgroundView: NameAnimationProtocol & SetGradientViewTop {
+extension HomeBackgroundView: NameAnimationProtocol & SetGradientViewTop {
     
     func doAnimation(to valueAlpha: CGFloat, withDelay delay: TimeInterval, withDuration duration: TimeInterval) {
         UIView.animate(withDuration: duration, delay: delay, options: .curveEaseIn, animations: {

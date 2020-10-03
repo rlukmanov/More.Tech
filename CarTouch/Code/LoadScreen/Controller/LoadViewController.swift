@@ -48,7 +48,9 @@ extension LoadViewController: ToHomeProtocol {
     
     func toHomeScreen() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyboard.instantiateViewController(identifier: "HomePageVC") as! HomePageViewController
+       // let newViewController = storyboard.instantiateViewController(identifier: "HomePageVC") as! HomePageViewController HomePageVCNew
+        
+        let newViewController = storyboard.instantiateViewController(identifier: "HomePageVCNew") as! HomeViewController
         
         let transition = CATransition()
         transition.duration = delayTransition
