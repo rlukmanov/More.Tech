@@ -56,6 +56,7 @@ class TitleView: UIView {
         
         UIViewPropertyAnimator.runningPropertyAnimator(withDuration: translataionDuration, delay: 0.0, options: .curveEaseOut, animations: {
             self.trailingConstraint.constant = -32
+            
             superview.layoutIfNeeded()
         }, completion: nil)
         

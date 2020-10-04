@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
         mainView.delegate = backgroundView
         mainView.configurate()
         backgroundView.configurate()
-        scrollView.delegateChangeTitle = backgroundView
+        scrollView.delegateChangeView = backgroundView
         
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }

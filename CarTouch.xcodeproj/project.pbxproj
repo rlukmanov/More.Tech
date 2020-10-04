@@ -32,6 +32,7 @@
 		E1F0604E252923EE007CB4A4 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0604D252923EE007CB4A4 /* HistoryView.swift */; };
 		E1F0605225292460007CB4A4 /* HistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1F0605125292460007CB4A4 /* HistoryView.xib */; };
 		E1F060562529311B007CB4A4 /* ChangeCurrentTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F060552529311B007CB4A4 /* ChangeCurrentTitle.swift */; };
+		E1F060592529376A007CB4A4 /* PositionIconProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F060582529376A007CB4A4 /* PositionIconProtocol.swift */; };
 		E1F8577D2521FE2100D33CB9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F8577C2521FE2100D33CB9 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		E1F0604D252923EE007CB4A4 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		E1F0605125292460007CB4A4 /* HistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryView.xib; sourceTree = "<group>"; };
 		E1F060552529311B007CB4A4 /* ChangeCurrentTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCurrentTitle.swift; sourceTree = "<group>"; };
+		E1F060582529376A007CB4A4 /* PositionIconProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionIconProtocol.swift; sourceTree = "<group>"; };
 		E1F8577C2521FE2100D33CB9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 				E1312EBC2523C7530004A014 /* NameAnimationProtocol.swift */,
 				E1D2767E2525676500702A27 /* SetGradientViewTop.swift */,
 				E1F060552529311B007CB4A4 /* ChangeCurrentTitle.swift */,
+				E1F060582529376A007CB4A4 /* PositionIconProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D276BB2528FAF500702A27 /* HomeGradientView.swift in Sources */,
+				E1F060592529376A007CB4A4 /* PositionIconProtocol.swift in Sources */,
 				E16218A92520D9EE00A58078 /* LoadViewController.swift in Sources */,
 				E13403C725217DF0003C7856 /* NavigationViewController.swift in Sources */,
 				E1D276A52528BD9B00702A27 /* HomeViewController.swift in Sources */,

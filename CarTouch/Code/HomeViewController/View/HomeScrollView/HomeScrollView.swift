@@ -12,7 +12,7 @@ class HomeScrollView: UIScrollView {
     
     // MARK: - Property
     
-    var delegateChangeTitle: ChangeCurrentTitle?
+    var delegateChangeView: (ChangeCurrentTitle & PositionIconProtocol)?
     
     // MARK: - Init
     
@@ -40,9 +40,13 @@ extension HomeScrollView: UIScrollViewDelegate {
         }
         
         if offsetX == 0 {
-            delegateChangeTitle?.changeSearchLabel()
+            delegateChangeView?.changeSearchLabel()
         } else if offsetX == UIScreen.main.bounds.width {
-            delegateChangeTitle?.changeHistoryLabel()
+            delegateChangeView?.changeHistoryLabel()
+        }
+        
+        if offsetX >= 0, offsetX <= UIScreen.main.bounds.width {
+            delegateChangeView?.changePositionIcon(offset: offsetX / 2)
         }
     }
 }

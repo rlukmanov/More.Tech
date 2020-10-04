@@ -18,6 +18,9 @@ class HomeBackgroundView: UIView {
     @IBOutlet weak var gradientView: HomeGradientView!
     @IBOutlet weak var searchLabel: UILabel!
     @IBOutlet weak var historyLabel: UILabel!
+    @IBOutlet weak var positionIcon: UIImageView!
+    
+    var positionIconCenterXAnchor = NSLayoutConstraint()
     
     // MARK: - Init
     
@@ -33,8 +36,12 @@ class HomeBackgroundView: UIView {
     // MARK: - Configurate
     
     func configurate() {
-        titleLabel.alpha = 0
+        titleLabel.alpha = 0.0
         historyLabel.alpha = 0.5
+        
+        positionIconCenterXAnchor = NSLayoutConstraint(item: positionIcon!, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 0.5, constant: 0)
+
+        positionIconCenterXAnchor.isActive = true
     }
     
     // MARK: - AppearTitleAnimation
@@ -56,6 +63,18 @@ extension HomeBackgroundView: NameAnimationProtocol & SetGradientViewTop {
     
     func setGradientViewTopConstraint() {
         self.gradientView.topAnchor.constraint(equalTo: self.topAnchor, constant: 177).isActive = true
+    }
+}
+
+// MARK: - ChangePositionIcon
+
+extension HomeBackgroundView: PositionIconProtocol {
+    
+    func changePositionIcon(offset: CGFloat) {
+        UIView.animate(withDuration: 0.1, animations: {
+            self.positionIconCenterXAnchor.constant = offset
+            self.layoutIfNeeded()
+        })
     }
 }
 

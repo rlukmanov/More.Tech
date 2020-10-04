@@ -152,6 +152,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PositionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qhe-hL-K7d">
+                                <rect key="frame" x="46" y="280" width="115" height="3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="U4J-wb-JeM"/>
+                                    <constraint firstAttribute="height" constant="3" id="kOH-mH-aBt"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAe-tb-XZr" customClass="MainView" customModule="CarTouch" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="287" width="414" height="609"/>
                                 <subviews>
@@ -213,13 +220,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PositionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qhe-hL-K7d">
-                                <rect key="frame" x="46" y="280" width="115" height="3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="115" id="U4J-wb-JeM"/>
-                                    <constraint firstAttribute="height" constant="3" id="kOH-mH-aBt"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="История" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwM-2H-fvg">
                                 <rect key="frame" x="277.5" y="253" width="66" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
@@ -236,25 +236,26 @@
                         <viewLayoutGuide key="safeArea" id="so3-cM-A2Q"/>
                         <color key="backgroundColor" red="0.1017900333" green="0.37777084109999998" blue="0.8549514413" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="qhe-hL-K7d" firstAttribute="bottom" secondItem="bAe-tb-XZr" secondAttribute="top" constant="-4" id="09Q-As-zB2"/>
                             <constraint firstItem="BwM-2H-fvg" firstAttribute="bottom" secondItem="bAe-tb-XZr" secondAttribute="top" constant="-14" id="3bY-N9-YKR"/>
+                            <constraint firstItem="qhe-hL-K7d" firstAttribute="bottom" secondItem="bAe-tb-XZr" secondAttribute="top" constant="-4" id="E4c-BA-KkG"/>
                             <constraint firstItem="G4c-5v-uXS" firstAttribute="bottom" secondItem="bAe-tb-XZr" secondAttribute="top" constant="-14" id="EFd-fO-yVt"/>
                             <constraint firstItem="bAe-tb-XZr" firstAttribute="bottom" secondItem="UPj-ZD-QhX" secondAttribute="bottom" id="Ghd-ay-nQA"/>
                             <constraint firstItem="bAe-tb-XZr" firstAttribute="top" secondItem="UPj-ZD-QhX" secondAttribute="top" priority="250" constant="287" id="KJZ-mV-xUr"/>
                             <constraint firstItem="Ool-3K-Xcy" firstAttribute="bottom" secondItem="bAe-tb-XZr" secondAttribute="top" priority="250" constant="90" id="KYw-La-Yec"/>
                             <constraint firstItem="Ool-3K-Xcy" firstAttribute="leading" secondItem="UPj-ZD-QhX" secondAttribute="leading" id="Qyn-TJ-iLa"/>
-                            <constraint firstItem="qhe-hL-K7d" firstAttribute="centerX" secondItem="UPj-ZD-QhX" secondAttribute="centerX" multiplier="0.5" id="Rrk-VI-fle"/>
                             <constraint firstItem="Ool-3K-Xcy" firstAttribute="trailing" secondItem="UPj-ZD-QhX" secondAttribute="trailing" id="SJg-wq-MXl"/>
                             <constraint firstItem="o2q-Hs-TXZ" firstAttribute="leading" secondItem="UPj-ZD-QhX" secondAttribute="leading" constant="16" id="XdI-gt-Zxa"/>
                             <constraint firstItem="BwM-2H-fvg" firstAttribute="centerX" secondItem="UPj-ZD-QhX" secondAttribute="centerX" multiplier="1.5" id="YoB-On-Y6E"/>
                             <constraint firstItem="bAe-tb-XZr" firstAttribute="leading" secondItem="UPj-ZD-QhX" secondAttribute="leading" id="cNF-BP-qSE"/>
                             <constraint firstItem="G4c-5v-uXS" firstAttribute="centerX" secondItem="UPj-ZD-QhX" secondAttribute="centerX" multiplier="0.5" id="eoZ-q5-PCU"/>
+                            <constraint firstItem="qhe-hL-K7d" firstAttribute="centerX" secondItem="UPj-ZD-QhX" secondAttribute="centerX" multiplier="0.5" priority="250" id="k8t-zq-VgT"/>
                             <constraint firstItem="o2q-Hs-TXZ" firstAttribute="top" secondItem="UPj-ZD-QhX" secondAttribute="top" constant="52" id="oM7-cl-ouf"/>
                             <constraint firstItem="bAe-tb-XZr" firstAttribute="trailing" secondItem="UPj-ZD-QhX" secondAttribute="trailing" id="xJu-G1-WkN"/>
                         </constraints>
                         <connections>
                             <outlet property="gradientView" destination="Ool-3K-Xcy" id="1dT-ve-Idi"/>
                             <outlet property="historyLabel" destination="BwM-2H-fvg" id="DkK-1w-YPQ"/>
+                            <outlet property="positionIcon" destination="qhe-hL-K7d" id="nWi-a0-khh"/>
                             <outlet property="searchLabel" destination="G4c-5v-uXS" id="pGE-ik-TNg"/>
                             <outlet property="titleLabel" destination="o2q-Hs-TXZ" id="AgM-nc-hJn"/>
                         </connections>
