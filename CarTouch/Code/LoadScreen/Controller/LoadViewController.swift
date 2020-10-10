@@ -50,6 +50,8 @@ extension LoadViewController: ToHomeProtocol {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyboard.instantiateViewController(identifier: "HomePageVCNew") as! HomeViewController
         
+        //let newViewController = storyboard.instantiateViewController(identifier: "GalleryLoadViewController") as! GalleryLoadViewController
+        
         let transition = CATransition()
         transition.duration = delayTransition
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
