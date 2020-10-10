@@ -14,6 +14,7 @@ import UIKit
     
     var view: UIView!
     var nibName: String = "SearchView"
+    var delegateToGalleryLoad: ToGalleryLoadProtocol?
     
     // MARK: - Init
     
@@ -48,5 +49,11 @@ import UIKit
         view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
         
         addSubview(view)
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func toGalleryLoad(_ sender: Any) {
+        delegateToGalleryLoad?.toGalleryLoad()
     }
 }

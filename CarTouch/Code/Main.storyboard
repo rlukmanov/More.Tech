@@ -583,6 +583,7 @@
                         <outlet property="backgroundView" destination="UPj-ZD-QhX" id="Yi3-5G-QHT"/>
                         <outlet property="mainView" destination="bAe-tb-XZr" id="gXd-jN-zPX"/>
                         <outlet property="scrollView" destination="02K-ad-0ac" id="hhg-Ry-vR4"/>
+                        <outlet property="searchView" destination="J3r-HP-mlX" id="6qM-dP-Mzi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nda-5T-RmQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

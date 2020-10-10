@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var backgroundView: HomeBackgroundView!
     @IBOutlet weak var mainView: MainView!
     @IBOutlet weak var scrollView: HomeScrollView!
+    @IBOutlet weak var searchView: SearchView!
+    
     let durationAppear = 1.0
     var leadingAnchor = NSLayoutConstraint()
     
@@ -37,7 +39,9 @@ class HomeViewController: UIViewController {
         mainView.configurate()
         backgroundView.configurate()
         scrollView.delegateChangeView = backgroundView
+        
         galleryCollectionView.delegateToPrivateCab = self
+        searchView.delegateToGalleryLoad = self
         
         //self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
@@ -76,7 +80,17 @@ extension HomeViewController: ToPrivateCabProtocol {
     func toPrivateCab() {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PersonalCabViewController") as! PersonalCabViewController
-        //self.present(nextViewController, animated:true, completion:nil)
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
+}
+
+// MARK:- ToGalleryLoadProtocol
+
+extension HomeViewController: ToGalleryLoadProtocol {
+    
+    func toGalleryLoad() {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "GalleryLoadViewController") as! GalleryLoadViewController
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }

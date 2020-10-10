@@ -107,6 +107,9 @@
                     <state key="normal" title="Поиск по фотографии из галереи">
                         <color key="titleColor" red="0.2274509804" green="0.51372549020000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="toGalleryLoad:" destination="-1" eventType="touchUpInside" id="TeP-zB-3oJ"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Название производителя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l8p-3w-TSF">
                     <rect key="frame" x="57" y="81" width="301" height="18.5"/>
