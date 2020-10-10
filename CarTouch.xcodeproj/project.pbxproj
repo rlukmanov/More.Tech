@@ -10,6 +10,9 @@
 		E10BCFE02531DBF3002924D1 /* ToPrivateCabProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10BCFDF2531DBF3002924D1 /* ToPrivateCabProtocol.swift */; };
 		E10BCFE42531E1C6002924D1 /* GalleryLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10BCFE32531E1C6002924D1 /* GalleryLoadViewController.swift */; };
 		E10BCFE8253200B4002924D1 /* ToGalleryLoadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10BCFE7253200B4002924D1 /* ToGalleryLoadProtocol.swift */; };
+		E10BCFEC25322B73002924D1 /* ResultSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10BCFEB25322B72002924D1 /* ResultSearchViewController.swift */; };
+		E10BCFF425323402002924D1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10BCFF225323402002924D1 /* ResultTableViewCell.swift */; };
+		E10BCFF525323402002924D1 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10BCFF325323402002924D1 /* ResultTableViewCell.xib */; };
 		E130278A2521528500681C1B /* ToHomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13027892521528500681C1B /* ToHomeProtocol.swift */; };
 		E1312EBD2523C7530004A014 /* NameAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1312EBC2523C7530004A014 /* NameAnimationProtocol.swift */; };
 		E13403C725217DF0003C7856 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13403C625217DF0003C7856 /* NavigationViewController.swift */; };
@@ -49,6 +52,9 @@
 		E10BCFDF2531DBF3002924D1 /* ToPrivateCabProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToPrivateCabProtocol.swift; sourceTree = "<group>"; };
 		E10BCFE32531E1C6002924D1 /* GalleryLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryLoadViewController.swift; sourceTree = "<group>"; };
 		E10BCFE7253200B4002924D1 /* ToGalleryLoadProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToGalleryLoadProtocol.swift; sourceTree = "<group>"; };
+		E10BCFEB25322B72002924D1 /* ResultSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchViewController.swift; sourceTree = "<group>"; };
+		E10BCFF225323402002924D1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		E10BCFF325323402002924D1 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		E13027892521528500681C1B /* ToHomeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToHomeProtocol.swift; sourceTree = "<group>"; };
 		E1312EBC2523C7530004A014 /* NameAnimationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAnimationProtocol.swift; sourceTree = "<group>"; };
 		E13403C625217DF0003C7856 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,24 @@
 				E10BCFE32531E1C6002924D1 /* GalleryLoadViewController.swift */,
 			);
 			path = GalleryLoadViewController;
+			sourceTree = "<group>";
+		};
+		E10BCFEA25322B42002924D1 /* ResultSearchController */ = {
+			isa = PBXGroup;
+			children = (
+				E10BCFF1253233DC002924D1 /* ResultTableViewCell */,
+				E10BCFEB25322B72002924D1 /* ResultSearchViewController.swift */,
+			);
+			path = ResultSearchController;
+			sourceTree = "<group>";
+		};
+		E10BCFF1253233DC002924D1 /* ResultTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E10BCFF225323402002924D1 /* ResultTableViewCell.swift */,
+				E10BCFF325323402002924D1 /* ResultTableViewCell.xib */,
+			);
+			path = ResultTableViewCell;
 			sourceTree = "<group>";
 		};
 		E1302786252151F000681C1B /* Protocols */ = {
@@ -168,6 +192,7 @@
 				E1F857A42523BF0C00D33CB9 /* NavigationViewController */,
 				E1CBF0E125317014006F8A27 /* PersonalCabViewController */,
 				E1DB2B9B25216A0500A57A31 /* LoadScreen */,
+				E10BCFEA25322B42002924D1 /* ResultSearchController */,
 				E10BCFE22531E170002924D1 /* GalleryLoadViewController */,
 				E1D276A72528D8E600702A27 /* HomeViewController */,
 				E145A898251B822E00A78C56 /* Main.storyboard */,
@@ -409,6 +434,7 @@
 			files = (
 				E1A84F8625290ACC0051FF15 /* SearchView.xib in Resources */,
 				E145A899251B822E00A78C56 /* Main.storyboard in Resources */,
+				E10BCFF525323402002924D1 /* ResultTableViewCell.xib in Resources */,
 				E1F0605225292460007CB4A4 /* HistoryView.xib in Resources */,
 				E18CD3432521714800841536 /* LaunchScreen.storyboard in Resources */,
 				E145A884251B5F0D00A78C56 /* Assets.xcassets in Resources */,
@@ -444,6 +470,7 @@
 				E1D2767F2525676500702A27 /* SetGradientViewTop.swift in Sources */,
 				E16218A32520D49000A58078 /* TitleView.swift in Sources */,
 				E1D276B22528E38F00702A27 /* HomeScrollView.swift in Sources */,
+				E10BCFF425323402002924D1 /* ResultTableViewCell.swift in Sources */,
 				E1CBF0DE25316439006F8A27 /* GalleryCellModel.swift in Sources */,
 				E145A882251B5F0900A78C56 /* CarTouch.xcdatamodeld in Sources */,
 				E1F0604E252923EE007CB4A4 /* HistoryView.swift in Sources */,
@@ -452,6 +479,7 @@
 				E10BCFE42531E1C6002924D1 /* GalleryLoadViewController.swift in Sources */,
 				E145A87A251B5F0900A78C56 /* SceneDelegate.swift in Sources */,
 				E10BCFE8253200B4002924D1 /* ToGalleryLoadProtocol.swift in Sources */,
+				E10BCFEC25322B73002924D1 /* ResultSearchViewController.swift in Sources */,
 				E1F8577D2521FE2100D33CB9 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
