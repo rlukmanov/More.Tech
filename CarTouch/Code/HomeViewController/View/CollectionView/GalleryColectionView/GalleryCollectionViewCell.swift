@@ -69,7 +69,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
         
         self.layer.cornerRadius = 8
-        self.clipsToBounds = true
+        self.clipsToBounds = false
     }
     
     // MARK: - SetupConstraints
