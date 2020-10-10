@@ -9,5 +9,6 @@
 import Foundation
 
 class BrandModel: Codable {
+    var logo: String?
     var title: String?
 }

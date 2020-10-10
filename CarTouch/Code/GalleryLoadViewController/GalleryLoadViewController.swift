@@ -15,6 +15,7 @@ class GalleryLoadViewController: UIViewController {
     
     let imagePicker = UIImagePickerController()
     let sourceType: UIImagePickerController.SourceType = .savedPhotosAlbum
+    var imageWillFound = UIImage()
     var isFound = false
     
     @IBOutlet weak var imageView: UIImageView!
@@ -44,31 +45,28 @@ class GalleryLoadViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func searchAction(_ sender: Any) {
+        // -------------------------------------------------------------
+        
+        NetworkManager.shared.getData(from: self.imageWillFound, completion: { (carList) in
+            
+            guard let carList = carList else {
+                return
+            }
+            
+            
+//            print(carList.result?.count)
+//            print(carList.result?.first?.brand?.title)
+//            print(carList.result?.first?.title)
+//            print(carList.result?.first?.minPrice)
+        })
+                
+        // -------------------------------------------------------------
+    }
     // MARK: - View Controller Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // -------------------------------------------------------------
-        
-        let image = UIImage(named: "some_photo")!
-
-        AF.upload(
-            multipartFormData: { multipartFormData in
-                multipartFormData.append(image.jpegData(compressionQuality: 0.5)!,withName: "img" , fileName: "file.jpeg", mimeType: "image/jpeg")
-        },
-            to: "https://84.201.184.151:5000/", method: .post , headers: nil)
-            .responseDecodable(of: OfferModel.self) { (response) in
-                guard let carList = response.value else {
-                    return
-                }
-                
-                print(carList.best?.first?.brand?.title)
-                print(carList.best?.first?.title)
-                print(carList.best?.first?.minPrice)
-            }
-        
-        // -------------------------------------------------------------
         
         imagePicker.delegate = self
         defaultSet()
@@ -88,6 +86,7 @@ class GalleryLoadViewController: UIViewController {
     
     private func foundSet(image: UIImage) {
         imageView.image = image
+        imageWillFound = image
         loadButtonTitle.text = ""
         descriptionLabel.text = "Для выбора другой фотографии нажмите на область с текущим фото"
         searchButton.isEnabled = true

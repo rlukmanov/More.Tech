@@ -10,6 +10,7 @@ import Foundation
 
 class CarListModel: Codable {
     var brand: BrandModel?
+    var photo: String?
     var title: String?
     var minPrice: Int?
 }

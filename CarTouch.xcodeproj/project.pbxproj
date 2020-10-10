@@ -29,6 +29,7 @@
 		E16218A92520D9EE00A58078 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16218A82520D9EE00A58078 /* LoadViewController.swift */; };
 		E18890A12532768900A198AE /* CarListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18890A02532768900A198AE /* CarListModel.swift */; };
 		E18890A4253276D000A198AE /* BrandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18890A3253276D000A198AE /* BrandModel.swift */; };
+		E18890A725327BA000A198AE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18890A625327BA000A198AE /* NetworkManager.swift */; };
 		E18CD3432521714800841536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18CD3422521714800841536 /* LaunchScreen.storyboard */; };
 		E1A84F7B2529094D0051FF15 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A84F7A2529094D0051FF15 /* SearchView.swift */; };
 		E1A84F8125290A1F0051FF15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A84F8025290A1F0051FF15 /* ContentView.swift */; };
@@ -77,6 +78,7 @@
 		E16218A82520D9EE00A58078 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 		E18890A02532768900A198AE /* CarListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListModel.swift; sourceTree = "<group>"; };
 		E18890A3253276D000A198AE /* BrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandModel.swift; sourceTree = "<group>"; };
+		E18890A625327BA000A198AE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E18CD3422521714800841536 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1A84F7A2529094D0051FF15 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		E1A84F8025290A1F0051FF15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		E1173C922532544A00131FF0 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				E18890A625327BA000A198AE /* NetworkManager.swift */,
 				E1173C972532555B00131FF0 /* OfferModel */,
 			);
 			path = NetworkManager;
@@ -560,6 +563,7 @@
 				E1A84F8125290A1F0051FF15 /* ContentView.swift in Sources */,
 				E1F060562529311B007CB4A4 /* ChangeCurrentTitle.swift in Sources */,
 				E16218A62520D7DF00A58078 /* TitleAnimationProtocol.swift in Sources */,
+				E18890A725327BA000A198AE /* NetworkManager.swift in Sources */,
 				E1312EBD2523C7530004A014 /* NameAnimationProtocol.swift in Sources */,
 				E1D2767F2525676500702A27 /* SetGradientViewTop.swift in Sources */,
 				E16218A32520D49000A58078 /* TitleView.swift in Sources */,

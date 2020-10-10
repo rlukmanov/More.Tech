@@ -11,4 +11,5 @@ import Foundation
 class OfferModel: Codable {
     var hasBestMatch: Bool?
     var best: [CarListModel]?
+    var result: [CarListModel]?
 }

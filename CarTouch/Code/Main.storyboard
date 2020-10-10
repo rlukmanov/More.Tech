@@ -669,6 +669,9 @@
                                 <state key="normal" title="Найти автомобиль">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchAction:" destination="YxH-D6-4m2" eventType="touchUpInside" id="nFs-FY-XWe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузите фотографию автомобиля" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaQ-wg-p3K">
                                 <rect key="frame" x="78" y="508" width="258" height="17"/>
