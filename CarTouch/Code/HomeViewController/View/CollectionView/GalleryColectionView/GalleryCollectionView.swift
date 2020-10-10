@@ -12,7 +12,7 @@ class GalleryCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
     
     // MARK: - Properties
     
-    let cells = ["One", "Two", "Three"]
+    let cells = GalleryCellModel.cellsNumber
     let maxOffsetScrollView: CGFloat = 144 // 260 - 144 // popupOffset - topOffset
     
     // MARK: - Init
@@ -58,7 +58,15 @@ extension GalleryCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.reuseId, for: indexPath) as! GalleryCollectionViewCell
         
-        //cell.mainImageView.image = UIImage(named: "Wallet")
+        guard let index = indexPath.last else {
+            return cell
+        }
+        
+        cell.titleCellLabel.text = GalleryCellModel.titles[index]
+        cell.titleButtonCellLabel.text = GalleryCellModel.subtitles[index]
+        cell.iconImageView.image = GalleryCellModel.iconCell[index]
+        cell.iconImageView.widthAnchor.constraint(equalToConstant: GalleryCellModel.sizes[index].0).isActive = true
+        cell.iconImageView.heightAnchor.constraint(equalToConstant: GalleryCellModel.sizes[index].1).isActive = true
         
         return cell
     }
