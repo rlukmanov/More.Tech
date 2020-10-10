@@ -589,8 +589,118 @@
             </objects>
             <point key="canvasLocation" x="344.92753623188406" y="-256.47321428571428"/>
         </scene>
+        <!--Gallery Load View Controller-->
+        <scene sceneID="AsL-cT-Lyr">
+            <objects>
+                <viewController storyboardIdentifier="GalleryLoadViewController" id="YxH-D6-4m2" customClass="GalleryLoadViewController" customModule="CarTouch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x7s-FS-B3C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Wb-5h-igN">
+                                <rect key="frame" x="62" y="100" width="290" height="380"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="ZjZ-2F-OvT"/>
+                                    <constraint firstAttribute="height" constant="380" id="r0E-EG-hfx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="Bvp-3p-mu4">
+                                <rect key="frame" x="20" y="52.5" width="14" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="14" id="79S-0M-bRQ"/>
+                                    <constraint firstAttribute="height" constant="24" id="rRw-IW-NLm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузка фотографии" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVq-mS-10t">
+                                <rect key="frame" x="109" y="54" width="196.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJ6-Wb-1va">
+                                <rect key="frame" x="11" y="46.5" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="fNr-Fm-iNQ"/>
+                                    <constraint firstAttribute="width" constant="36" id="oJ6-6e-oNh"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="backAction:" destination="Wy7-qF-Mfd" eventType="touchUpInside" id="7AG-1e-zLu"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add" translatesAutoresizingMaskIntoConstraints="NO" id="wAf-ym-m5h">
+                                <rect key="frame" x="339" y="467" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="TQs-Rq-7LD"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b09-JZ-y0b" customClass="CustomButton" customModule="CarTouch" customModuleProvider="target">
+                                <rect key="frame" x="16" y="580" width="382" height="55"/>
+                                <color key="backgroundColor" red="0.2274509804" green="0.51372549020000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="I4y-Tk-Er6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Найти автомобиль">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузите фотографию автомобиля" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaQ-wg-p3K">
+                                <rect key="frame" x="78" y="520" width="258" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.61960784313725492" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtH-l2-tWU">
+                                <rect key="frame" x="62" y="100" width="290" height="380"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.32889753579999997" green="0.60126817229999996" blue="0.95690745119999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="getImageAction:" destination="YxH-D6-4m2" eventType="touchUpInside" id="cNR-b3-PCw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y51-k9-Gtw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wAf-ym-m5h" firstAttribute="top" secondItem="5Wb-5h-igN" secondAttribute="bottom" constant="-13" id="2FD-5o-PZx"/>
+                            <constraint firstItem="5Wb-5h-igN" firstAttribute="centerX" secondItem="x7s-FS-B3C" secondAttribute="centerX" id="FhI-jz-oLe"/>
+                            <constraint firstItem="JVq-mS-10t" firstAttribute="centerX" secondItem="x7s-FS-B3C" secondAttribute="centerX" id="FwY-xd-W9d"/>
+                            <constraint firstItem="Y51-k9-Gtw" firstAttribute="trailing" secondItem="b09-JZ-y0b" secondAttribute="trailing" constant="16" id="GUo-mI-xm1"/>
+                            <constraint firstItem="5Wb-5h-igN" firstAttribute="top" secondItem="JtH-l2-tWU" secondAttribute="top" id="Id9-2k-pYl"/>
+                            <constraint firstItem="nJ6-Wb-1va" firstAttribute="leading" secondItem="x7s-FS-B3C" secondAttribute="leading" constant="11" id="Jkw-7B-KJf"/>
+                            <constraint firstItem="Bvp-3p-mu4" firstAttribute="leading" secondItem="x7s-FS-B3C" secondAttribute="leading" constant="20" id="PWF-c7-YOo"/>
+                            <constraint firstItem="Bvp-3p-mu4" firstAttribute="centerY" secondItem="JVq-mS-10t" secondAttribute="centerY" id="PWo-nS-VSJ"/>
+                            <constraint firstItem="b09-JZ-y0b" firstAttribute="leading" secondItem="Y51-k9-Gtw" secondAttribute="leading" constant="16" id="VBq-fU-4oH"/>
+                            <constraint firstItem="nJ6-Wb-1va" firstAttribute="centerY" secondItem="JVq-mS-10t" secondAttribute="centerY" id="dYD-dZ-QK8"/>
+                            <constraint firstItem="JtH-l2-tWU" firstAttribute="bottom" secondItem="5Wb-5h-igN" secondAttribute="bottom" id="ezV-Kn-UIX"/>
+                            <constraint firstItem="JVq-mS-10t" firstAttribute="top" secondItem="x7s-FS-B3C" secondAttribute="top" constant="54" id="fZd-IU-Sh9"/>
+                            <constraint firstItem="wAf-ym-m5h" firstAttribute="trailing" secondItem="5Wb-5h-igN" secondAttribute="trailing" constant="13" id="ila-tH-6qj"/>
+                            <constraint firstItem="JtH-l2-tWU" firstAttribute="trailing" secondItem="5Wb-5h-igN" secondAttribute="trailing" id="j4G-iK-7Nz"/>
+                            <constraint firstItem="5Wb-5h-igN" firstAttribute="top" secondItem="x7s-FS-B3C" secondAttribute="top" constant="100" id="nuL-M7-cCQ"/>
+                            <constraint firstItem="NaQ-wg-p3K" firstAttribute="top" secondItem="5Wb-5h-igN" secondAttribute="bottom" constant="40" id="oOb-hP-3tD"/>
+                            <constraint firstItem="JtH-l2-tWU" firstAttribute="leading" secondItem="5Wb-5h-igN" secondAttribute="leading" id="xHv-0f-7l7"/>
+                            <constraint firstItem="NaQ-wg-p3K" firstAttribute="centerX" secondItem="Y51-k9-Gtw" secondAttribute="centerX" id="yiG-6D-Fcs"/>
+                            <constraint firstItem="b09-JZ-y0b" firstAttribute="top" secondItem="NaQ-wg-p3K" secondAttribute="bottom" constant="43" id="z9U-xN-5Pf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="5Wb-5h-igN" id="1Y9-bu-ILv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LuF-G6-4It" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224.6376811594205" y="-256.47321428571428"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Add" width="26" height="26"/>
         <image name="Back" width="9" height="14"/>
         <image name="CircleFour" width="100" height="101"/>
         <image name="CircleOne" width="100" height="101"/>
