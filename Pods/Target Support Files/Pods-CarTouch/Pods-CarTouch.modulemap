@@ -1,0 +1,6 @@
+framework module Pods_CarTouch {
+  umbrella header "Pods-CarTouch-umbrella.h"
+
+  export *
+  module * { export * }
+}

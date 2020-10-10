@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "2020-kia-k5-kdm-spec.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "2020-kia-k5-kdm-spec-1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "2020-kia-k5-kdm-spec-2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

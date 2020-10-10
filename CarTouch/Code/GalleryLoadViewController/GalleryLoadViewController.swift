@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class GalleryLoadViewController: UIViewController {
     
@@ -47,6 +48,27 @@ class GalleryLoadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // -------------------------------------------------------------
+        
+        let image = UIImage(named: "some_photo")!
+
+        AF.upload(
+            multipartFormData: { multipartFormData in
+                multipartFormData.append(image.jpegData(compressionQuality: 0.5)!,withName: "img" , fileName: "file.jpeg", mimeType: "image/jpeg")
+        },
+            to: "https://84.201.184.151:5000/", method: .post , headers: nil)
+            .responseDecodable(of: OfferModel.self) { (response) in
+                guard let carList = response.value else {
+                    return
+                }
+                
+                print(carList.best?.first?.brand?.title)
+                print(carList.best?.first?.title)
+                print(carList.best?.first?.minPrice)
+            }
+        
+        // -------------------------------------------------------------
         
         imagePicker.delegate = self
         defaultSet()
@@ -90,3 +112,35 @@ extension GalleryLoadViewController: UIImagePickerControllerDelegate & UINavigat
         picker.dismiss(animated: true, completion: nil)
     }
 }
+
+//            .responseJSON(completionHandler: { response in
+//                print(response)
+//
+//                if let status = response.response?.statusCode {
+//                    switch(status){
+//                        case 201:
+//                            print("example success")
+//                        default:
+//                            print("error with response status: \(status)")
+//                        }
+//                }
+//                //to get JSON return value
+//                if let result = response.result.value {
+//                    let JSON = result as! NSDictionary
+//                        print(JSON)
+//                }
+//            })
+        
+        
+        
+//        let image = UIImage(named: "some_photo")!
+//
+//        AF.upload(
+//            multipartFormData: { multipartFormData in
+//                multipartFormData.append(image.jpegData(compressionQuality: 0.5)!,withName: "img" , fileName: "file.jpeg", mimeType: "image/jpeg")
+//        },
+//            to: "https://84.201.184.151:5000/", method: .post , headers: nil)
+//            .response { resp in
+//                print(resp)
+//
+//        }
