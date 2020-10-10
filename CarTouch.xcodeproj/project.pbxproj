@@ -23,6 +23,9 @@
 		E1A84F7B2529094D0051FF15 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A84F7A2529094D0051FF15 /* SearchView.swift */; };
 		E1A84F8125290A1F0051FF15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A84F8025290A1F0051FF15 /* ContentView.swift */; };
 		E1A84F8625290ACC0051FF15 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1A84F8525290ACC0051FF15 /* SearchView.xib */; };
+		E1CBF0D225313680006F8A27 /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CBF0D125313680006F8A27 /* GalleryCollectionView.swift */; };
+		E1CBF0D625313838006F8A27 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CBF0D525313838006F8A27 /* GalleryCollectionViewCell.swift */; };
+		E1CBF0DA25314C92006F8A27 /* HideCollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CBF0D925314C92006F8A27 /* HideCollectionViewProtocol.swift */; };
 		E1D2767F2525676500702A27 /* SetGradientViewTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2767E2525676500702A27 /* SetGradientViewTop.swift */; };
 		E1D276A52528BD9B00702A27 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D276A42528BD9B00702A27 /* HomeViewController.swift */; };
 		E1D276B22528E38F00702A27 /* HomeScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D276B12528E38F00702A27 /* HomeScrollView.swift */; };
@@ -55,6 +58,9 @@
 		E1A84F7A2529094D0051FF15 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		E1A84F8025290A1F0051FF15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1A84F8525290ACC0051FF15 /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		E1CBF0D125313680006F8A27 /* GalleryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
+		E1CBF0D525313838006F8A27 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		E1CBF0D925314C92006F8A27 /* HideCollectionViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideCollectionViewProtocol.swift; sourceTree = "<group>"; };
 		E1D2767E2525676500702A27 /* SetGradientViewTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGradientViewTop.swift; sourceTree = "<group>"; };
 		E1D276A42528BD9B00702A27 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E1D276B12528E38F00702A27 /* HomeScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScrollView.swift; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 				E1D2767E2525676500702A27 /* SetGradientViewTop.swift */,
 				E1F060552529311B007CB4A4 /* ChangeCurrentTitle.swift */,
 				E1F060582529376A007CB4A4 /* PositionIconProtocol.swift */,
+				E1CBF0D925314C92006F8A27 /* HideCollectionViewProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -185,6 +192,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E1CBF0B92531213A006F8A27 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E1CBF0D025313628006F8A27 /* GalleryColectionView */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		E1CBF0D025313628006F8A27 /* GalleryColectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E1CBF0D125313680006F8A27 /* GalleryCollectionView.swift */,
+				E1CBF0D525313838006F8A27 /* GalleryCollectionViewCell.swift */,
+			);
+			path = GalleryColectionView;
+			sourceTree = "<group>";
+		};
 		E1D276A72528D8E600702A27 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +229,7 @@
 		E1D276AB2528D9AF00702A27 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E1CBF0B92531213A006F8A27 /* CollectionView */,
 				E1A84F8325290A3E0051FF15 /* HomeScrollView */,
 				E1A84F7F25290A0A0051FF15 /* ContentView */,
 				E1D276BF2529007700702A27 /* MainView */,
@@ -352,12 +377,14 @@
 				E16218A92520D9EE00A58078 /* LoadViewController.swift in Sources */,
 				E13403C725217DF0003C7856 /* NavigationViewController.swift in Sources */,
 				E1D276A52528BD9B00702A27 /* HomeViewController.swift in Sources */,
+				E1CBF0DA25314C92006F8A27 /* HideCollectionViewProtocol.swift in Sources */,
 				E1DB2B972521629100A57A31 /* MainView.swift in Sources */,
 				E130278A2521528500681C1B /* ToHomeProtocol.swift in Sources */,
 				E14A7D54251FB33F0047A2A1 /* IconView.swift in Sources */,
 				E1D276B62528F9B200702A27 /* HomeBackgroundView.swift in Sources */,
 				E1A84F7B2529094D0051FF15 /* SearchView.swift in Sources */,
 				E145A878251B5F0900A78C56 /* AppDelegate.swift in Sources */,
+				E1CBF0D625313838006F8A27 /* GalleryCollectionViewCell.swift in Sources */,
 				E1A84F8125290A1F0051FF15 /* ContentView.swift in Sources */,
 				E1F060562529311B007CB4A4 /* ChangeCurrentTitle.swift in Sources */,
 				E16218A62520D7DF00A58078 /* TitleAnimationProtocol.swift in Sources */,
@@ -367,6 +394,7 @@
 				E1D276B22528E38F00702A27 /* HomeScrollView.swift in Sources */,
 				E145A882251B5F0900A78C56 /* CarTouch.xcdatamodeld in Sources */,
 				E1F0604E252923EE007CB4A4 /* HistoryView.swift in Sources */,
+				E1CBF0D225313680006F8A27 /* GalleryCollectionView.swift in Sources */,
 				E145A87A251B5F0900A78C56 /* SceneDelegate.swift in Sources */,
 				E1F8577D2521FE2100D33CB9 /* CustomButton.swift in Sources */,
 			);

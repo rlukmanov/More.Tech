@@ -138,45 +138,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ool-3K-Xcy" customClass="HomeGradientView" customModule="CarTouch" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="177" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="150" width="414" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="yvm-1x-PRh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                        <color key="value" red="0.096390388909999999" green="0.38804620499999998" blue="0.82357615230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="value" red="0.30778965349999998" green="0.58897376059999995" blue="0.95690840479999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                        <color key="value" red="0.0" green="0.1215686275" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.043137254901960784" green="0.11372549019607843" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PositionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qhe-hL-K7d">
-                                <rect key="frame" x="46" y="280" width="115" height="3"/>
+                                <rect key="frame" x="46" y="253" width="115" height="3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="U4J-wb-JeM"/>
                                     <constraint firstAttribute="height" constant="3" id="kOH-mH-aBt"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAe-tb-XZr" customClass="MainView" customModule="CarTouch" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="287" width="414" height="609"/>
+                                <rect key="frame" x="0.0" y="260" width="414" height="636"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02K-ad-0ac" customClass="HomeScrollView" customModule="CarTouch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="609"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="636"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wtd-pZ-aFQ" customClass="ContentView" customModule="CarTouch" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="828" height="609"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="828" height="636"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3r-HP-mlX" customClass="SearchView" customModule="CarTouch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="609"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="636"/>
                                                         <color key="tintColor" red="0.0" green="0.1215686275" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" priority="250" constant="414" id="58v-8q-3Rp"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0B-t2-Dei" customClass="HistoryView" customModule="CarTouch" customModuleProvider="target">
-                                                        <rect key="frame" x="414" y="0.0" width="414" height="609"/>
+                                                        <rect key="frame" x="414" y="0.0" width="414" height="636"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" priority="250" constant="414" id="OHz-bR-XIJ"/>
                                                         </constraints>
@@ -221,26 +221,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="История" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwM-2H-fvg">
-                                <rect key="frame" x="277.5" y="253" width="66" height="20"/>
+                                <rect key="frame" x="277.5" y="222" width="66" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4c-5v-uXS">
-                                <rect key="frame" x="79" y="253.5" width="49" height="19.5"/>
+                                <rect key="frame" x="79" y="222.5" width="49" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="so3-cM-A2Q"/>
-                        <color key="backgroundColor" red="0.1017900333" green="0.37777084109999998" blue="0.8549514413" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.31853586439999998" green="0.58881747719999999" blue="0.96083027119999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="BwM-2H-fvg" firstAttribute="bottom" secondItem="bAe-tb-XZr" secondAttribute="top" constant="-14" id="3bY-N9-YKR"/>
+                            <constraint firstItem="BwM-2H-fvg" firstAttribute="bottom" secondItem="bAe-tb-XZr" secondAttribute="top" constant="-18" id="3bY-N9-YKR"/>
                             <constraint firstItem="qhe-hL-K7d" firstAttribute="bottom" secondItem="bAe-tb-XZr" secondAttribute="top" constant="-4" id="E4c-BA-KkG"/>
-                            <constraint firstItem="G4c-5v-uXS" firstAttribute="bottom" secondItem="bAe-tb-XZr" secondAttribute="top" constant="-14" id="EFd-fO-yVt"/>
+                            <constraint firstItem="G4c-5v-uXS" firstAttribute="bottom" secondItem="bAe-tb-XZr" secondAttribute="top" constant="-18" id="EFd-fO-yVt"/>
                             <constraint firstItem="bAe-tb-XZr" firstAttribute="bottom" secondItem="UPj-ZD-QhX" secondAttribute="bottom" id="Ghd-ay-nQA"/>
-                            <constraint firstItem="bAe-tb-XZr" firstAttribute="top" secondItem="UPj-ZD-QhX" secondAttribute="top" priority="250" constant="287" id="KJZ-mV-xUr"/>
+                            <constraint firstItem="bAe-tb-XZr" firstAttribute="top" secondItem="UPj-ZD-QhX" secondAttribute="top" priority="250" constant="260" id="KJZ-mV-xUr"/>
                             <constraint firstItem="Ool-3K-Xcy" firstAttribute="bottom" secondItem="bAe-tb-XZr" secondAttribute="top" priority="250" constant="90" id="KYw-La-Yec"/>
                             <constraint firstItem="Ool-3K-Xcy" firstAttribute="leading" secondItem="UPj-ZD-QhX" secondAttribute="leading" id="Qyn-TJ-iLa"/>
                             <constraint firstItem="Ool-3K-Xcy" firstAttribute="trailing" secondItem="UPj-ZD-QhX" secondAttribute="trailing" id="SJg-wq-MXl"/>
@@ -268,7 +268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nda-5T-RmQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="346" y="-256"/>
+            <point key="canvasLocation" x="344.92753623188406" y="-256.47321428571428"/>
         </scene>
     </scenes>
     <resources>

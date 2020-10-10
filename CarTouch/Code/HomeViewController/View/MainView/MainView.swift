@@ -23,8 +23,8 @@ class MainView: UIView {
     
     // MARK: - Properties
     
-    private let popupOffset: CGFloat = 287
-    private let popupOffsetMax: CGFloat = 357
+    private let popupOffset: CGFloat = 260
+    private let popupOffsetMax: CGFloat = 340
     private let topOffset: CGFloat = 144
     private let upOffsetMultiplier = CGFloat(0.7)
     private let middleOffsetMultiplier = CGFloat(0.3)
@@ -33,6 +33,7 @@ class MainView: UIView {
     private var topConstraint = NSLayoutConstraint()
     
     var delegate: SetGradientViewTop?
+    var delegateCollectionView: HideCollectionViewProtocol?
     
     // MARK: - Init
     
@@ -104,9 +105,11 @@ class MainView: UIView {
             switch state {
             case .toUp:
                 self.topConstraint.constant = self.topOffset
+                self.delegateCollectionView?.animateHideCollectionView(withDuration: duration, offset: self.topOffset)
                 //self.delegate?.doAnimation(to: 0.0, withDelay: 0.0, withDuration: 0.7)
             case .toMiddle:
                 self.topConstraint.constant = self.popupOffset
+                self.delegateCollectionView?.animateHideCollectionView(withDuration: duration / 2, offset: 0)
                 //self.delegate?.doAnimation(to: 1.0, withDelay: 0.0, withDuration: 0.7)
             }
             superview.layoutIfNeeded()
@@ -126,6 +129,11 @@ class MainView: UIView {
             //progressAnimation = progressAnimation > 1 ? 1 : progressAnimation
             
             self.topConstraint.constant = currentConstraint
+            
+            if (currentConstraint <= self.popupOffset) {
+                self.delegateCollectionView?.animateHideCollectionView(withDuration: 0.2, offset: self.popupOffset - currentConstraint)
+            }
+            
             //self.delegate?.doAnimation(to: progressAnimation, withDelay: 0.0, withDuration: 0.1)
             self.superview!.layoutIfNeeded()
         })

@@ -34,7 +34,7 @@ class HomeBackgroundView: UIView {
     }
     
     // MARK: - Configurate
-    
+
     func configurate() {
         titleLabel.alpha = 0.0
         historyLabel.alpha = 0.5
