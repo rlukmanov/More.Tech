@@ -599,7 +599,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Wb-5h-igN">
                                 <rect key="frame" x="62" y="100" width="290" height="380"/>
-                                <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.90196078431372551" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="290" id="ZjZ-2F-OvT"/>
                                     <constraint firstAttribute="height" constant="380" id="r0E-EG-hfx"/>
@@ -610,6 +610,24 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для загрузки фото нажмите на меня" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AH-gq-Blj">
+                                <rect key="frame" x="105" y="261.5" width="204" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="0sf-UG-cle"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtH-l2-tWU">
+                                <rect key="frame" x="62" y="100" width="290" height="380"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.32889753579999997" green="0.60126817229999996" blue="0.95690745119999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="getImageAction:" destination="YxH-D6-4m2" eventType="touchUpInside" id="cNR-b3-PCw"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="Bvp-3p-mu4">
                                 <rect key="frame" x="20" y="52.5" width="14" height="24"/>
                                 <constraints>
@@ -631,6 +649,7 @@
                                 </constraints>
                                 <connections>
                                     <action selector="backAction:" destination="Wy7-qF-Mfd" eventType="touchUpInside" id="7AG-1e-zLu"/>
+                                    <action selector="backButtonAction:" destination="YxH-D6-4m2" eventType="touchUpInside" id="M6V-SA-8BL"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add" translatesAutoresizingMaskIntoConstraints="NO" id="wAf-ym-m5h">
@@ -640,7 +659,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b09-JZ-y0b" customClass="CustomButton" customModule="CarTouch" customModuleProvider="target">
-                                <rect key="frame" x="16" y="580" width="382" height="55"/>
+                                <rect key="frame" x="16" y="557" width="382" height="55"/>
                                 <color key="backgroundColor" red="0.2274509804" green="0.51372549020000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="I4y-Tk-Er6"/>
@@ -650,19 +669,20 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузите фотографию автомобиля" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaQ-wg-p3K">
-                                <rect key="frame" x="78" y="520" width="258" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузите фотографию автомобиля" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaQ-wg-p3K">
+                                <rect key="frame" x="78" y="508" width="258" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.61960784313725492" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtH-l2-tWU">
-                                <rect key="frame" x="62" y="100" width="290" height="380"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.32889753579999997" green="0.60126817229999996" blue="0.95690745119999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05d-Yj-lFM">
+                                <rect key="frame" x="329" y="457" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="EgE-6w-Cdc"/>
+                                    <constraint firstAttribute="width" constant="46" id="RpY-pb-oys"/>
+                                </constraints>
                                 <connections>
-                                    <action selector="getImageAction:" destination="YxH-D6-4m2" eventType="touchUpInside" id="cNR-b3-PCw"/>
+                                    <action selector="subAction:" destination="YxH-D6-4m2" eventType="touchUpInside" id="yry-T9-IvA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -670,28 +690,40 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wAf-ym-m5h" firstAttribute="top" secondItem="5Wb-5h-igN" secondAttribute="bottom" constant="-13" id="2FD-5o-PZx"/>
+                            <constraint firstItem="NaQ-wg-p3K" firstAttribute="top" secondItem="JtH-l2-tWU" secondAttribute="bottom" constant="28" id="9Wv-dS-Qg2"/>
                             <constraint firstItem="5Wb-5h-igN" firstAttribute="centerX" secondItem="x7s-FS-B3C" secondAttribute="centerX" id="FhI-jz-oLe"/>
                             <constraint firstItem="JVq-mS-10t" firstAttribute="centerX" secondItem="x7s-FS-B3C" secondAttribute="centerX" id="FwY-xd-W9d"/>
                             <constraint firstItem="Y51-k9-Gtw" firstAttribute="trailing" secondItem="b09-JZ-y0b" secondAttribute="trailing" constant="16" id="GUo-mI-xm1"/>
+                            <constraint firstItem="b09-JZ-y0b" firstAttribute="top" secondItem="NaQ-wg-p3K" secondAttribute="bottom" constant="32" id="IGD-xf-lLG"/>
                             <constraint firstItem="5Wb-5h-igN" firstAttribute="top" secondItem="JtH-l2-tWU" secondAttribute="top" id="Id9-2k-pYl"/>
                             <constraint firstItem="nJ6-Wb-1va" firstAttribute="leading" secondItem="x7s-FS-B3C" secondAttribute="leading" constant="11" id="Jkw-7B-KJf"/>
+                            <constraint firstItem="05d-Yj-lFM" firstAttribute="centerX" secondItem="wAf-ym-m5h" secondAttribute="centerX" id="KEY-bS-Dfc"/>
                             <constraint firstItem="Bvp-3p-mu4" firstAttribute="leading" secondItem="x7s-FS-B3C" secondAttribute="leading" constant="20" id="PWF-c7-YOo"/>
                             <constraint firstItem="Bvp-3p-mu4" firstAttribute="centerY" secondItem="JVq-mS-10t" secondAttribute="centerY" id="PWo-nS-VSJ"/>
                             <constraint firstItem="b09-JZ-y0b" firstAttribute="leading" secondItem="Y51-k9-Gtw" secondAttribute="leading" constant="16" id="VBq-fU-4oH"/>
+                            <constraint firstItem="05d-Yj-lFM" firstAttribute="centerY" secondItem="wAf-ym-m5h" secondAttribute="centerY" id="VmL-3i-yR5"/>
+                            <constraint firstItem="NaQ-wg-p3K" firstAttribute="leading" secondItem="Y51-k9-Gtw" secondAttribute="leading" constant="78" id="WRY-Pd-TzN"/>
+                            <constraint firstItem="Y51-k9-Gtw" firstAttribute="trailing" secondItem="NaQ-wg-p3K" secondAttribute="trailing" constant="78" id="aVF-mG-wR1"/>
                             <constraint firstItem="nJ6-Wb-1va" firstAttribute="centerY" secondItem="JVq-mS-10t" secondAttribute="centerY" id="dYD-dZ-QK8"/>
                             <constraint firstItem="JtH-l2-tWU" firstAttribute="bottom" secondItem="5Wb-5h-igN" secondAttribute="bottom" id="ezV-Kn-UIX"/>
                             <constraint firstItem="JVq-mS-10t" firstAttribute="top" secondItem="x7s-FS-B3C" secondAttribute="top" constant="54" id="fZd-IU-Sh9"/>
                             <constraint firstItem="wAf-ym-m5h" firstAttribute="trailing" secondItem="5Wb-5h-igN" secondAttribute="trailing" constant="13" id="ila-tH-6qj"/>
                             <constraint firstItem="JtH-l2-tWU" firstAttribute="trailing" secondItem="5Wb-5h-igN" secondAttribute="trailing" id="j4G-iK-7Nz"/>
                             <constraint firstItem="5Wb-5h-igN" firstAttribute="top" secondItem="x7s-FS-B3C" secondAttribute="top" constant="100" id="nuL-M7-cCQ"/>
-                            <constraint firstItem="NaQ-wg-p3K" firstAttribute="top" secondItem="5Wb-5h-igN" secondAttribute="bottom" constant="40" id="oOb-hP-3tD"/>
+                            <constraint firstItem="1AH-gq-Blj" firstAttribute="centerX" secondItem="JtH-l2-tWU" secondAttribute="centerX" id="t8t-eN-3sY"/>
+                            <constraint firstItem="1AH-gq-Blj" firstAttribute="leading" secondItem="JtH-l2-tWU" secondAttribute="trailing" constant="-247" id="wW8-8U-h7J"/>
+                            <constraint firstItem="1AH-gq-Blj" firstAttribute="centerY" secondItem="JtH-l2-tWU" secondAttribute="centerY" id="wgc-aU-7dP"/>
                             <constraint firstItem="JtH-l2-tWU" firstAttribute="leading" secondItem="5Wb-5h-igN" secondAttribute="leading" id="xHv-0f-7l7"/>
                             <constraint firstItem="NaQ-wg-p3K" firstAttribute="centerX" secondItem="Y51-k9-Gtw" secondAttribute="centerX" id="yiG-6D-Fcs"/>
-                            <constraint firstItem="b09-JZ-y0b" firstAttribute="top" secondItem="NaQ-wg-p3K" secondAttribute="bottom" constant="43" id="z9U-xN-5Pf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionLabel" destination="NaQ-wg-p3K" id="jpV-99-c9A"/>
+                        <outlet property="getImageButton" destination="JtH-l2-tWU" id="aDr-8w-Nnl"/>
                         <outlet property="imageView" destination="5Wb-5h-igN" id="1Y9-bu-ILv"/>
+                        <outlet property="loadButtonTitle" destination="1AH-gq-Blj" id="4jm-Fh-53C"/>
+                        <outlet property="searchButton" destination="b09-JZ-y0b" id="SnR-sz-1Vp"/>
+                        <outlet property="subActionImageView" destination="wAf-ym-m5h" id="kNY-xf-THO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LuF-G6-4It" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
