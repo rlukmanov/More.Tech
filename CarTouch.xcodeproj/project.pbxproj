@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E10BCFE02531DBF3002924D1 /* ToPrivateCabProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10BCFDF2531DBF3002924D1 /* ToPrivateCabProtocol.swift */; };
 		E130278A2521528500681C1B /* ToHomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13027892521528500681C1B /* ToHomeProtocol.swift */; };
 		E1312EBD2523C7530004A014 /* NameAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1312EBC2523C7530004A014 /* NameAnimationProtocol.swift */; };
 		E13403C725217DF0003C7856 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13403C625217DF0003C7856 /* NavigationViewController.swift */; };
@@ -28,6 +29,7 @@
 		E1CBF0DA25314C92006F8A27 /* HideCollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CBF0D925314C92006F8A27 /* HideCollectionViewProtocol.swift */; };
 		E1CBF0DE25316439006F8A27 /* GalleryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CBF0DD25316439006F8A27 /* GalleryCellModel.swift */; };
 		E1CBF0E325317035006F8A27 /* PersonalCabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CBF0E225317035006F8A27 /* PersonalCabViewController.swift */; };
+		E1CBF0E72531CEF8006F8A27 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CBF0E62531CEF8006F8A27 /* RadioButton.swift */; };
 		E1D2767F2525676500702A27 /* SetGradientViewTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D2767E2525676500702A27 /* SetGradientViewTop.swift */; };
 		E1D276A52528BD9B00702A27 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D276A42528BD9B00702A27 /* HomeViewController.swift */; };
 		E1D276B22528E38F00702A27 /* HomeScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D276B12528E38F00702A27 /* HomeScrollView.swift */; };
@@ -42,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E10BCFDF2531DBF3002924D1 /* ToPrivateCabProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToPrivateCabProtocol.swift; sourceTree = "<group>"; };
 		E13027892521528500681C1B /* ToHomeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToHomeProtocol.swift; sourceTree = "<group>"; };
 		E1312EBC2523C7530004A014 /* NameAnimationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAnimationProtocol.swift; sourceTree = "<group>"; };
 		E13403C625217DF0003C7856 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		E1CBF0D925314C92006F8A27 /* HideCollectionViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideCollectionViewProtocol.swift; sourceTree = "<group>"; };
 		E1CBF0DD25316439006F8A27 /* GalleryCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCellModel.swift; sourceTree = "<group>"; };
 		E1CBF0E225317035006F8A27 /* PersonalCabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCabViewController.swift; sourceTree = "<group>"; };
+		E1CBF0E62531CEF8006F8A27 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		E1D2767E2525676500702A27 /* SetGradientViewTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGradientViewTop.swift; sourceTree = "<group>"; };
 		E1D276A42528BD9B00702A27 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E1D276B12528E38F00702A27 /* HomeScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScrollView.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				E1F060552529311B007CB4A4 /* ChangeCurrentTitle.swift */,
 				E1F060582529376A007CB4A4 /* PositionIconProtocol.swift */,
 				E1CBF0D925314C92006F8A27 /* HideCollectionViewProtocol.swift */,
+				E10BCFDF2531DBF3002924D1 /* ToPrivateCabProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 		E145A895251B81EE00A78C56 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				E1CBF0E92531CF0D006F8A27 /* RadioButton */,
 				E1CBF0E125317014006F8A27 /* PersonalCabViewController */,
 				E1F857812522028300D33CB9 /* CustomButton */,
 				E1302786252151F000681C1B /* Protocols */,
@@ -229,6 +235,14 @@
 				E1CBF0E225317035006F8A27 /* PersonalCabViewController.swift */,
 			);
 			path = PersonalCabViewController;
+			sourceTree = "<group>";
+		};
+		E1CBF0E92531CF0D006F8A27 /* RadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				E1CBF0E62531CEF8006F8A27 /* RadioButton.swift */,
+			);
+			path = RadioButton;
 			sourceTree = "<group>";
 		};
 		E1D276A72528D8E600702A27 /* HomeViewController */ = {
@@ -407,6 +421,7 @@
 				E1D276B62528F9B200702A27 /* HomeBackgroundView.swift in Sources */,
 				E1A84F7B2529094D0051FF15 /* SearchView.swift in Sources */,
 				E145A878251B5F0900A78C56 /* AppDelegate.swift in Sources */,
+				E10BCFE02531DBF3002924D1 /* ToPrivateCabProtocol.swift in Sources */,
 				E1CBF0D625313838006F8A27 /* GalleryCollectionViewCell.swift in Sources */,
 				E1A84F8125290A1F0051FF15 /* ContentView.swift in Sources */,
 				E1F060562529311B007CB4A4 /* ChangeCurrentTitle.swift in Sources */,
@@ -418,6 +433,7 @@
 				E1CBF0DE25316439006F8A27 /* GalleryCellModel.swift in Sources */,
 				E145A882251B5F0900A78C56 /* CarTouch.xcdatamodeld in Sources */,
 				E1F0604E252923EE007CB4A4 /* HistoryView.swift in Sources */,
+				E1CBF0E72531CEF8006F8A27 /* RadioButton.swift in Sources */,
 				E1CBF0D225313680006F8A27 /* GalleryCollectionView.swift in Sources */,
 				E145A87A251B5F0900A78C56 /* SceneDelegate.swift in Sources */,
 				E1F8577D2521FE2100D33CB9 /* CustomButton.swift in Sources */,

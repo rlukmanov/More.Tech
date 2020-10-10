@@ -19,11 +19,20 @@ class PersonalCabViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var incomeTextField: UITextField!
     
+    @IBOutlet weak var manButton: RadioButton!
+    @IBOutlet weak var womanButton: RadioButton!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     var bottomConstraintScrollView = NSLayoutConstraint()
     var defaultBottomOffset: CGFloat = -374
     var bottomMaxOffset: CGFloat = -374 + 2 * 31 + 55
+    
+    // MARK: - Action
+    
+    @IBAction func backAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     // MARK: - Controller Life Cycle
     
@@ -52,6 +61,12 @@ class PersonalCabViewController: UIViewController {
         let tapScreen = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapScreen.cancelsTouchesInView = false
         view.addGestureRecognizer(tapScreen)
+        
+        manButton.isSelected = true
+        womanButton.isSelected = false
+        
+        manButton.alternateButton = [womanButton!]
+        womanButton.alternateButton = [manButton!]
     }
     
     // MARK: - Animate function

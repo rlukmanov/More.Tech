@@ -12,6 +12,15 @@ class GalleryCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
     
     // MARK: - Properties
     
+    var delegateToPrivateCab: ToPrivateCabProtocol?
+    
+    let toPersonalCabButton: UIButton = {
+        let toPersonalCabButton = UIButton()
+        toPersonalCabButton.backgroundColor = .none
+        toPersonalCabButton.translatesAutoresizingMaskIntoConstraints = false
+        return toPersonalCabButton
+    }()
+    
     let cells = GalleryCellModel.cellsNumber
     let maxOffsetScrollView: CGFloat = 144 // 260 - 144 // popupOffset - topOffset
     
@@ -38,6 +47,13 @@ class GalleryCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Actions
+    
+    @objc
+    func toPrivateCab() {
+        delegateToPrivateCab?.toPrivateCab()
     }
     
     // MARK: - CollectionView(sizeForItemAt)
@@ -68,6 +84,15 @@ extension GalleryCollectionView: UICollectionViewDataSource {
         cell.iconImageView.widthAnchor.constraint(equalToConstant: GalleryCellModel.sizes[index].0).isActive = true
         cell.iconImageView.heightAnchor.constraint(equalToConstant: GalleryCellModel.sizes[index].1).isActive = true
         
+        if index == 0 {
+            cell.addSubview(toPersonalCabButton)
+            toPersonalCabButton.leftAnchor.constraint(equalTo: cell.leftAnchor).isActive = true
+            toPersonalCabButton.rightAnchor.constraint(equalTo: cell.rightAnchor).isActive =    true
+            toPersonalCabButton.topAnchor.constraint(equalTo: cell.topAnchor).isActive = true
+            toPersonalCabButton.bottomAnchor.constraint(equalTo: cell.bottomAnchor).isActive =  true
+            toPersonalCabButton.addTarget(self, action: #selector(toPrivateCab), for:   .touchUpInside)
+        }
+            
         return cell
     }
 }

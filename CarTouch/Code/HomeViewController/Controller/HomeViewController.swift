@@ -29,13 +29,17 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Delete LoadViewController
+        self.navigationController?.viewControllers.remove(at: 0)
+        
         mainView.delegate = backgroundView
         mainView.delegateCollectionView = galleryCollectionView
         mainView.configurate()
         backgroundView.configurate()
         scrollView.delegateChangeView = backgroundView
+        galleryCollectionView.delegateToPrivateCab = self
         
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        //self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         view.addSubview(galleryCollectionView)
         
@@ -62,5 +66,17 @@ class HomeViewController: UIViewController {
             self.leadingAnchor.constant = 16
             self.view.layoutIfNeeded()
         }, completion: nil)
+    }
+}
+
+// MARK: - ToPrivateCabProtocol
+
+extension HomeViewController: ToPrivateCabProtocol {
+    
+    func toPrivateCab() {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PersonalCabViewController") as! PersonalCabViewController
+        //self.present(nextViewController, animated:true, completion:nil)
+        self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }

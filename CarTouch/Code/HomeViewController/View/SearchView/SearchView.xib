@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVy-6a-YzF">
-                    <rect key="frame" x="16" y="233" width="382" height="55"/>
+                    <rect key="frame" x="16" y="238" width="382" height="55"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87B-Gz-V31" customClass="CustomButton" customModule="CarTouch" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="382" height="55"/>
@@ -49,13 +49,13 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="rrl-5e-RtD">
-                    <rect key="frame" x="16" y="166" width="382" height="1"/>
+                    <rect key="frame" x="16" y="188" width="382" height="1"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="XB3-uY-9vg"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="bnw-Ob-Q3Y">
-                    <rect key="frame" x="16" y="98" width="382" height="1"/>
+                    <rect key="frame" x="16" y="120" width="382" height="1"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="iP9-ap-17r"/>
                     </constraints>
@@ -68,48 +68,48 @@
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wallet" translatesAutoresizingMaskIntoConstraints="NO" id="Ib8-oV-JI2">
-                    <rect key="frame" x="16" y="127" width="20" height="19"/>
+                    <rect key="frame" x="16" y="149" width="20" height="19"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="3DA-o5-pzJ"/>
                         <constraint firstAttribute="height" constant="19" id="ohw-Vm-k96"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeAutocredit" translatesAutoresizingMaskIntoConstraints="NO" id="J7Y-22-4Oi">
-                    <rect key="frame" x="16" y="57" width="21" height="22"/>
+                    <rect key="frame" x="16" y="79" width="21" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="21" id="gcw-xS-ZTA"/>
                         <constraint firstAttribute="height" constant="22" id="idB-nh-Vpu"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Globe" translatesAutoresizingMaskIntoConstraints="NO" id="I4u-Vw-mFS">
-                    <rect key="frame" x="378" y="58" width="20" height="20"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Key" translatesAutoresizingMaskIntoConstraints="NO" id="I4u-Vw-mFS">
+                    <rect key="frame" x="378" y="80" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="3Qn-UV-q5Y"/>
                         <constraint firstAttribute="height" constant="20" id="L66-KW-NPR"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="₽" translatesAutoresizingMaskIntoConstraints="NO" id="vAv-MQ-h4F">
-                    <rect key="frame" x="374" y="122" width="27" height="27"/>
+                    <rect key="frame" x="374" y="144" width="27" height="27"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="27" id="QzZ-Mk-1Dd"/>
                         <constraint firstAttribute="height" constant="27" id="R8H-r9-Whl"/>
                     </constraints>
                 </imageView>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Данные настройки пользователя опциональны, Вам не обязательно их использовать " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kt-eS-KYY">
-                    <rect key="frame" x="16" y="187" width="351.5" height="36"/>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Данные настройки пользователя опциональны, Вам не обязательно их использовать " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kt-eS-KYY">
+                    <rect key="frame" x="16" y="28" width="382" height="36"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
-                    <color key="textColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKc-Nm-MNG">
-                    <rect key="frame" x="77" y="307" width="260" height="32"/>
+                    <rect key="frame" x="77" y="312" width="260" height="32"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                     <state key="normal" title="Поиск по фотографии из галереи">
                         <color key="titleColor" red="0.2274509804" green="0.51372549020000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Название производителя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l8p-3w-TSF">
-                    <rect key="frame" x="57" y="59" width="301" height="18.5"/>
+                    <rect key="frame" x="57" y="81" width="301" height="18.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardAppearance="light"/>
                     <userDefinedRuntimeAttributes>
@@ -119,7 +119,7 @@
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Обозначить лимит стоимости" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Q2-AJ-wkJ">
-                    <rect key="frame" x="56" y="127" width="298" height="19"/>
+                    <rect key="frame" x="56" y="149" width="298" height="19"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardAppearance="light"/>
                     <userDefinedRuntimeAttributes>
@@ -137,7 +137,7 @@
                 <constraint firstItem="vAv-MQ-h4F" firstAttribute="bottom" secondItem="rrl-5e-RtD" secondAttribute="top" constant="-17" id="46Y-SG-vUN"/>
                 <constraint firstItem="l8p-3w-TSF" firstAttribute="centerY" secondItem="J7Y-22-4Oi" secondAttribute="centerY" id="62J-c7-BZ0"/>
                 <constraint firstItem="1Q2-AJ-wkJ" firstAttribute="leading" secondItem="Ib8-oV-JI2" secondAttribute="trailing" constant="20" id="8RT-uT-dSA"/>
-                <constraint firstItem="IVy-6a-YzF" firstAttribute="top" secondItem="rrl-5e-RtD" secondAttribute="top" constant="67" id="A8d-Qi-22E"/>
+                <constraint firstItem="IVy-6a-YzF" firstAttribute="top" secondItem="rrl-5e-RtD" secondAttribute="top" constant="50" id="A8d-Qi-22E"/>
                 <constraint firstItem="J7Y-22-4Oi" firstAttribute="bottom" secondItem="bnw-Ob-Q3Y" secondAttribute="bottom" constant="-20" id="BGZ-Mm-vLB"/>
                 <constraint firstItem="Ib8-oV-JI2" firstAttribute="leading" secondItem="1bw-rA-NRf" secondAttribute="leading" constant="16" id="EHM-kU-Dz7"/>
                 <constraint firstItem="IVy-6a-YzF" firstAttribute="leading" secondItem="1bw-rA-NRf" secondAttribute="leading" constant="16" id="Eti-Dj-5Ty"/>
@@ -153,12 +153,13 @@
                 <constraint firstItem="eKc-Nm-MNG" firstAttribute="top" secondItem="87B-Gz-V31" secondAttribute="bottom" constant="19" id="blR-dN-XCA"/>
                 <constraint firstItem="rrl-5e-RtD" firstAttribute="trailing" secondItem="1bw-rA-NRf" secondAttribute="trailing" constant="-16" id="ciD-We-mvb"/>
                 <constraint firstItem="bnw-Ob-Q3Y" firstAttribute="trailing" secondItem="1bw-rA-NRf" secondAttribute="trailing" constant="-16" id="eYF-NY-nN2"/>
-                <constraint firstItem="7Kt-eS-KYY" firstAttribute="top" secondItem="rrl-5e-RtD" secondAttribute="bottom" constant="20" id="he5-64-Kdz"/>
+                <constraint firstAttribute="trailing" secondItem="7Kt-eS-KYY" secondAttribute="trailing" constant="16" id="fOm-cp-c47"/>
+                <constraint firstItem="7Kt-eS-KYY" firstAttribute="top" secondItem="1bw-rA-NRf" secondAttribute="top" constant="28" id="he5-64-Kdz"/>
                 <constraint firstItem="vAv-MQ-h4F" firstAttribute="trailing" secondItem="1bw-rA-NRf" secondAttribute="trailing" constant="-13" id="tep-D5-GeZ"/>
                 <constraint firstItem="7Kt-eS-KYY" firstAttribute="leading" secondItem="1bw-rA-NRf" secondAttribute="leading" constant="16" id="uUL-2u-Oan"/>
                 <constraint firstItem="I4u-Vw-mFS" firstAttribute="centerY" secondItem="J7Y-22-4Oi" secondAttribute="centerY" id="uVj-Vc-KzT"/>
                 <constraint firstItem="Ib8-oV-JI2" firstAttribute="bottom" secondItem="rrl-5e-RtD" secondAttribute="top" constant="-20" id="utY-hQ-UQP"/>
-                <constraint firstItem="bnw-Ob-Q3Y" firstAttribute="top" secondItem="1bw-rA-NRf" secondAttribute="top" constant="98" id="xJF-uK-a1J"/>
+                <constraint firstItem="bnw-Ob-Q3Y" firstAttribute="top" secondItem="1bw-rA-NRf" secondAttribute="top" constant="120" id="xJF-uK-a1J"/>
                 <constraint firstItem="bnw-Ob-Q3Y" firstAttribute="leading" secondItem="1bw-rA-NRf" secondAttribute="leading" constant="16" id="yhE-jd-zbu"/>
                 <constraint firstItem="Wak-Hi-DTx" firstAttribute="top" secondItem="1bw-rA-NRf" secondAttribute="top" constant="14" id="zT2-a5-LPU"/>
             </constraints>
@@ -170,8 +171,8 @@
     </objects>
     <resources>
         <image name="Camera" width="21" height="18"/>
-        <image name="Globe" width="20" height="20"/>
         <image name="HomeAutocredit" width="21" height="22"/>
+        <image name="Key" width="18" height="19"/>
         <image name="Line" width="343" height="1"/>
         <image name="LinePopUp" width="56" height="4"/>
         <image name="Wallet" width="20" height="19"/>
