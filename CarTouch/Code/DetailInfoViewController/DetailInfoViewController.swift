@@ -31,11 +31,17 @@ class DetailInfoViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func toLoanVC(_ sender: Any) {
+        NetworkManager.shared.postLoan()
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoanViewController") as! LoanViewController
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
+
     // MARK: - Controller Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
