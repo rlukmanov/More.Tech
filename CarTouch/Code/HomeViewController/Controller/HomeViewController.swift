@@ -46,8 +46,6 @@ class HomeViewController: UIViewController {
         searchView.delegateToGalleryLoad = self
         searchView.delegateCamera = self
         
-        imagePicker.delegate = self
-        
         //self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         view.addSubview(galleryCollectionView)
@@ -84,6 +82,8 @@ extension HomeViewController: UIImagePickerControllerDelegate & UINavigationCont
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
+        picker.dismiss(animated: true, completion: nil)
+        
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         
         NetworkManager.shared.getData(from: image, completion: { (carList) in
@@ -97,8 +97,6 @@ extension HomeViewController: UIImagePickerControllerDelegate & UINavigationCont
             nextViewController.data = carList
             self.navigationController?.pushViewController(nextViewController, animated: true)
         })
-        
-        picker.dismiss(animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -133,7 +131,10 @@ extension HomeViewController: ToGalleryLoadProtocol {
 extension HomeViewController: ToCameraProtocol {
     
     func toCamera() {
+        imagePicker.delegate = self
         imagePicker.sourceType = .camera
+        imagePicker.allowsEditing = true
+        
         self.present(imagePicker, animated: true, completion: nil)
     }
 }
