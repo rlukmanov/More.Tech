@@ -10,6 +10,12 @@ import UIKit
 
 class ResultTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var carImageView: UIImageView!
+    @IBOutlet weak var modelLabel: UILabel!
+    @IBOutlet weak var manufacterLabel: UILabel!
+    @IBOutlet weak var manufacterImageView: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

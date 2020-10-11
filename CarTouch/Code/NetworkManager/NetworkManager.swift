@@ -18,7 +18,7 @@ class NetworkManager {
         AF.upload(
             multipartFormData: { multipartFormData in
                 multipartFormData.append(image.jpegData(compressionQuality: 0.5)!,withName: "img" , fileName: "file.jpeg", mimeType: "image/jpeg")
-        },  to: "https://84.201.184.151:5000/", method: .post , headers: nil) .responseDecodable(of: OfferModel.self) { (response) in
+        },  to: "https://84.201.184.151:5000/", method: .post, headers: nil) .responseDecodable(of: OfferModel.self) { (response) in
                 guard let carList = response.value else {
                     completion(nil)
                     return

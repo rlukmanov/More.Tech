@@ -15,6 +15,7 @@
 		E10BCFF425323402002924D1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10BCFF225323402002924D1 /* ResultTableViewCell.swift */; };
 		E10BCFF525323402002924D1 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10BCFF325323402002924D1 /* ResultTableViewCell.xib */; };
 		E1173C992532556F00131FF0 /* OfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1173C982532556F00131FF0 /* OfferModel.swift */; };
+		E120512B2532AB710042E580 /* DetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E120512A2532AB710042E580 /* DetailInfoViewController.swift */; };
 		E130278A2521528500681C1B /* ToHomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13027892521528500681C1B /* ToHomeProtocol.swift */; };
 		E1312EBD2523C7530004A014 /* NameAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1312EBC2523C7530004A014 /* NameAnimationProtocol.swift */; };
 		E13403C725217DF0003C7856 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13403C625217DF0003C7856 /* NavigationViewController.swift */; };
@@ -62,6 +63,7 @@
 		E10BCFF225323402002924D1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		E10BCFF325323402002924D1 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		E1173C982532556F00131FF0 /* OfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferModel.swift; sourceTree = "<group>"; };
+		E120512A2532AB710042E580 /* DetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoViewController.swift; sourceTree = "<group>"; };
 		E13027892521528500681C1B /* ToHomeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToHomeProtocol.swift; sourceTree = "<group>"; };
 		E1312EBC2523C7530004A014 /* NameAnimationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAnimationProtocol.swift; sourceTree = "<group>"; };
 		E13403C625217DF0003C7856 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,14 @@
 			path = OfferModel;
 			sourceTree = "<group>";
 		};
+		E120512D2532AB850042E580 /* DetailInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E120512A2532AB710042E580 /* DetailInfoViewController.swift */,
+			);
+			path = DetailInfoViewController;
+			sourceTree = "<group>";
+		};
 		E1302786252151F000681C1B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +256,7 @@
 				E1DB2B9B25216A0500A57A31 /* LoadScreen */,
 				E10BCFEA25322B42002924D1 /* ResultSearchController */,
 				E10BCFE22531E170002924D1 /* GalleryLoadViewController */,
+				E120512D2532AB850042E580 /* DetailInfoViewController */,
 				E1D276A72528D8E600702A27 /* HomeViewController */,
 				E145A898251B822E00A78C56 /* Main.storyboard */,
 			);
@@ -565,6 +576,7 @@
 				E16218A62520D7DF00A58078 /* TitleAnimationProtocol.swift in Sources */,
 				E18890A725327BA000A198AE /* NetworkManager.swift in Sources */,
 				E1312EBD2523C7530004A014 /* NameAnimationProtocol.swift in Sources */,
+				E120512B2532AB710042E580 /* DetailInfoViewController.swift in Sources */,
 				E1D2767F2525676500702A27 /* SetGradientViewTop.swift in Sources */,
 				E16218A32520D49000A58078 /* TitleView.swift in Sources */,
 				E1D276B22528E38F00702A27 /* HomeScrollView.swift in Sources */,

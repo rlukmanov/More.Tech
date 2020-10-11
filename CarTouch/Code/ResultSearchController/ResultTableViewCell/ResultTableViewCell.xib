@@ -23,7 +23,6 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I25-WN-K2x">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="140"/>
-                                <color key="backgroundColor" red="0.84705882352941175" green="0.90196078431372551" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="maQ-Kp-Kac"/>
                                 </constraints>
@@ -34,7 +33,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bmw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igt-8f-Kfe">
-                                <rect key="frame" x="192" y="13" width="233" height="17"/>
+                                <rect key="frame" x="192" y="13" width="220" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,11 +58,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qET-nj-6jc">
-                                <rect key="frame" x="300" y="13" width="17" height="17"/>
-                                <color key="backgroundColor" red="0.32889753579999997" green="0.60126817229999996" blue="0.95690745119999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="287" y="6.5" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="cnC-F6-nvJ"/>
-                                    <constraint firstAttribute="width" constant="17" id="qrW-oy-Zk7"/>
+                                    <constraint firstAttribute="height" constant="30" id="cnC-F6-nvJ"/>
+                                    <constraint firstAttribute="width" constant="30" id="qrW-oy-Zk7"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rub" translatesAutoresizingMaskIntoConstraints="NO" id="Rm8-BI-VTV">
@@ -104,6 +102,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="carImageView" destination="I25-WN-K2x" id="Iyv-ZG-08Z"/>
+                <outlet property="manufacterImageView" destination="qET-nj-6jc" id="jGd-N0-7xe"/>
+                <outlet property="manufacterLabel" destination="igt-8f-Kfe" id="kK6-Rr-DQ0"/>
+                <outlet property="modelLabel" destination="fiL-9m-fwB" id="Wk9-L2-jZT"/>
+                <outlet property="priceLabel" destination="Dj3-Iq-BRm" id="HBC-P5-pwE"/>
+            </connections>
             <point key="canvasLocation" x="170.28985507246378" y="72.321428571428569"/>
         </tableViewCell>
     </objects>

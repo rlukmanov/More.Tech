@@ -54,25 +54,58 @@ class GalleryLoadViewController: UIViewController {
                 return
             }
             
-            NetworkManager.shared.getImage(from: (carList.result?.first?.brand?.logo)!, completion: { (image) in
-                
-                guard let image = image else {
-                    return
-                }
-                
-                //self.imageView.image = image
-            })
+//            NetworkManager.shared.getImage(from: (carList.result?.first?.brand?.logo)!, completion: { (image) in
+//
+//                guard let image = image else {
+//                    return
+//                }
+//
+//                //self.imageView.image = image
+//            })
+            
 //            print(carList.result?.first?.brand?.title)
 //            print(carList.result?.first?.title)
 //            print(carList.result?.first?.minPrice)
+            
+            self.toResultSearchVC(carList: carList)
         })
                 
         // -------------------------------------------------------------
     }
+    
+    private func toResultSearchVC(carList: OfferModel) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ResultSearchViewController") as! ResultSearchViewController
+        nextViewController.data = carList
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
     // MARK: - View Controller Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NetworkManager.shared.getData(from: UIImage(named: "some_photo")!, completion: { (carList) in
+            
+            guard let carList = carList else {
+                return
+            }
+            
+//            NetworkManager.shared.getImage(from: (carList.result?.first?.brand?.logo)!, completion: { (image) in
+//
+//                guard let image = image else {
+//                    return
+//                }
+//
+//                //self.imageView.image = image
+//            })
+            
+//            print(carList.result?.first?.brand?.title)
+//            print(carList.result?.first?.title)
+//            print(carList.result?.first?.minPrice)
+            
+            self.toResultSearchVC(carList: carList)
+        })
         
         imagePicker.delegate = self
         defaultSet()

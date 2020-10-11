@@ -52,16 +52,23 @@ extension LoadViewController: ToHomeProtocol {
         
         //let newViewController = storyboard.instantiateViewController(identifier: "PersonalCabViewController") as! PersonalCabViewController
         
-        let newViewController = storyboard.instantiateViewController(identifier: "GalleryLoadViewController") as! GalleryLoadViewController
+        //let newViewController = storyboard.instantiateViewController(identifier: "GalleryLoadViewController") as! GalleryLoadViewController
         
         //let newViewController = storyboard.instantiateViewController(identifier: "ResultSearchViewController") as! ResultSearchViewController
+        
+        let newViewController = storyboard.instantiateViewController(identifier: "DetailInfoViewController") as! DetailInfoViewController
         
         let transition = CATransition()
         transition.duration = delayTransition
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         transition.type = CATransitionType.fade
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
+//            self.navigationController?.view.layer.add(transition, forKey: nil)
+//            self.navigationController?.pushViewController(newViewController, animated: false)
+//        })
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(50), execute: {
             self.navigationController?.view.layer.add(transition, forKey: nil)
             self.navigationController?.pushViewController(newViewController, animated: false)
         })
