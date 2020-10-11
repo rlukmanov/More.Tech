@@ -54,7 +54,7 @@ class GalleryLoadViewController: UIViewController {
                 return
             }
             
-            
+        
 //            print(carList.result?.count)
 //            print(carList.result?.first?.brand?.title)
 //            print(carList.result?.first?.title)

@@ -26,4 +26,18 @@ class NetworkManager {
                 completion(carList)
             }
     }
+    
+    func getImage() {
+        AF.request("https://httpbin.org/image/png").responseImage { response in
+            debugPrint(response)
+
+            print(response.request)
+            print(response.response)
+            debugPrint(response.result)
+
+            if case .success(let image) = response.result {
+                print("image downloaded: \(image)")
+            }
+        }
+    }
 }
