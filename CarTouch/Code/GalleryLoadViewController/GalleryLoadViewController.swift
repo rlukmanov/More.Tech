@@ -54,19 +54,6 @@ class GalleryLoadViewController: UIViewController {
                 return
             }
             
-//            NetworkManager.shared.getImage(from: (carList.result?.first?.brand?.logo)!, completion: { (image) in
-//
-//                guard let image = image else {
-//                    return
-//                }
-//
-//                //self.imageView.image = image
-//            })
-            
-//            print(carList.result?.first?.brand?.title)
-//            print(carList.result?.first?.title)
-//            print(carList.result?.first?.minPrice)
-            
             self.toResultSearchVC(carList: carList)
         })
                 
@@ -85,11 +72,11 @@ class GalleryLoadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkManager.shared.getData(from: UIImage(named: "some_photo")!, completion: { (carList) in
-            
-            guard let carList = carList else {
-                return
-            }
+//        NetworkManager.shared.getData(from: UIImage(named: "some_photo")!, completion: { (carList) in
+//
+//            guard let carList = carList else {
+//                return
+//            }
             
 //            NetworkManager.shared.getImage(from: (carList.result?.first?.brand?.logo)!, completion: { (image) in
 //
@@ -104,9 +91,9 @@ class GalleryLoadViewController: UIViewController {
 //            print(carList.result?.first?.title)
 //            print(carList.result?.first?.minPrice)
             
-            self.toResultSearchVC(carList: carList)
-        })
-        
+//            self.toResultSearchVC(carList: carList)
+//        })
+//
         imagePicker.delegate = self
         defaultSet()
     }
