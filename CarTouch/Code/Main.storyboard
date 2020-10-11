@@ -670,7 +670,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="searchAction:" destination="YxH-D6-4m2" eventType="touchUpInside" id="nFs-FY-XWe"/>
+                                    <action selector="searchAction:" destination="YxH-D6-4m2" eventType="touchUpInside" id="L0D-Wm-axh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузите фотографию автомобиля" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaQ-wg-p3K">

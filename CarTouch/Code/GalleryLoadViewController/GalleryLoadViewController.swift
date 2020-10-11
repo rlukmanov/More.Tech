@@ -54,8 +54,14 @@ class GalleryLoadViewController: UIViewController {
                 return
             }
             
-        
-//            print(carList.result?.count)
+            NetworkManager.shared.getImage(from: (carList.result?.first?.brand?.logo)!, completion: { (image) in
+                
+                guard let image = image else {
+                    return
+                }
+                
+                //self.imageView.image = image
+            })
 //            print(carList.result?.first?.brand?.title)
 //            print(carList.result?.first?.title)
 //            print(carList.result?.first?.minPrice)

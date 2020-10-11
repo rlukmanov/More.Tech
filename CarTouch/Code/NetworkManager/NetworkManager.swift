@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+// import AlamofireImage
 
 class NetworkManager {
     
@@ -27,16 +28,18 @@ class NetworkManager {
             }
     }
     
-    func getImage() {
-        AF.request("https://httpbin.org/image/png").responseImage { response in
-            debugPrint(response)
-
-            print(response.request)
-            print(response.response)
-            debugPrint(response.result)
-
-            if case .success(let image) = response.result {
-                print("image downloaded: \(image)")
+    func getImage(from url: String, completion: @escaping (UIImage?) -> Void) {
+        AF.request(url).responseData { (response) in
+            if response.error == nil {
+                guard let data = response.data else {
+                    completion(nil)
+                    return
+                }
+                
+                let image = UIImage(data: data)
+                completion(image)
+            } else {
+                completion(nil)
             }
         }
     }
