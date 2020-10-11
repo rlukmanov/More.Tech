@@ -71,6 +71,13 @@
                                     <constraint firstAttribute="height" constant="13" id="txL-Vf-2wA"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGH-Tw-cy6">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="140"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="toDetailViewAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zlo-PD-hMn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -83,9 +90,13 @@
                             <constraint firstItem="Dj3-Iq-BRm" firstAttribute="top" secondItem="fiL-9m-fwB" secondAttribute="bottom" constant="21" id="VdS-f2-eiU"/>
                             <constraint firstItem="igt-8f-Kfe" firstAttribute="leading" secondItem="I25-WN-K2x" secondAttribute="trailing" constant="32" id="Zxl-sc-OOM"/>
                             <constraint firstItem="qET-nj-6jc" firstAttribute="centerY" secondItem="igt-8f-Kfe" secondAttribute="centerY" id="cTg-bH-aqh"/>
+                            <constraint firstAttribute="bottom" secondItem="IGH-Tw-cy6" secondAttribute="bottom" id="eXd-mc-S9S"/>
+                            <constraint firstItem="IGH-Tw-cy6" firstAttribute="top" secondItem="eR8-A9-R6w" secondAttribute="top" id="gFb-t5-xZl"/>
                             <constraint firstAttribute="height" priority="999" constant="150" id="j5J-Xs-lbw"/>
                             <constraint firstItem="MNI-Np-qUG" firstAttribute="top" secondItem="Dj3-Iq-BRm" secondAttribute="bottom" constant="20" id="kVL-ve-fLp"/>
+                            <constraint firstItem="IGH-Tw-cy6" firstAttribute="leading" secondItem="eR8-A9-R6w" secondAttribute="leading" id="mY3-Hf-5j3"/>
                             <constraint firstItem="I25-WN-K2x" firstAttribute="top" secondItem="eR8-A9-R6w" secondAttribute="top" id="x19-h2-ELJ"/>
+                            <constraint firstAttribute="trailing" secondItem="IGH-Tw-cy6" secondAttribute="trailing" id="x7v-tX-ZWX"/>
                             <constraint firstItem="MNI-Np-qUG" firstAttribute="leading" secondItem="Dj3-Iq-BRm" secondAttribute="leading" id="x8K-Qo-cgn"/>
                             <constraint firstItem="Rm8-BI-VTV" firstAttribute="centerY" secondItem="Dj3-Iq-BRm" secondAttribute="centerY" id="y5M-zZ-RAk"/>
                             <constraint firstItem="fiL-9m-fwB" firstAttribute="top" secondItem="igt-8f-Kfe" secondAttribute="bottom" constant="20" id="yfw-sP-bzh"/>

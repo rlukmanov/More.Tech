@@ -33,7 +33,7 @@ class ResultSearchViewController: UIViewController {
         self.tableView.estimatedRowHeight = 150.0
     }
     
-    //
+    // MARK: - getStringPrice
     
     private func getStringPrice(price: String) -> String {
         var resultPrice = "от "
@@ -74,6 +74,8 @@ extension ResultSearchViewController: UITableViewDataSource, UITableViewDelegate
             cell.manufacterLabel.text = (data.result?[index].brand?.title) ?? ""
             cell.modelLabel.text = (data.result?[index].title) ?? ""
             cell.priceLabel.text = getStringPrice(price: String(data.result?[index].minPrice ?? 0))
+            cell.delegateToDetailView = self
+            cell.giveData = (data.result?[index])!
             
             NetworkManager.shared.getImage(from: (data.result?[index].brand?.logo)!, completion: { (image) in
 
@@ -91,11 +93,25 @@ extension ResultSearchViewController: UITableViewDataSource, UITableViewDelegate
                 }
 
                 cell.carImageView.image = image
+                cell.imageCar = image
             })
             
             return cell
         }
         
         return UITableViewCell()
+    }
+}
+
+// MARK: - ToDetailViewProtocol
+
+extension ResultSearchViewController: ToDetailViewProtocol {
+ 
+    func toDetailViewProtocol(data: CarListModel, imageCar: UIImage) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "DetailInfoViewController") as! DetailInfoViewController
+        nextViewController.data = data
+        nextViewController.imageCar = imageCar
+        self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }

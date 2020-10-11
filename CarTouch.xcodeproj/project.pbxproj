@@ -16,6 +16,9 @@
 		E10BCFF525323402002924D1 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10BCFF325323402002924D1 /* ResultTableViewCell.xib */; };
 		E1173C992532556F00131FF0 /* OfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1173C982532556F00131FF0 /* OfferModel.swift */; };
 		E120512B2532AB710042E580 /* DetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E120512A2532AB710042E580 /* DetailInfoViewController.swift */; };
+		E125E0F32532BEE1002C4185 /* ToDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E125E0F22532BEE1002C4185 /* ToDetailViewProtocol.swift */; };
+		E125E0F62532C3C8002C4185 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E125E0F52532C3C8002C4185 /* CountryModel.swift */; };
+		E125E0F92532C564002C4185 /* BodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E125E0F82532C564002C4185 /* BodyModel.swift */; };
 		E130278A2521528500681C1B /* ToHomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13027892521528500681C1B /* ToHomeProtocol.swift */; };
 		E1312EBD2523C7530004A014 /* NameAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1312EBC2523C7530004A014 /* NameAnimationProtocol.swift */; };
 		E13403C725217DF0003C7856 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13403C625217DF0003C7856 /* NavigationViewController.swift */; };
@@ -64,6 +67,9 @@
 		E10BCFF325323402002924D1 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		E1173C982532556F00131FF0 /* OfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferModel.swift; sourceTree = "<group>"; };
 		E120512A2532AB710042E580 /* DetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoViewController.swift; sourceTree = "<group>"; };
+		E125E0F22532BEE1002C4185 /* ToDetailViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDetailViewProtocol.swift; sourceTree = "<group>"; };
+		E125E0F52532C3C8002C4185 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		E125E0F82532C564002C4185 /* BodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyModel.swift; sourceTree = "<group>"; };
 		E13027892521528500681C1B /* ToHomeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToHomeProtocol.swift; sourceTree = "<group>"; };
 		E1312EBC2523C7530004A014 /* NameAnimationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAnimationProtocol.swift; sourceTree = "<group>"; };
 		E13403C625217DF0003C7856 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +182,8 @@
 				E1173C982532556F00131FF0 /* OfferModel.swift */,
 				E18890A02532768900A198AE /* CarListModel.swift */,
 				E18890A3253276D000A198AE /* BrandModel.swift */,
+				E125E0F52532C3C8002C4185 /* CountryModel.swift */,
+				E125E0F82532C564002C4185 /* BodyModel.swift */,
 			);
 			path = OfferModel;
 			sourceTree = "<group>";
@@ -200,6 +208,7 @@
 				E1CBF0D925314C92006F8A27 /* HideCollectionViewProtocol.swift */,
 				E10BCFDF2531DBF3002924D1 /* ToPrivateCabProtocol.swift */,
 				E10BCFE7253200B4002924D1 /* ToGalleryLoadProtocol.swift */,
+				E125E0F22532BEE1002C4185 /* ToDetailViewProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -589,6 +598,9 @@
 				E10BCFE42531E1C6002924D1 /* GalleryLoadViewController.swift in Sources */,
 				E1173C992532556F00131FF0 /* OfferModel.swift in Sources */,
 				E18890A12532768900A198AE /* CarListModel.swift in Sources */,
+				E125E0F92532C564002C4185 /* BodyModel.swift in Sources */,
+				E125E0F62532C3C8002C4185 /* CountryModel.swift in Sources */,
+				E125E0F32532BEE1002C4185 /* ToDetailViewProtocol.swift in Sources */,
 				E145A87A251B5F0900A78C56 /* SceneDelegate.swift in Sources */,
 				E10BCFE8253200B4002924D1 /* ToGalleryLoadProtocol.swift in Sources */,
 				E10BCFEC25322B73002924D1 /* ResultSearchViewController.swift in Sources */,

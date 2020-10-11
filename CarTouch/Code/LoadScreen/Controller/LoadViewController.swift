@@ -52,11 +52,11 @@ extension LoadViewController: ToHomeProtocol {
         
         //let newViewController = storyboard.instantiateViewController(identifier: "PersonalCabViewController") as! PersonalCabViewController
         
-        //let newViewController = storyboard.instantiateViewController(identifier: "GalleryLoadViewController") as! GalleryLoadViewController
+        let newViewController = storyboard.instantiateViewController(identifier: "GalleryLoadViewController") as! GalleryLoadViewController
         
         //let newViewController = storyboard.instantiateViewController(identifier: "ResultSearchViewController") as! ResultSearchViewController
         
-        let newViewController = storyboard.instantiateViewController(identifier: "DetailInfoViewController") as! DetailInfoViewController
+        //let newViewController = storyboard.instantiateViewController(identifier: "DetailInfoViewController") as! DetailInfoViewController
         
         let transition = CATransition()
         transition.duration = delayTransition

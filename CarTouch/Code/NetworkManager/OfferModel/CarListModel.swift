@@ -13,4 +13,7 @@ class CarListModel: Codable {
     var photo: String?
     var title: String?
     var minPrice: Int?
+    var count: Int?
+    var bodies: [BodyModel]?
+    var transportType: String?
 }

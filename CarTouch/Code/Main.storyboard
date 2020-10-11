@@ -828,7 +828,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zJm-cV-04y">
                                                 <rect key="frame" x="16" y="0.0" width="382" height="260"/>
-                                                <color key="backgroundColor" red="0.3294117647" green="0.59999999999999998" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" red="0.92156862745098034" green="0.95294117647058818" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="260" id="abC-h6-ONj"/>
                                                 </constraints>
@@ -932,11 +932,11 @@
                                                     <constraint firstAttribute="height" constant="12" id="AGf-HG-5ss"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кредит на спецусловиях" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTh-D0-t6O">
-                                                <rect key="frame" x="16" y="555" width="148" height="61"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кредит на спец условиях" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTh-D0-t6O">
+                                                <rect key="frame" x="16" y="555" width="155" height="61"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="61" id="SRW-oL-eBM"/>
-                                                    <constraint firstAttribute="width" constant="148" id="uvk-W6-8D5"/>
+                                                    <constraint firstAttribute="width" constant="155" id="uvk-W6-8D5"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                 <nil key="textColor"/>
@@ -1048,33 +1048,67 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="H17-TS-hzL"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Y9a-Od-noB"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9i-SS-Psv">
-                                <rect key="frame" x="140" y="62" width="54.5" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="БМВ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9i-SS-Psv">
+                                <rect key="frame" x="143.5" y="62" width="47.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 серия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xd-Rm-3fv">
-                                <rect key="frame" x="220.5" y="62" width="80.5" height="26.5"/>
+                                <rect key="frame" x="217" y="62" width="80.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="kz4-HB-C1f">
+                                <rect key="frame" x="16" y="63.5" width="14" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="JHC-JG-mlZ"/>
+                                    <constraint firstAttribute="width" constant="14" id="xAf-1K-Yzy"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ths-iC-3qj">
+                                <rect key="frame" x="5" y="57.5" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="5bJ-ru-lnp"/>
+                                    <constraint firstAttribute="width" constant="36" id="w3m-K9-dWN"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="backAction:" destination="Wy7-qF-Mfd" eventType="touchUpInside" id="5V2-zg-Hp3"/>
+                                    <action selector="backAction:" destination="f1y-BE-zGH" eventType="touchUpInside" id="Kkx-c4-tTG"/>
+                                    <action selector="backButtonAction:" destination="YxH-D6-4m2" eventType="touchUpInside" id="76Y-kb-LVC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fKl-tf-aT1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="E9i-SS-Psv" firstAttribute="top" secondItem="fKl-tf-aT1" secondAttribute="top" constant="18" id="1aX-s5-eDe"/>
                             <constraint firstItem="2Xd-Rm-3fv" firstAttribute="leading" secondItem="E9i-SS-Psv" secondAttribute="trailing" constant="26" id="7WP-nN-RZB"/>
+                            <constraint firstItem="ths-iC-3qj" firstAttribute="centerX" secondItem="kz4-HB-C1f" secondAttribute="centerX" id="CZ4-Ye-Ym3"/>
                             <constraint firstItem="2Xd-Rm-3fv" firstAttribute="centerY" secondItem="E9i-SS-Psv" secondAttribute="centerY" id="HoC-AM-D6t"/>
+                            <constraint firstItem="kz4-HB-C1f" firstAttribute="leading" secondItem="fKl-tf-aT1" secondAttribute="leading" constant="16" id="LIb-yk-8q1"/>
+                            <constraint firstItem="kz4-HB-C1f" firstAttribute="centerY" secondItem="E9i-SS-Psv" secondAttribute="centerY" id="VJ4-j5-fFl"/>
                             <constraint firstItem="E9i-SS-Psv" firstAttribute="centerX" secondItem="fKl-tf-aT1" secondAttribute="centerX" constant="-40" id="b3Q-cU-KUe"/>
                             <constraint firstAttribute="bottom" secondItem="LLe-QG-xmU" secondAttribute="bottom" id="bgV-aQ-kMt"/>
                             <constraint firstItem="LLe-QG-xmU" firstAttribute="top" secondItem="fKl-tf-aT1" secondAttribute="top" constant="72" id="c0m-Xn-R4b"/>
                             <constraint firstAttribute="trailing" secondItem="LLe-QG-xmU" secondAttribute="trailing" id="cFa-9b-XN0"/>
                             <constraint firstItem="LLe-QG-xmU" firstAttribute="leading" secondItem="r8d-FH-dYi" secondAttribute="leading" id="dOI-T6-B4P"/>
+                            <constraint firstItem="ths-iC-3qj" firstAttribute="centerY" secondItem="kz4-HB-C1f" secondAttribute="centerY" id="r1o-KP-ikQ"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1403"/>
+                    <connections>
+                        <outlet property="amountLabel" destination="nmk-je-epE" id="Idj-ZT-dTs"/>
+                        <outlet property="carImageView" destination="zJm-cV-04y" id="HTl-mw-nb6"/>
+                        <outlet property="countryLabel" destination="Aq5-8J-Tdt" id="tmh-NC-RHS"/>
+                        <outlet property="doorsLabel" destination="8Vc-j1-gU4" id="H16-pv-U40"/>
+                        <outlet property="manufacterLabel" destination="E9i-SS-Psv" id="kf0-sD-JNL"/>
+                        <outlet property="modelLabel" destination="2Xd-Rm-3fv" id="Pc9-YR-f3r"/>
+                        <outlet property="priceLabel" destination="jSH-f5-Hl3" id="rl2-4S-fky"/>
+                        <outlet property="typeBodyLabel" destination="M1J-Al-Men" id="quC-FC-via"/>
+                        <outlet property="typeCarLabel" destination="j6w-8y-fER" id="WnA-Fj-ETu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AB3-q2-1KH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

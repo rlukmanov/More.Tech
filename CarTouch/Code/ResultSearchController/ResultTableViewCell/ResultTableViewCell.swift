@@ -16,6 +16,15 @@ class ResultTableViewCell: UITableViewCell {
     @IBOutlet weak var manufacterImageView: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
     
+    var delegateToDetailView: ToDetailViewProtocol?
+    
+    var giveData = CarListModel()
+    var imageCar = UIImage()
+    
+    @IBAction func toDetailViewAction(_ sender: Any) {
+        delegateToDetailView?.toDetailViewProtocol(data: giveData, imageCar: imageCar)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

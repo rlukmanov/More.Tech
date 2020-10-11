@@ -1,5 +1,5 @@
 //
-//  BrandModel.swift
+//  CountryModel.swift
 //  CarTouch
 //
 //  Created by Ruslan Lukmanov on 11.10.2020.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-class BrandModel: Codable {
-    var logo: String?
-    var country: CountryModel?
+class CountryModel: Codable {
     var title: String?
 }
