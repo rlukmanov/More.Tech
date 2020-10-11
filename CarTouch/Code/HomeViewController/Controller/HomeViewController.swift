@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var scrollView: HomeScrollView!
     @IBOutlet weak var searchView: SearchView!
     
+    let imagePicker = UIImagePickerController()
+    
     let durationAppear = 1.0
     var leadingAnchor = NSLayoutConstraint()
     
@@ -42,6 +44,9 @@ class HomeViewController: UIViewController {
         
         galleryCollectionView.delegateToPrivateCab = self
         searchView.delegateToGalleryLoad = self
+        searchView.delegateCamera = self
+        
+        imagePicker.delegate = self
         
         //self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
@@ -73,6 +78,34 @@ class HomeViewController: UIViewController {
     }
 }
 
+// MARK: - UIImagePickerControllerDelegate & UINavigationControllerDelegate
+
+extension HomeViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        
+        NetworkManager.shared.getData(from: image, completion: { (carList) in
+            
+            guard let carList = carList else {
+                return
+            }
+            
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ResultSearchViewController") as! ResultSearchViewController
+            nextViewController.data = carList
+            self.navigationController?.pushViewController(nextViewController, animated: true)
+        })
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
+
 // MARK: - ToPrivateCabProtocol
 
 extension HomeViewController: ToPrivateCabProtocol {
@@ -92,5 +125,15 @@ extension HomeViewController: ToGalleryLoadProtocol {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "GalleryLoadViewController") as! GalleryLoadViewController
         self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
+}
+
+// MARK
+
+extension HomeViewController: ToCameraProtocol {
+    
+    func toCamera() {
+        imagePicker.sourceType = .camera
+        self.present(imagePicker, animated: true, completion: nil)
     }
 }

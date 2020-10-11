@@ -12,10 +12,8 @@ class TitleView: UIView {
     
     // MARK: - Properties
     
-    //private var characterDelay = 0.5
-    private var characterDelay = 0.1
-    //private var translataionDuration = 0.5 * 8
-    private var translataionDuration = 0.1
+    private var characterDelay = 0.5
+    private var translataionDuration = 0.5 * 8
     private var trailingConstraint = NSLayoutConstraint()
     
     @IBOutlet var titleLabel: UILabel!

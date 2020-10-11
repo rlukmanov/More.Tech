@@ -16,6 +16,14 @@ import UIKit
     var nibName: String = "SearchView"
     var delegateToGalleryLoad: ToGalleryLoadProtocol?
     
+    var delegateCamera: ToCameraProtocol?
+    
+    // MARK: - Actions
+    
+    @IBAction func searchCameraAction(_ sender: Any) {
+        delegateCamera?.toCamera()
+    }
+    
     // MARK: - Init
     
     override init(frame: CGRect) {

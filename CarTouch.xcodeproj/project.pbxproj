@@ -19,6 +19,7 @@
 		E125E0F32532BEE1002C4185 /* ToDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E125E0F22532BEE1002C4185 /* ToDetailViewProtocol.swift */; };
 		E125E0F62532C3C8002C4185 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E125E0F52532C3C8002C4185 /* CountryModel.swift */; };
 		E125E0F92532C564002C4185 /* BodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E125E0F82532C564002C4185 /* BodyModel.swift */; };
+		E125E0FC2532CD40002C4185 /* ToCameraProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E125E0FB2532CD40002C4185 /* ToCameraProtocol.swift */; };
 		E130278A2521528500681C1B /* ToHomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13027892521528500681C1B /* ToHomeProtocol.swift */; };
 		E1312EBD2523C7530004A014 /* NameAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1312EBC2523C7530004A014 /* NameAnimationProtocol.swift */; };
 		E13403C725217DF0003C7856 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13403C625217DF0003C7856 /* NavigationViewController.swift */; };
@@ -70,6 +71,7 @@
 		E125E0F22532BEE1002C4185 /* ToDetailViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDetailViewProtocol.swift; sourceTree = "<group>"; };
 		E125E0F52532C3C8002C4185 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		E125E0F82532C564002C4185 /* BodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyModel.swift; sourceTree = "<group>"; };
+		E125E0FB2532CD40002C4185 /* ToCameraProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToCameraProtocol.swift; sourceTree = "<group>"; };
 		E13027892521528500681C1B /* ToHomeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToHomeProtocol.swift; sourceTree = "<group>"; };
 		E1312EBC2523C7530004A014 /* NameAnimationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAnimationProtocol.swift; sourceTree = "<group>"; };
 		E13403C625217DF0003C7856 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				E10BCFDF2531DBF3002924D1 /* ToPrivateCabProtocol.swift */,
 				E10BCFE7253200B4002924D1 /* ToGalleryLoadProtocol.swift */,
 				E125E0F22532BEE1002C4185 /* ToDetailViewProtocol.swift */,
+				E125E0FB2532CD40002C4185 /* ToCameraProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				E125E0F32532BEE1002C4185 /* ToDetailViewProtocol.swift in Sources */,
 				E145A87A251B5F0900A78C56 /* SceneDelegate.swift in Sources */,
 				E10BCFE8253200B4002924D1 /* ToGalleryLoadProtocol.swift in Sources */,
+				E125E0FC2532CD40002C4185 /* ToCameraProtocol.swift in Sources */,
 				E10BCFEC25322B73002924D1 /* ResultSearchViewController.swift in Sources */,
 				E1F8577D2521FE2100D33CB9 /* CustomButton.swift in Sources */,
 			);

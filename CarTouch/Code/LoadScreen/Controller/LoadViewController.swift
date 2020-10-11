@@ -63,12 +63,7 @@ extension LoadViewController: ToHomeProtocol {
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         transition.type = CATransitionType.fade
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
-//            self.navigationController?.view.layer.add(transition, forKey: nil)
-//            self.navigationController?.pushViewController(newViewController, animated: false)
-//        })
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(50), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
             self.navigationController?.view.layer.add(transition, forKey: nil)
             self.navigationController?.pushViewController(newViewController, animated: false)
         })

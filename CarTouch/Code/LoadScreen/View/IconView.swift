@@ -12,10 +12,8 @@ class IconView: UIView {
     
     // MARK: - Properties
     
-    //private var rotateDuration = 2.0
-    private var rotateDuration = 0.1
-    //private var scaleAntTranslationDuration = 4.0
-    private var scaleAntTranslationDuration = 0.1
+    private var rotateDuration = 2.0
+    private var scaleAntTranslationDuration = 4.0
     private var leadingConstraint = NSLayoutConstraint()
     
     @IBOutlet var circleOneImageView: [UIImageView]!
